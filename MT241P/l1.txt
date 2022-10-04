@@ -1,0 +1,129 @@
+Finite mathematics
+
+1. Natural numbers, Integers and Rational numbers
+
+Defⁿ: 
+    Let S be a non-empty set A binary operation is map *: S x S -> S: (a, b) → a * b
+    
+    (*) can be any binary operation (+, *)
+
+    We say: 
+
+        (P1) * is associative if (a * b) * c = a * (b * c), for all a, b, c ∈ S
+        (P2) * is communicate if a * b = b * a, for all a, b, c ∈ S
+        (P3) e ∈ S is an identity element, if a * e = e * a = a , for all a ∈ S
+        (P4) a' ∈ S is an inverse of a ∈ S, if a * a' = a' * a = e
+
+Remark 1.2 (Natural Numbers): We define the natural numbers ℕ₀ using the fine Peano Axioms:
+
+    (PA 1) 0 ∈ ℕ₀, that is, ℕ₀ has at least one element
+    (PA 2) there is a function S: ℕ₀ -> ℕ₀ called the successor function
+    (PA 3) there is no x ∈ ℕ₀ such that S(x) = 0
+    (PA 4) if S(x) = S(y), then x=y
+    (PA 5) (Axiom of Induction) If K is a subset of ℕ₀ such that:
+        (a) 0 ∈ K
+        (b) if x ∈ K,then S(x) ∈ K 
+        then K = ℕ₀
+    
+    Axioms (PA1) to (PA4) ensures that the following elements:
+        (*) 0, S(0), S(S(0)), S(S(S(0))), ... 
+    exist, belong to ℕ₀ and all differ from each other.
+
+    Furthermore ℕ₀ is precisely the set of those elements, because if K is the list (*),
+    then K satisfies conditions (PA5a) and (PA5b), and therefore K = ℕ₀.
+
+    We  agree to the following notation: 1:= S(0), 2:=S(1), 3:= S(2), ... and we call ℕ₀ the natural numbers.
+
+    Furthermore ℕ = {1, 2, 3, ...}.
+
+    We define addition (+) and multiplication (*) on ℕ₀ and ℕ for all m, n ∈ ℕ₀.
+
+    S(x) = x + 1
+
+    (A1) m + 0:= m
+    (A2) m + S(n):= S(m+n)
+
+    (A1) m * 0:= 0
+    (A2) m * S(n):= m + (m*n)
+        
+    One can show that both + and * satisfy the properties (P1) - (P3) of Definition 1.1, but not (P4).
+    The additive identity is 0 and the multiplicative identity is 1.
+
+Remark 1.3 (Integers)
+
+    Note that the equations 1 + x = 0 and 4 + y = 3 have no solution x, y ∈ ℕ₀. 
+    Also for any solutions x, y we get 3 + 1 + x = 0 + 4 + y, and so x=y
+
+    Let the pair (m, n) ∈ ℕ₀ x ℕ represent the equation n + x = m.
+    We say two equations (m₁, n₁) are equivalent if m₁ + n₂ = m₂ + n₁.
+
+    One can show that the elements:
+    x:= {(0, 0), (1, 0), (0, 1), (2, 0), (0, 2), (3, 0), (0, 3), ...}
+    are all non-equivalent, but every element (m, n) ∈ ℕ₀ x ℕ₀ is equivalent to precisely one of them.
+
+    Furthermore we define an addition and multiplication ℕ₀ x ℕ₀ as follows:
+    (Addition) (m₁, n₁) + (m₂, n₂):= (m₁ + m₂, n₁ + n₂)
+    (multiplication) (m₁, n₁) * (m₂, n₂):= ( m₁ * m₂ + n₁ * n₂, m₁ * n₂ + m₂ * n₁)
+    for all m₁, m₂, n₁, n₂ ∈ ℕ₀
+
+    We may identify each (m, n) with it's equivalence companion in X and understand + and * as operations on X.
+
+    One can show that * satisfies properties (P1)-(P3) with identity (1, 0) and + satisfies properties (P1)-(P4), 
+    with identity (0, 0), and with (n, 0) and (0, n) being inverses of each other, i.e??? one write:
+        (n, 0) = (0, n).
+
+    If we identify the element (n, 0) with n ∈ ℕ₀, then x contains ℕ₀.
+
+    Thus we may write (n, 0) as n and (0, n) as -n.
+
+    Overall we denote the set X by ℤ and call it the Integers. In particular we have:
+        ℤ = {..., -3, -2, -1, 0, 1, 2, 3, ...}
+
+    There is an order on ℤ. For a, b, c ∈ ℤ we write a < b, if there is an x ∈ ℕ such that a + x = b, or in other words:
+        (-a) + b ∈ ℕ.
+
+    If (-a) + b ∉ ℕ, then either (-a) + b = 0, that is a = b, or (-a) + b = -c, for some c ∈ ℕ.
+
+    The letter gives b + c = a and therefore b < a thus precisely one of the following is true:
+        a < b, a = b, a > b.
+
+    Furthermore we write a ≥ b, if b ≤ a.
+
+    Next note that for every a ∈ ℤ we have 0 < a if and only if a ∈ ℕ we call those integers negative.
+
+Remark 1.4 (Rational Numbers)
+
+    Observe that the equation 4 * x = 1 has no solution in ℤ.
+
+    We identify the equation b * x = a, where a, b ∈ ℤ, b ≠ 0 with the pair (a, b) and we say two such pairs:
+        (a, b) and (c, d) are equivalent, if a * d = b * c set:
+            X:= {(a, b)| a, b ∈ ℤ, b ≠ 0}
+
+    where we understand equivalent elements as the same element.
+
+    On X we define the operations:
+        (a, b) + (c, d):= ((a * d) + (b * c), b * d),
+        (a, b) * (c, d):= ((a * c), (b * d)),
+    for all (a, b), (c, d) ∈ X, Then + satisfies (P1)-(P4) with additive identity (0, 1)(which equals (0, x), for any integer x ≠ 0)
+    and the additive inverse of (a, b) is:
+        (-a, b) ie -(a, b) = (-a, b).
+
+    Also * satisfies (P1)-(P4), where the multiplicative identity is (1, 1)(which equals (x, x) for any non-zero x ∈ ℤ)
+    and the multiplicative inverse of any non-zero (a, b) is (b, a), that is, (a, b)⁻¹ = (b, a).
+
+    Overall we denote the set S by ℚ and call it the rational numbers.
+
+    Usually we denote the pair (a, b) by the fraction (a / b) and so:
+        ℚ = {(a / b) | a, b ∈ ℤ, b ≠ 0}
+
+    Note that if b < 0, then (a / b) = (-a / -b).
+
+    Thus we may always assume that b > 0.
+    
+    Then the rationals can be ordered by:
+        (a / b) < (c / d),
+    if (a * d) < (d * c)
+
+    Furthermore we can identify ℤ as the subset {(a/1)| a ∈ ℤ} of ℚ.
+
+    Note that the operations and order on ℚ are extensions of the operations are order on ℤ

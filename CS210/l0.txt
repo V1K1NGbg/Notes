@@ -1,0 +1,57 @@
+20% continues
+80% exam
+
+Data structures and algorithms in Java by Robert...
+
+Exams are in Java!
+
+Plan : 
+    - Objects
+    - Arrays
+    - Algorithm complexity
+    - algorithms
+        - sorting
+            - bubble
+            - selection
+            - insertion
+        - stacks, queues
+        - bit manipulation
+        - hash tables
+        - search
+            - berth first
+            - depth first
+
+Data structures : organizing information
+
+Algorithm : repeatable step-by-step plan for solving a problem
+
+Languages :
+    Higher Level
+    haskell
+    python
+    java
+    c++
+    c
+    assembly
+    Lower Level
+
+Java : 
+    -JVM : Java Virtual Machine
+    -JDK : Java Developer Kit
+    -JRE : Java Runtime Environment
+    -Compiler : Translates to machine code
+
+editor -> source file -> compiler -> class file -> virtual machine -> program
+
+variable types:
+    - byte , short , int , long
+    - float , double
+    - char , String
+    - boolean
+
+bit - (0/1)
+byte - 8*(0/1)
+kilobyte - 1024*8*(0/1)
+megabyte - 1024*1024*8*(0/1)
+gigabyte - 1024*1024*1024*8*(0/1)
+terabyte - 1024*1024*1024*1024*8*(0/1)

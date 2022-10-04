@@ -1,0 +1,42 @@
+Negation - ~ - not
+
+    p   ~p
+    1   01
+    0   10
+
+Conjunction - . - and
+
+    p   q   p . q
+    1   1   1 1 1
+    1   0   1 0 0
+    0   1   0 0 1
+    0   0   0 0 0
+
+Disjunction - V - or
+
+    p   q   p V q
+    1   1   1 1 1
+    1   0   1 1 0
+    0   1   0 1 1
+    0   0   0 0 0
+
+Material implication - ⊃ - if ... then ... 
+
+    p   q   p ⊃ q
+    1   1   1 1 1
+    1   0   1 0 0
+    0   1   0 1 1
+    0   0   0 1 0
+
+Material equivalence - ≡ - if and only if ... then ... - [ p)q = q)p ]
+
+    p   q   p ≡ q
+    1   1   1 1 1
+    1   0   1 0 0
+    0   1   0 0 1
+    0   0   0 1 0
+
+() -> [] -> {}
+
+true -> 1
+false -> 0

@@ -1,0 +1,22 @@
+Logic -> Ideal (form of reasoning)
+
+Philosophy -> Discipline (skills that take time to learn) -> Logic
+
+Learn -> know something you already don't know
+
+Logic -> study of arguments
+
+Arguments -> valid / invalid
+Statements -> true/false
+
+Logic -> self critical discipline
+
+propositions and premisses
+
+arguments -> signed/unsigned
+
+Propositions:
+    Categorical: "All whales are mammals"
+    Conjunctive: "... and ..." , "... but ..."
+    Disjunctive: "... ether ..." , "... or ..."
+    Hypothetical: "if ... then ..." 

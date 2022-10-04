@@ -1,0 +1,40 @@
+Arrays
+    Start from 0
+    Format:
+        (arr)[(index)]
+    Indexes:
+        from 0 to (n - 1)
+    Initializing:
+        (type)[] (arr) = new (type)[n]
+    Copy:
+        NOT (arr2) = (arr1)
+        for(int i = 0; i < (arr1).length; i++){
+            (arr2)[i] = (arr1)[i];
+        }
+    Print:
+        for(int j = 0; j < (arr).length; j++){
+            System.out.println((arr)[j]);
+        }
+    Length:
+        (arr).length
+    2D Arrays:
+        Initializing:
+            int[][] (arr)) = new (type)[n][m];
+
+            for (int i = 0; i < rows; i++)
+                for (int j = 0; j < columns; j++)
+                    (arr)[i][j] = (value);
+                }
+            }
+Random Numbers:
+    Math.random() - (0 - 1)
+    int number = (int)(Math.random()*100.0) - (0 - 99)
+    
+Prime algorithm:
+    On found prime 
+    multiply it by n
+    the result is not a prime
+
+Randomize an array:
+    for each element
+    replace it with a random element

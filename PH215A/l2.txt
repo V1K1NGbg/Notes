@@ -1,0 +1,53 @@
+Material implication - ⊃ - if ... then ... 
+
+    p   q   p ⊃ q
+    1   1   1 1 1
+    1   0   1 0 0
+    0   1   0 1 1
+    0   0   0 1 0
+
+Material equivalence - ≡ - if and only if ... then ... - [ p)q = q)p ]
+
+    p   q   p ≡ q
+    1   1   1 1 1
+    1   0   1 0 0
+    0   1   0 0 1
+    0   0   0 1 0
+
+Example:
+    ~p ∧ q
+    p   q   ~ p ∧ q
+    1   1   0 1 1 1
+    1   0   0 1 0 0
+    0   1   1 0 1 1
+    0   0   1 0 1 0
+
+Example:
+    p v (q . r)
+    p   q   r   p v (q . r)
+    1   1   1   1 1  1 1 1
+    1   1   0   1 1  1 0 0
+    1   0   1   1 1  0 0 1
+    1   0   0   1 1  0 0 0
+    0   1   1   0 1  1 1 1
+    0   1   0   0 0  1 0 0
+    0   0   1   0 0  0 0 1
+    0   0   0   0 0  0 0 0
+
+
+Expression types:
+    tautology (Always true)
+    contradiction(Always false)
+    contingency (Bipolar)
+
+p   q   r   [p .(q v r)] ≡ [(p . q)v(p . r)]
+1   1   1    1 1 1 1 1   1   1 1 1 1 1 1 1
+1   1   0    1 1 1 1 0   1   1 1 1 1 1 0 0
+1   0   1    1 1 0 1 1   1   1 0 0 1 1 1 1
+1   0   0    1 0 0 0 0   1   1 0 0 0 1 0 0
+0   1   1    0 0 1 1 1   1   0 0 1 0 0 0 1
+0   1   0    0 0 1 1 0   1   0 0 1 0 0 0 0
+0   0   1    0 0 0 1 1   1   0 0 0 0 0 0 1
+0   0   0    0 0 0 0 0   1   0 0 0 0 0 0 0
+
+    

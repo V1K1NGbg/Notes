@@ -1,0 +1,52 @@
+Continues assessment: 30% (Homework)
+Exam: 70% (January)
+
+1 Problem solving
+
+1.1 Problem
+    1. Understand the problem
+    2. Draw a diagram (optional)
+    3. Never say you can't solve a problem
+    4. Try a different approach
+    5. The more problems you solve -> the better you will get at solving them
+    6. Learn from your mistakes
+
+1.2 Proof
+    Axioms: accepted statements not requiring prove
+    Deductive reasoning: start with premises and we then derive conclusion
+    Mathematical proof: requires deductive reasoning from axioms
+
+Remark 3: 
+    P ⇒ Q (If P therefor Q)
+    P ⇔ Q (If and only if P therefor Q)
+
+Proof that the √ af an odd number is odd:
+    Proof 1:
+        n  = (2 * k) + 1 (is always odd)
+        n² = ((2 * k) + 1)²
+        n² = (4 * k²) + (4 * k) + 1
+        n² = (2 * ((2 * k²) + (2 * k))) + 1 (is also always odd)
+    
+    Proof 2:
+        If n² is an integer, then n has to be odd, because otherwise n is even and so (by example (6)): 
+            n² is even which is impossible.
+
+Remark 5:
+    Negative numbers -> n < 0
+    Non-negative numbers -> n ≥ 0
+    "Root 2" -> √2 (only the positive value)
+
+Proof that √2 is rational:
+    Supposing (Accepting) that √2 is rational:
+        √2 = (a / b) 
+        2 = (a² / b²)
+        2 * b² = a²
+        a² -> even
+        ⇒ a -> even
+        a = 2 * e for some integer e
+        (4 * e²) = (2 * b²)
+        (2 * e²) = b²
+        a² -> even
+        ⇒ a -> even
+
+n is odd ↔ n² is odd

@@ -1,0 +1,49 @@
+Proposition is a statement that is ether true or false,but not both
+
+"3 is a prime number" - true
+However the statement: "Where are you going?" is not a proposition
+
+Remark 6:
+    A proposition takes exactly one of the values: true or false.
+    Typically, we denote true by T or 1 and we denote false by F or 0.
+    The proposition above is called elementary proposition because they can't be broken into simpler propositions
+    "6 > 5 and 110 is even"
+    The proposition above is called compound proposition because they can be broken into simpler propositions
+
+Remark 7:
+    1. Negation (NOT)
+        (not sign)
+
+    2. Conjunction (AND)
+        (and sign /\)
+
+    3. Disjunction (OR)
+        (or sign \/) 
+
+    Tables:
+        1. Negation
+            p   (not)p
+            T   F
+            F   T
+
+        2. Conjunction
+            p   q   p /\ q
+            T   T   T
+            T   F   F
+            F   T   F
+            F   F   F
+
+        3. Disjunction
+            p   q   p \/ q
+            T   T   T
+            T   F   T
+            F   T   T
+            F   F   F
+
+Example:
+    p   q   (not)q  p/\((not)q) (not)(p/\((not)q))
+    T   T   F       F           T
+    T   F   T       T           F
+    F   T   F       F           T
+    F   F   T       F           T
+

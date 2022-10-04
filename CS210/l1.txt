@@ -1,0 +1,74 @@
+java useful methods:
+    SPLIT : (arr) = (str).split("(str)symbol", "(int)number");
+    COMPARE : (condition) = (str).equals("(str)");
+    COMPARE TO : (str).compareTo((str)) <>= 0;
+    STRING : String (str) = "(str)";
+    SCANNER : import java.util.Scanner; Scanner in = new Scanner(System.in); int (int) = in.nextInt(); double (double) = in.nextDouble(); nextLine(); nextWord();
+
+if ((condition)) {
+    (execution);
+}
+
+for ((initialization);(condition);(update)) {
+    (execution);
+}
+
+while ((condition)) {
+    (execution);
+}
+
+do{
+    (execution);
+} while ((condition));
+
+Operators :
+    - &&    (AND)
+    - ||    (OR)
+    - !     (NOT)
+
+Nesting : 
+    for ((initialization);(condition);(update)) {
+        for ((initialization);(condition);(update)) {
+            (execution);
+        }
+    }
+
+Methods :
+    - public - 
+    - private - 
+
+    - static, final 
+
+    - return : void, int, double ...
+
+    -parameters - 
+
+public static (type)) (function name))((type)args){
+    (execution);
+    return ((type)var)
+}
+
+Objects :
+    class Circle {
+
+        private final double PI = 3.14159;
+        private double radius;
+        private double area;
+
+        public Circle(double r) {
+
+            radius = r;
+        
+        }
+        public double getRadius() {
+        
+            return radius;
+        
+        }
+        public double getArea() {
+            area = PI * radius * radius;
+            
+            return area;
+        
+        }
+    }

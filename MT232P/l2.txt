@@ -1,0 +1,146 @@
+Functions:
+    f: A -> B is a function if f associates to each element a ∈ A a single element b ∈ B
+
+Defⁿ:
+    Let A and B be sets.
+    
+    A function f from A to B is a set of ordered pairs in A x B with the property that if (a, b) and (a, c) are elements of f then b = c
+    
+    Domain of f is {x | x appears as the first element of a pair in f}
+
+    Range = {y | y appears as the second element in a pair in f}
+
+Some functions have formulas associated with them:
+    ex. f(x) = x³ - 3x² + 1
+
+Some have more than one:
+    f: ℝ -> ℝ
+    f(x) = {1 : x ∈ ℚ,
+            0 : x ∈ ℝ - ℚ}
+    Range = {0, 1}
+
+The absolute value function:
+    f(x) : ℝ -> ℝ
+    f(x) = |x| = {x if x ≥ 0,
+                  -x if x ≤ 0}
+    (Distance between x and 0)
+
+f(x) = |x| ≥ 0 ∀x
+Range = [0, ∞)
+
+Sometimes there is no formula.
+
+Let A = {cat, dog, mouse}
+Let B = {house, garden}
+
+f(cat) = garden
+f(dog) = house
+f(mouse) = garden
+
+This is a function.
+
+How many others are there: 8
+
+Defⁿ:
+    Suppose f: A -> B is a function.
+    Suppose C < A we can define the restriction of f to C as:
+        f:C -> B
+
+
+Example:
+    Consider Dirichlet's function f: ℝ -> ℝ
+    f(x) = {1 : x ∈ ℚ,
+            0 : x ∈ ℝ - ℚ}
+
+Defⁿ:
+    Suppose f: A -> B and g: B -> C are functions we can define the composition:
+        gₒf(a) = g(f(a))
+        for all a such that f(a) is the domain of g
+
+Example:
+    Consider f: ℝ -> ℝ
+    f(x) = 3x + 1
+    and g: [0, ∞) -> [0, ∞) is given by g(x) = √x.
+
+    find gₒf(x) = g(f(x)) = g(3x + 1) = √(3x+1)
+
+This is only defined if:
+    3+1 ≥ 0
+    3x ≥ -1
+    x ≥ -(1/3) ⇒ x ∈ [-(1/3), ∞)
+
+    f: [-(1/3), ∞) -> [0, ∞)
+
+Injection, Surjection and Bijection
+
+Defⁿ:
+    A function f: A -> B is injection (or 1-1 function)
+    If whenever f(a) = f(b) we have a = b, ∀a, b ∈ A
+
+∃ - there exists
+
+Example:
+    If ℝ -> ℝ f(x) = 3x + 1 is a 1-1 function
+    Suppose ∃ a, b ∈ R such that 
+    f(a) = f(b)
+    3a + 1 = 3b + 1
+    3a = 3b
+    a = b 
+    f is 1-1
+
+Example:
+    Let f: ℝ -> ℝ be given f(x) = x² is not 1-1 since f(2) = 4 = f(-2)
+    and 2 ≠ -2
+
+Example:
+    Let A = {cat, dog, mouse}
+    Let B = {house, garden}
+
+    f(cat) = garden
+    f(dog) = house
+    f(mouse) = garden
+
+    f is not 1-1 because f(cat) = f(mouse)
+
+    There is no 1-1 function from A to B, but 1 can find a 1-1 function from B to A
+
+Example:
+    Find a 1-1 function from ℕ to E = {2, 4, 6, 8, ...}
+    f: ℕ -> E
+    f(x) = 2x
+    f(a) = f(b)
+    2a = 2b
+    a = b
+    f is 1-1
+
+    g(x) = 4x
+    is also a 1-1 function from ℕ to E
+
+Defⁿ:
+    A function f: A -> B is a surjective if f: A -> B, if ∀b ∈ B, ∃a ∈ A such that f(a) = b
+
+Example:
+    f: ℕ -> E
+    f(x) = 2x is onto but, 
+    g: ℕ -> E
+    g(x) = 4x is not onto
+    since 2 ∈ E but ∄ a ∈ ℕ
+    such that g(a) = 2
+    ie 4a = 2
+
+Example:
+    f: ℝ -> ℝ
+    f(x) = 3x + 1 is onto
+    Let y ∈ ℝ, need to find x such that
+    f(x) = y
+    ie 3x + 1 = y
+    3x = y - 1
+    x = (y - 1)/3
+    Check:
+        f((y - 1)/3) = 3((y - 1)/3) + 1
+                     = y - 1 + 1 = y
+
+Example:
+    f: ℝ -> ℝ
+    f(x) = x² is onto since -1 ∈ ℝ 
+    but f(x) ≠ -1 ∀x ∈ ℝ
