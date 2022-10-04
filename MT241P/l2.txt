@@ -1,1 +1,74 @@
-hello
+2. Principle of Induction
+    Theorem 2:1 (Principle of Induction)
+        Let n₀ ∈ ℤ and let P(n) be a property which is true or false for all n ∈ ℤ with n₀ ≤ n
+
+        Let P(n₀) be true and and assume that if P(n) is true for some n ∈ ℤ with n₀ ≤ n
+        then P(n + 1) is true
+
+        Then P(n) is true for all integers n with n₀ ≤ n
+
+    Proof:
+        Set K := {n ∈ ℕ₀, P(n₀ + n) is true}
+
+        As P(n₀) is true we have 0 ∈ K
+
+        Furthermore if n ∈ K, then P(n₀ + n) is true and so by assumption
+
+        P(n₀ + n + 1) is true consequently.
+
+        S(n) = S(n + 0) = n + S(0) = n + 1 ∈ K
+
+        So, by the axioms os induction K = ℕ₀
+
+    Example 2.2:
+        Show that:
+            ∑ⁿ₁₌₁ i = 1 + 2 + 3 + ... + n = (n * (n + 1))/2
+        for all integers n ≥ 1
+
+        The statement is true for the base case n = 1, as then ∑ⁿ₁₌₁ i = 1
+        and (n * (n + 1))/2 = (1*2)/2 = 1
+
+        Next suppose the statement is true for some integers n ≥ 1 we show it holds for n + 1.
+
+        We have:
+            ∑ⁿ⁺¹₁₌₁ i = (n + 1) + ∑ⁿ₁₌₁ i = (n + 1) + (n * (n + 1))/2 = (n + 1) * (1 + (n / 2)) =
+            = (n + 1) * ((n + 2)/2) = ((n + 1)(n + 2))/2
+
+        Hence the statement is true for n = 1
+
+        In particular the statement is true for all n ≥ 1
+
+    For n, k ∈ ℕ₀ such that 0 ≤ k ≤ n we define the binomial coefficient:
+        (ⁿₖ) = (n!)/(k! * (n - k)!), when n! = {1 | if n = 0,
+                                                Πⁿ₁₌₁ | if n ≥ 1}
+    
+    We claim that all binomial coefficients are integers.
+
+    Check that (ⁿₖ) = 1, if n = 0 or k = 0.
+
+    Hence we assume that neither is zero
+
+    If n = 1, then k = 1 and (¹₁) = 1
+
+    Hence the statement is true for n = 1
+
+    Next assume the statement is true for some integers n ≥ 1 and all integers k with 0 ≤ k ≤ n
+
+    Then for all 1 ≤ k ≤ n we have:
+        (ⁿ⁺¹ₖ) = ((n + 1)!)/(k! * (n + 1 - k)!) = (n! * ((n + 1) - k + k))/(k! * (n + 1 - k)!) =
+        = (n! * (n + 1 - k))/(k! * (n + 1 - k)!) + (n! * k)/(k! * (n + 1 - k)!) =
+        = (n!)/(k! * (n - k)!) + (n)/((k - 1)! * (n - (k - 1))!) = (ⁿₖ) + (ⁿₖ₋₁)
+
+    Both (ⁿₖ) and (ⁿₖ₋₁) are integers by assumption and thus (ⁿ⁺¹ₖ) is an integer
+
+    Finally note that (ⁿ⁺¹ₙ₊₁) = 1
+
+    Hence by induction (ⁿₖ) is an integer for all integers n ≥ 0 and all integers k with 0 ≤ k ≤ n
+
+    Corollary 2.3 (Strong induction)
+        Let  n₀ ∈ ℤ and let P(n) be a property which is true or false, for all n ∈ ℤ with n₀ ≤ n
+
+        Let P(n₀) be true and assume that P(n + 1) is true for some n ∈ ℤ with n₀ ≤ n
+        whenever P(k) is true for all integers k n₀ ≤ k ≤ n
+
+        Then P(n) is true for all integers n with n₀ ≤ n
