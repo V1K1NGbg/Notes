@@ -72,3 +72,102 @@
         whenever P(k) is true for all integers k n₀ ≤ k ≤ n
 
         Then P(n) is true for all integers n with n₀ ≤ n
+
+    Proof:
+        We use induction.
+        
+        The base case holds, as P(n₀) is true.
+
+        Next let P(n) is be true, for some n ∈ ℤ with n₀ ≤ n
+
+        Assume there is some k₀ ∈ {n₀, ..., n} such that P(k₀) is false and choose the smallest such k₀
+
+        Note that k₀ > n₀.
+
+        Then P(k) is true, for all k ∈ ℤ with n₀ ≤ k ≤ k₀-1
+        and so by assumption P(k₀) is true.
+
+        Thus is a contradiction, ie k₀ as above does not exist. 
+        
+        So P(k) is true, for all k ∈ ℤ with n₀ ≤ k ≤ n and so by assumption P(n+1) is true
+
+        Hence by Theorem 2.1, P(n) is true, for all n ∈ ℤ with n₀ ≤ n.
+    
+    Example:
+        Set T₁ = 1, T₂ = 3 and recursively Tₙ = Tₙ₋₁ + Tₙ₋₂, for integers n ≥ 3 (Lucas sequence)
+
+        Prove that:
+            Tₙ < (7/4)ⁿ for all n ≥ 1
+
+            As T₁ = 1 < 7/4 and T₂ = 3 < 49/16 = (7/4)² the statement holds for n ∈ {1, 2}
+
+            Next suppose ir holds for all k ∈ {1, 2, ..., n}, for some integer n ≥ 2
+
+            Then:
+                Tₙ₊₁ = Tₙ + Tₙ₋₁ < (7/4)ⁿ + (7/4)ⁿ⁻¹ = (7/4)ⁿ⁻¹ * ((7/4)+1) =
+                = (7/4)ⁿ⁻¹ * (11/4) < (7/4)ⁿ⁻¹ * (7/4)² = (7/4)ⁿ⁺¹
+                since (11/4) = (44/16) < (49/16) = (7/4)²
+
+            Hence the statement holds for all integers n ≥ 1
+
+    Theorem 2.5 (Well-Ordering Principle):
+        Let S be a non-empty subset of ℕ₀. 
+        
+        Then S has a minimal element, that is, there is some l ∈ S so that l ≤ s, for all s ∈ S
+
+    Proof:
+        Let s be a subset of ℕ₀ without a minimal element.
+
+        Then surely 0 ∉ S.
+
+        Now set K:= {n ∈ ℕ₀ | n ∉ S}
+
+        We say P(n) is true for some n ∈ ℕ₀, if n ∈ K
+
+        Hence P(0) is true.
+
+        Next let n ≥ 0 and assume that P(k) is true, for all k ∈ {0, 1, 2, ..., n}
+
+        Hence k ∉ S for all k ∈ {0, 1, 2, ..., n}
+
+        Then n + 1 ∉ S, as otherwise n + 1 is a minimal element of S, in contradiction to the above assumption.
+
+        Hence n + 1 ∈ K, ie P(n + 1) is true.
+
+        Now by Corollary 2.3 we get that K = ℕ₀
+
+        In particular S = ∅
+
+    Corollary 2.6:
+        There is no a ∈ ℤ such that 0 < a < 1
+
+    Proof:
+        Assume there is such an integer a ∈ ℤ and let S be the set of all such a.
+
+        Then S is non-empty subset of ℕ₀ and as such contains a minimal element l
+
+        Note l ≠ 0.
+        
+        As l < 1, there is some x ∈ ℕ such that l + x = 1.
+
+        Multiplying l onto this equation gives l² + x * l = l
+
+        Clearly, x * l ∈ ℤ and so l² < l
+
+        We also have 0 < l² < 1 that as l² ∈ S
+
+        But this contradicts the minimality of l
+
+        In particular there is no a as described
+
+    Remark 2.7:
+        The integers do not satisfy the Will-Ordering Principle
+        as there are subsets of ℤ that do not contain a minimum element
+
+        Take for instance ℤ or the negative integers
+
+        In particular any number system contains the integers
+        such as Q for instance, cannot satisfy the Well-Ordering Principle either
+
+    
+        

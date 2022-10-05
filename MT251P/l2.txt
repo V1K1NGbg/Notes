@@ -12,38 +12,105 @@ Remark 6:
 
 Remark 7:
     1. Negation (NOT)
-        (not sign)
+        ¬
 
     2. Conjunction (AND)
-        (and sign /\)
+        ∧
 
     3. Disjunction (OR)
-        (or sign \/) 
+        v
 
     Tables:
-        1. Negation
-            p   (not)p
+        1. Negation:
+            p   ¬p
             T   F
             F   T
 
-        2. Conjunction
-            p   q   p /\ q
+        2. Conjunction:
+            p   q   p ∧ q
             T   T   T
             T   F   F
             F   T   F
             F   F   F
 
-        3. Disjunction
-            p   q   p \/ q
+        3. Disjunction:
+            p   q   p v q
             T   T   T
             T   F   T
             F   T   T
             F   F   F
+        4. Implication:
+            p   q   p ⇒ q
+            T   T   T
+            T   F   F
+            F   T   T
+            F   F   T
 
 Example:
-    p   q   (not)q  p/\((not)q) (not)(p/\((not)q))
-    T   T   F       F           T
-    T   F   T       T           F
-    F   T   F       F           T
-    F   F   T       F           T
+    p   q   ¬q  p ∧ ¬q  ¬(p ∧ ¬q)
+    T   T   F     F         T
+    T   F   T     T         F
+    F   T   F     F         T
+    F   F   T     F         T
 
+Example:
+    Check that p ⇒ q is equivalent to ¬p v q
+
+Remark 9:
+    The "If and only if" statement is denoted by p ⇔ q and can be defined as:
+        p ⇔ q = (p ⇒ q) ∧ (q ⇒ p)
+
+Remark 10:
+    Order of operation:
+        ¬ -> ∧ -> v
+
+Tautology:
+    A formula is a tautology if it takes the value T for all possible values of its variables.
+
+Example:
+    p v ¬p is a tautology, because its truth table is:
+        p   ¬p  p v ¬p
+        T   F   T
+        F   T   T
+
+Example:
+    (p ∧ q) ∧ r ∼ p ∧ (q ∧ r)
+
+Proof:
+    p   q   r   p ∧ q   (p ∧ q) ∧ r
+    T   T   T   T       T
+    T   T   F   T       F
+    T   F   T   F       F
+    T   F   F   F       F
+    F   T   T   F       F
+    F   T   F   F       F
+    F   F   T   F       F
+    F   F   F   F       F
+
+    p   q   r   q ∧ r   p ∧ (q ∧ r)
+    T   T   T   T       T
+    T   T   F   F       F
+    T   F   T   F       F
+    T   F   F   F       F
+    F   T   T   T       F
+    F   T   F   F       F
+    F   F   T   F       F
+    F   F   F   F       F
+
+    Same last columns
+
+Remark 11:
+    One can solve that the following equivalences hold:
+        Idempotency: p v p ∼ p, p ∧ p
+        Associative: p v (q v r) ∼ (p v q) v r, p ∧ (q ∧ r) ∼ (p ∧ q) ∧ r
+        Commutativity: p v q ∼ q v p
+        Distributivity: p ∧ (q v r) ∼ (p ∧ q) v (p ∧ r), p v (q ∧ r) ∼ (p v q) ∧ (p v r)
+        Identity: p v T ∼ T, p ∧ T ∼ p, p v F ∼ p, p ∧ F ∼ F
+        Compliments: p v ¬p ∼ T, p ∧ ¬p ∼ F
+        Involution: ¬(¬p) = p
+        De Morgan's Laws: ¬(p v q) ∼ ¬p ∧ ¬q, ¬(p ∧ q) ∼ ¬p v ¬q
+
+Remark 12:
+    You can prove Remark 11 using truth tables.
+    You can replace letters with formulas.
+    You can replace sub-formulas with other formulas.
