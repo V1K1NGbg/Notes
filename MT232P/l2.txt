@@ -144,3 +144,106 @@ Example:
     f: ℝ -> ℝ
     f(x) = x² is onto since -1 ∈ ℝ 
     but f(x) ≠ -1 ∀x ∈ ℝ
+
+Examples:
+    function that is 1-1 and onto: x³ (no repeating outputs and every output is hit)
+    function that is not 1-1 and not onto: x² (repeating outputs but there are outputs that are not hit)
+    function that is 1-1 but not onto: eˣ (no repeating outputs and there are outputs that are not hit)
+    function that is not 1-1 but onto: x * (x - 1) * (x - 2) (repeating outputs but every output is hit)
+
+Defⁿ:
+    If f: A -> B is a function which is 1-1 and onto then we say f is a bijection
+
+Defⁿ:
+    Let A be a set.
+    The identity function idₐ(a) = a, ∀a ∈ A
+
+Defⁿ:
+    Let A and B be sets.
+    Let f: A -> B and g: B -> A be functions.
+
+    We say g is the inverse of f (denote g = f⁻¹)
+
+    If gₒf = idₐ nad fₒg = idᵦ
+    
+    ie g(f(a)) = a, ∀a ∈ A and f(g(b)) = b, ∀b ∈ B
+
+    What kind of functions have inverses?
+
+Thm 1.39:
+    Let f: A -> B be a bijection then f has an inverse
+
+Proof:
+    Given f: A -> B we need to define g: B -> A such that:
+        g(f(a)) = a ∀a ∈ A
+        f(g(b)) = b ∀b ∈ B
+
+    Let b ∈ B, what is g(b)?
+
+    Since f is onto ∃a ∈ A such that f(a) = b
+
+    Define g(b) = a
+
+    Is this well defined?
+    Yes since f is 1-1 there is only one such a.
+
+    So g: B -> A is a function.
+
+    Is g = f⁻¹ 
+    
+    g(f(a)) = g(b) = a, ∀a ∈ A
+    f(g(b)) = f(a) = b, ∀b ∈ B
+
+    So g = f⁻¹ exists
+
+Example:
+    We know f(x) = 3x + 1
+
+    f: ℝ -> ℝ is a bijection
+
+    So g = f⁻¹ exists.
+
+    g(x) = ?
+
+    f(g(y)) = f((y - 1)/3) = 3((y - 1)/3) + 1 = y - 1 + 1 = y
+    g(f(x)) = g((3 * x) + 1) = ((3 * x) + 1 - 1)/ 3 = (3 * x)/ 3 = x
+
+Consider:
+    f(x) = sin(x)
+    f: ℝ -> ℝ ; Range: [-1, 1]
+
+    sin(x): [-(π / 2), (π / 2)] -> [-1, 1] (1-1 and onto)
+    sin⁻¹(x): [-1, 1] -> [-(π / 2), (π / 2)]
+
+Thm 1.42:
+    Let f: A -> B and g: B -> C be bijection.
+
+    Then gₒf: A -> C is also a bijection
+
+Proof:
+    We need to show gₒf is 1-1 and onto
+
+    To show gₒf is 1-1 suppose:
+        gₒf(a₁) = gₒf(a₂)
+        g(f(a₁)) = g(f(a₂))
+
+    So f(a₁) = f(a₂) since g is 1-1
+
+    a₁ = a₂ since f is 1-1
+
+    To show gₒf is onto we need to show if z ∈C then ∃a ∈ A such that:
+        gₒf(a) = z
+        ie g(f(a)) = z
+    
+    Since g is onto ∃w ∈ B
+
+    Since f is onto ∃v ∈ A such that f(v) = w
+
+    gₒf(v) = g(f(v)) = g(w) = z so gₒf is onto.
+
+§ 1.3 Equivalence Relations:
+
+Defⁿ:
+    A relation on a set A is a subset of AxA
+
+    Given a relation ~ we say x ~ y (x is related to y) if (x, y) ∈ ~

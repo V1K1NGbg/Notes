@@ -18,7 +18,7 @@
 
         S(n) = S(n + 0) = n + S(0) = n + 1 ∈ K
 
-        So, by the axioms os induction K = ℕ₀
+        So, by the axioms of induction K = ℕ₀
 
     Example 2.2:
         Show that:
@@ -101,7 +101,7 @@
 
             As T₁ = 1 < 7/4 and T₂ = 3 < 49/16 = (7/4)² the statement holds for n ∈ {1, 2}
 
-            Next suppose ir holds for all k ∈ {1, 2, ..., n}, for some integer n ≥ 2
+            Next suppose it holds for all k ∈ {1, 2, ..., n}, for some integer n ≥ 2
 
             Then:
                 Tₙ₊₁ = Tₙ + Tₙ₋₁ < (7/4)ⁿ + (7/4)ⁿ⁻¹ = (7/4)ⁿ⁻¹ * ((7/4)+1) =
