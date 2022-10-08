@@ -21,5 +21,6 @@ public class l2{
         }else{
             System.out.println("Invalid");
         }
+        in.close();
     }
 }

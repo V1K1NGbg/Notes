@@ -30,5 +30,6 @@ public class l1{
         double result = midN+delta;
 
         System.out.println(result);
+        in.close();
     }
 }
