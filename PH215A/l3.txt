@@ -1,0 +1,27 @@
+p   q   (p ⊃ q)     ~ q     ~ p
+1   1    1 1 1      0 1     0 1
+1   0    1 0 0      1 0     0 1
+0   1    0 1 1      0 1     1 0
+0   0    0 1 0      1 0     1 0 *
+
+If the premises are true and the conclusion is true, the argument is valid
+
+If Afghanistan achieves peace, then the US and Britain will withdraw their troops.
+But the US will not withdraw its troops.
+Therefore, Afghanistan will not achieve peace
+
+p = Afghanistan achieves peace
+q = The US will not withdraw their troops
+r = Britain will withdraw their troops
+
+p   q   r   p ⊃(q . r)      ~ q     ~ p
+1   1   1   1 1 1 1 1       0 1     0 1
+1   1   0   1 1 1 0 0       0 1     0 1
+1   0   1   1 0 0 0 1       1 0     0 1
+1   0   0   1 0 0 0 0       1 0     0 1
+0   1   1   0 1 1 1 1       0 1     1 0
+0   1   0   0 1 1 0 0       0 1     1 0
+0   0   1   0 1 0 0 1       1 0     1 0 *
+0   0   0   0 1 0 0 0       1 0     1 0 *
+
+Valid

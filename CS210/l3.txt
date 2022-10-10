@@ -1,0 +1,39 @@
+Array linear search
+
+    for(int i=0; i<(arr).length; i++){
+        if((int) == ((arr)[i]){
+            return i;
+        } else {
+            return null;
+        }
+    }
+
+Find biggest / smallest
+
+    int (int) = (arr)[0];
+    for(int i=1; i<(arr).length; i++){
+        if((arr)[i] > (int)){
+            (int)=array[i];
+        }
+    }
+    return (int);
+
+Expand an array
+
+    int[] (arr2) = new int[2 * (arr).length];
+    for(int i=0; i<(arr).length ;i++){
+        (arr2)[i]=(arr)[i];
+    }
+    (arr) = (arr2);
+
+Binary search
+
+    guess the middle value every time
+    steps: O(logₙ)
+
+Insert an element into an array
+
+    for(int j=(arr_used_part); j>2; j--){
+        (arr)[j]=(arr)[j-1];
+    }
+

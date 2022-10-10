@@ -1,0 +1,64 @@
+2 - Euclid's Elements
+
+2.1 Postulates and Common Notions
+
+    Postulates:
+        1. A unique straight line can be drawn between any two points
+        2. A given finite straight line can be extended continuous in a straight line
+        3. A point(it's center) and a distance(the length of the radius) define a circle
+        4. All right angles are equal
+        5. if a straight line falling on two straight lines makes the interior angles on the same side
+            less than two lines meet on that side on which the angles are less than two right angles
+
+    Common Notions:
+        1. Things which equal the same thing also equal each other
+        2. If equals are added to equals, then the sums are equal
+        3. If equals are subtracted from equals, then the remainders are equal
+        4. Things which coincide with one another equal one another
+        5. The whole is greater than the part
+
+    Some notations and conventions:
+        1. We denote two points by capital letters: A, B, C
+        2. The line between two points A, B is denoted by AB and it's length is denoted by |AB|
+        3. The angle formed by the two lines AB, AC at point A is denoted by ∠BAC or ∠CAB
+        4. Angles are measured in radians and the magnitude of an angle ∠ABC is denoted by |∠ABC|
+        5. Denote the triangle with △ABC
+        6. Postulate 1 is denoted by P1
+        7. Common notions 1 is denoted by CN1
+        8. Propositions in Euclid's book are denoted by E.1.5 (Book 1, Propositions 5)
+
+2.2 Fundamental Theorems in Euclidean Geometry
+
+    Proof 1:
+        Draw a circle O₁ with center A and radius |AB|(by P3)
+
+        Draw a circle O₂ with center B and radius |AB|(by P3)
+
+        Denote the point of intersection of the two circles by C.
+
+        Then |AC| = |AB| and |BC| = |AB|.
+
+        By CS1 we then have |AC| = |BC| = |AB| and so the triangle △ABC is na equilateral triangle and we are done.
+
+    Definition 1:
+        Two triangles △ABC, △DEF are called congruent if:
+            |AB| = |DE|, |BC| = |EF|, |CA| = |FD| and
+            |∠ABC| = |∠DEF|, |∠BCA| = |∠EFD|, |∠CAB| = |∠FDE|
+
+    Remark 1:
+        Propositions E.1.2 and E.1.3 show how we can construct a line at point A equal to a given line BC 
+        and how we can cut from a longer line AB a section equals in length to a given shorter line CD
+
+        Proposition E.1.4 states the following first method for proving congruence of a triangles
+
+    Proposition 1.2 (SAS)
+        Suppose we have two triangles △ABC, △DEF.
+
+        If |AB| = |DE|, |BC| = |EF| and |∠ABC| = |∠DEF|, then △ABC is congruent to △DEF
+
+    Remark 2:
+        Euclid's proof os SAS uses "superposition"
+
+        Nowadays, SAS a typically taken as an axiom and we will do that
+
+        We will use two other congruence results
