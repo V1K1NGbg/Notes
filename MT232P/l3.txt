@@ -152,4 +152,149 @@ Equivalence Relations:
 
                 So x ∈ [z] ⇒ x ∼ z by definition
 
-        
+    Equivalence relation:
+        ~ relation on a set A withe the properties:
+            1. x ~ x ∀x ∈ A (reflexivity)
+            2. If x ~ y then y ~ x (symmetry)
+            3. If x ~ y and y ~ z then x ~ z (transitivity)
+
+        If ~ is an equivalence relation:
+            [a] = {x ∈ A | x ~ a}
+            a ∈ [a] so [a] ≠ ∅
+
+        Showed:
+            [x] = [z] if and only if x ~ z
+
+    Cor 1.50:
+        Let A be a set and ~ an equivalence relation on A.
+
+        Let x, z ∈ A
+            then either [x] = [z] or [x] ∩ [z] ≠ ∅
+
+    Proof:
+        Suppose [x] ∩ [z] ≠ ∅
+
+        So ∃y such that y ∈ [x] ∩ [z]
+
+        So y ∈ [x] and y = [z]
+        ie y ~ x and y ~ z
+        so x ~ y and y ~ z
+        so x ~ z by transitivity
+        ie [x] = [z]
+
+    These equivalence classes cover all of A since each a ∈ [a] with no overlaps
+
+    Let E be the set of equivalence classes of ~
+
+    E = {[a] | a ∈ A}
+
+    ⋃a ∈ A [a] = A
+    and [a] ∩ [b] = ∅
+    if a ≁ b
+
+    Defⁿ:
+        A partition of a set A is a collection of disjoint subset of A
+        whose union is all of A
+
+        Our equivalence classes of ~ form a partition of A
+
+    Example:
+        Let A be the set of counties in Ireland
+
+        Let:
+            A₁ = {counties in Munster}
+            A₂ = {counties in Leinster}
+            A₃ = {counties in Ulster}
+            A₄ = {counties in Connacht}
+
+        A₁ ∪ A₂ ∪ A₃ ∪ A₄ = A
+        and Aᵢ ∩ Aⱼ = ∅ if i ≠ j
+
+        {A₁, A₂, A₃, A₄} is a partition of A
+
+        We saw that equivalence relations give us partitions
+
+        Now we can see that given a partition of A
+        we can define an equivalence relation on A
+        which has equivalence classes exactly equal to the sets in our partition
+
+        Let D = {Aᵢ} where Aᵢ ∩ Aⱼ = ∅ if i ≠ j
+        ie D is a partition of A 
+
+        Put an equivalence on D such that the Aᵢ's are the equiv classes
+
+        Define x ~D y if x, y ∈ Aᵢ for some i is ~D an equiv relation on A?
+
+        1. Is x ~D x?
+            x ∈ A = ∪Aᵢ ⇒ x ∈ Aᵢ for some i
+
+        2. If x ~D y, is y ~D x?
+            x ~D y ⇒ ∃ j such that x, y ∈ Aⱼ
+            so y, x ∈ Aⱼ ⇒ y ~D x
+
+        3. If x ~D y and y ~D z is x ~D z
+            x ~D y ⇒ ∃i such that x, y ∈ Aᵢ
+            y ~D z ⇒ ∃j such that z, y ∈ Aⱼ
+                y ∈ Aᵢ ∩ Aⱼ ⇒ i = j (otherwise Aᵢ ∩ Aⱼ = ∅)
+
+            ⇒ x ∈ Aᵢ, z ∈ Aᵢ
+            ⇒ x ~D z
+
+§ 1.4 - Cardinality
+    Cardinality <-> size
+
+    A = {a, b, c} <-> {cat, dog, mouse}
+
+    {1, 2, 3, ..., n}
+    <-> A bijection
+
+    If A and B are finite sets, we can see that there is a bijection between them
+    if and only if A and B have the same number of elements (Prove)
+
+    Defⁿ:
+        Let x and y be two sets we say x is numerically equivalent to y(or has the same cardinality as y)
+        ∃f: x -> y which is a bijection
+
+    Example:
+        1. If A = {a, b, c}, B = {1, 2, 3}
+            f: B -> A 
+
+            f(1) = a
+            f(2) = b
+            f(3) = c
+
+            is a bijection
+
+        2. A = {1, 2, 3, 4, 5, 6}, B = {counties in Munster}
+            f: A -> B
+
+            f(1) = Cork, ...
+
+            f is a bijection
+                A, B are numerically equivalent
+
+        3. Let A = ℕ, B = {2, 4, 6, 8}
+            f: A -> B
+
+            f(n) = 2n is a bijection
+
+            So ℕ and the even numbers are numerically equivalent or have same cardinality
+
+        4. Galileo noticed
+
+            1 -> 1²
+            2 -> 2² = 4
+            ...
+            n -> n²
+
+            gives a bijection from ℕ to the perfect squares
+
+            So they have same cardinality
+
+        Defⁿ:
+            We say a set A is finite if ∃ a bijection
+
+            f:{1, 2, 3, ..., n} -> A
+            for some n ∈ ℕ
+
+            OOtherwise we say A is infinite
