@@ -1,0 +1,115 @@
+3. The Division Algorithm:
+    Lemma 3.1:
+        Let a, b, c ∈ ℤ such that a < b
+        
+        Then:
+            1. a + c < b + c
+            2. If c > 0, then a * c < b * c
+            3. If c < 0, then a * c > b * c
+
+    Proof:
+        By assumption a + x = b for some x ∈ ℕ
+            1. Then (a + c) + x = b + c and a + c < b + c ensues
+            2. (a + x) * c = b * c and so
+                a * c + x * c = b * c
+
+                Since c > 0 we have c ∈ ℕ and so x * c ∈ ℕ
+
+                Thus a * c < b * c
+
+            3. By 2. we have a * -c < b * -c
+                Adding a * c + b * c onto both sides we get:
+                    (a * -c) + (a * c) + (b * c) < (a * c) + (b * c) + (b * -c) by 1.
+
+                    which cancels to b * c < a * c
+
+    Remark 3.2:
+        Let x ∈ ℤ
+
+        The absolute value |x| of x is defined as:
+            |x| := { x | if x ≥ 0,
+                    -x | if x < 0}
+
+        Note that |x| = max{x, -x} = √(x²)
+
+        The following properties hold for all x, y ∈ ℤ
+            1. |x| ≥ 0
+            2. |x| = 0 if and only if x = 0
+            3. |xy| = |x| * |y|
+            4. |x| ≤ c if and only if -c ≤ x ≤ c, for any c ∈ ℚ
+            5. (triangle inequality) |x + y| ≤ |x| + |y|
+
+        Properties 1. - 4. are easily verified by looking at the cases x < 0 and x ≥ 0
+
+        For 5. we note that -|x| ≤ x ≤ |x| and -|y| ≤ y ≤ |y|, by 4.
+
+        Now by repeated application of Lemma 3.1 1.:
+            -(|x| + |y|) = -|x| + (-|y|) ≤ x + (-|y|) ≤ x + y ≤ |x| + y ≤ |x| + |y|,
+            that is -(|x| + |y|) ≤ x + y ≤ |x| + |y|
+
+        Thus by 4.:
+            |x + y| ≤ |x| + |y|
+
+    Defⁿ:
+        Let a, b ∈ ℤ
+        
+        We say a divides b and write a | b i there is some c ∈ ℤ such that a * c = b
+
+        Alternatively we say that a is a factor of b and b is a multiple of a
+
+    Lemma 3.4:
+        Let a, b, c ∈ ℤ then:
+            1. a | 0
+            2. If 0 | a, then a = 0
+            3. a | a
+            4. 1 | a
+            5. If a | b and b ≠ 0 then a ≤ |b|
+            6. If a | b and b | c then a | c
+            7. If a | b and a | c and u, v ∈ ℤ then a | (u * b + v * c)
+
+    Proof:
+        1. a * 0 = 0
+        2. By assumption 0 * c = a for some c ∈ ℤ
+            Hence a = 0, c = 0
+        3. a * 1 = a
+        4. 1 * a = a
+        5. As surely a ≤ |a| it suffices to show that |a| ≤ |b|
+            By assumption a * z = b for some z ∈ ℤ and |a| * x = |b| for:
+                x:= |z| ∈ ℕ₀
+
+            Note that x ≠ 0 as otherwise b = 0
+
+            In particular x ≥ 1
+
+            If x = 1 then |a| = |b|
+
+            If x > 1 then |b| = |a| * (1 + x - 1) = |a| + |a| * (x - 1)
+
+            If a ≠ 0 then  |a| * (x - 1) ∈ ℕ₀
+                and so |a| < |b|
+
+            If a = 0, then |a| < |b|
+
+            Overall |a| ≤ |b| as required
+
+    Example:
+        We claim that 11 | 23ⁿ - 1, for all integers n ≥ 0
+
+        For n = 0 we get that 23ⁿ - 1 = 1 - 1 = 0
+            which is divisible by 11. Next assume that 11 | 23ⁿ - 1
+            for some integer n ≥ 0
+        
+        Then 23ⁿ⁺¹ - 1 = 23ⁿ⁺¹ - 23 + 22 = 23 * (23ⁿ - 1) + 22
+
+        By assumption 11 | 23ⁿ - 1
+
+        Also 22 = 11 * 2 and so 11 | 22
+
+        So by Lemma 3.4 7. we got that 11 | 23 * (23ⁿ - 1) + 22 = 23ⁿ⁺¹ - 1
+
+        Now he claim follows by induction
+
+    Theorem 3.6 (Division Algorithm):
+        Let a, b ∈ ℤ with b ≠ 0
+
+        Then there exist unique q, r ∈ ℤ such that a = q * b + r and 0 ≤ r ≤ |b|
