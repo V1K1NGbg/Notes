@@ -2,27 +2,35 @@ import java.util.*;
 
 public class l3 {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
 
-		int lower = sc.nextInt(); 
-		int upper = sc.nextInt(); 
+		Scanner in = new Scanner(System.in);
 
-		for (int i = lower; i <= upper; i++) {
+		long starting_number = in.nextLong();
+		long ending_number = in.nextLong();
+		final long startTime = System.currentTimeMillis();
+		long sqr;
+		boolean prime;
+		long total = 0;
 
-            if (i == 2) {
+		for (long current = starting_number; current <= ending_number; current++) {
 
-                    System.out.println(i);
-            }
+			sqr = (long) Math.sqrt(current);
+			prime = true;
 
-            for (int j = 2; j * j <= i; j++) {
-
-                if (i % j != 0) {
-                    
-                    System.out.println(i);
-
+			for (long i = 2; i <= sqr; i++) {
+				if (current % i == 0) {
+					prime = false;
+				}
+			}
+			if (prime) {
+				System.out.println(current);
+				total = total + 1;
 			}
 		}
-		}
-		sc.close();
+		System.out.println(total);
+		in.close();
+		final long endTime = System.currentTimeMillis();
+
+		System.out.println("Total execution time: " + (endTime - startTime));
 	}
 }
