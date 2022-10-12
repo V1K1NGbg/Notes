@@ -91,6 +91,34 @@
             If a = 0, then |a| < |b|
 
             Overall |a| ≤ |b| as required
+        6. By definition:
+            a | b is equivalent to b = a * m and b | c is the same as c = b * n
+                where m, n ∈ ℤ
+
+            In c = b * n we can replace b with a * m by assumption which gives:
+                c = (a * m) * n = a * n * m = a * (m * n)
+
+            m and n are integers ∴ m * n must also be an integer, meaning that we can replace it with k ∈ ℤ:
+                c = a * k which by definition is equivalent to a | c
+        7. By definition:
+            a|b is equivalent to b = a * m and a|c is equivalent to c = a * n
+                where m, n ∈ ℤ
+
+            We can multiply both sides of the first equation by s:
+                s * b = a * (s * m)
+            We can do the same with the second one, but with t:
+                t * c = a * (t * n)
+
+            Now we can add the left and the right sides of the equation together
+                to form a new one:
+                    (s * b) + (t * c) = a * (s * m) + a * (t * n)
+
+            Now we can bring the a to the front on the right side:
+                    (s * b) + (t * c) = a * ((s * m) + (t * n))
+
+            m, n, s and t are integers ∴ (s * m) + (t * n) must also be an integer, meaning that we can replace it with k ∈ ℤ:
+                (s * b) + (t * c) = a * k which  by definition is equivalent to a | (s * b) + (t * c)
+
 
     Example:
         We claim that 11 | 23ⁿ - 1, for all integers n ≥ 0
@@ -113,3 +141,90 @@
         Let a, b ∈ ℤ with b ≠ 0
 
         Then there exist unique q, r ∈ ℤ such that a = q * b + r and 0 ≤ r ≤ |b|
+
+    Proof:
+        Without lose of generality b > 0
+
+        Let S = {s ∈ ℕ₀ | s = a - q * b for some q ∈ ℤ}
+
+        We claim that S is non-empty
+
+        If a ≥ 0 then choose q = 0 and so s = a - q * b = a ∈ ℕ₀
+
+        If a < 0 we choose q = a then:
+            s = a - q * b = a - a * b = (-a) * (-1) + (-a) * b = (-a) * (b - 1)
+
+        But 1 ≤ b by Corollary 2.6 and so b - 1 ≥ 0
+
+        Since -a > 0 we get s ∈ ℕ₀
+
+        Now S contains a minimal element r by Theorem 2.5
+
+        Note that r ≥ 0 and r = a - q * b for some q ∈ ℤ or in other words a = (q * b) + r
+
+        Next we show that r < |b| = b
+
+        Assume otherwise that is b ≤ r
+
+        Then 0 ≤ r - b and so:
+            0 ≤ r - b = (a - q * b) - b = a - (q + 1) * b
+
+        But then r - b ∈ S and surely r -b < r in contradiction to the minimality of r
+
+        In particular we have r < b = |b|
+
+        It remains to prove uniqueness of q and r
+
+        So let us assume that a = q = q' * b + r' for q', r' ∈ ℤ such that 0 ≤ r' < b
+
+        Without loss of generality we assume that r ≤ r'
+
+        Then:
+            0 = a - a = (q * b + r) - (q' * b + r') = (q - q') * b + (r - r') and so
+            0 ≤ r' - r = (q * q') * b
+
+        As b > 0 we have (q * q') ≥ 0 by Lemma 3.1
+
+        On the other hand r' < b and so r' - r < b - r < b by Lemma 3.1
+
+        Therefore (q - q') * b < b
+
+        Now q - q' = 0 as otherwise (q * q') * b > 0
+
+        Hence q = q' and consequently r' - r = 0 and so r = r'
+
+    Example:
+        We have 15 = 2 * 6 + 3 is the only way to write 15as a multiple of 6 plus a natural number less than 6
+
+    Example:
+        Let n ∈ ℤ
+
+        Then there are q ∈ ℤ and r ∈ {0, 1} such that n = 2 * q + r
+
+        In other words either n = 2 * q in which case we call n even on n = 2q + 1, in which case we call n odd
+
+    Example:
+        We show that every odd square S = k² where k ∈ ℤ is of the form 8 * n + 1 for some n ∈ ℤ
+
+        If k = 2 * q for some q ∈ ℤ then S = k² = (2 * q)² = 2 * (2 * q²) is not odd
+
+        So we have k = 2 * q + 1 for some q ∈ ℤ
+
+        Then s = k² = (2 * q + 1)² = 4 * q² + 4 * q + 1 = 4 * q * (q + 1) + 1
+
+        Note that either q or q + 1 is even and therefore q * (q + 1) = 2 * n for some n ∈ ℤ
+
+        Thus s = 4 * q * (q + 1) + 1 = 4 * (2 * n) + 1 = 8 * n + 1
+
+    Example:
+        Let n ∈ ℤ
+
+        Then (n * (n² + 2))/(3) ∈ ℚ
+
+        But is it in ℤ?
+        
+        There are q ∈ ℤ and r ∈ {0, 1, 2} such that n = 3 * q + r that is n = 3 * q or n = 3 * q + 1 or 3 * q + 2
+
+        If n = 3 * q then surely 3 | n
+
+        If n = 3 * q + 1 then n² + 2 = (3 * q + 1)² + 2 = 9 * q² + 6 * q + 3 = 3 * (3 * q² + 2 * q + 1) and so 3 | n² + 2

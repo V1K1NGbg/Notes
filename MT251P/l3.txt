@@ -62,3 +62,102 @@
         Nowadays, SAS a typically taken as an axiom and we will do that
 
         We will use two other congruence results
+
+    Fact ASA:
+        Suppose we have triangles △ABC, △DEF
+
+        If |∠ABC| = |∠DEF|, |BC| = |EF| and |AC| = ???
+
+    Fact SSS:
+        Suppose we have two triangles △ABC, △DEF ???
+
+    Proof: (Suppose ???
+
+        Choose F on AD and G on AE such that |AG| = |AF| (by Proposition E.1.3)
+
+        Join F to C and join B to G
+
+        Consider the triangle △ABG, △ACF
+
+        We have |AC| = |AB|, |AF| = |AG|, |∠FAC| = |∠BAG| and so SAS implies that:
+            △ABG is congruent to △ACF
+
+        So |FC| = |BG|, |∠AFC| = |∠AGB|
+
+        Hence |∠BFC| = |∠CGB| and |FC|
+
+        Also since |AF| = |AG| and |AB| = |AC| then we get |BF| = |CG| (by CN3)
+
+        So SAS implies that △BFC is congruent to △CGB then:
+            |∠ABC| = |∠ABG| - |∠CBG| = |∠ACF| - |∠FCB| = |∠BCA|
+
+    Proposition 1.4:
+        Suppose △ABC is a triangle with |∠ABC| = |∠BCA|
+
+        Then |AB| = |AC|
+
+    Proof:
+        We will prove this by contradiction.
+
+        Suppose |AB| ≠ |AC|
+
+        Then we either have |AB| > |AC| or |AB| < |AC|
+
+        Case 1.:
+            Suppose |AB| > |AC|
+
+            Choose D on AB with |BD| = |AC|
+
+            ???
+
+        Case 2.:
+            Suppose |AB| < |AC|
+
+            ???
+
+Section 2.3:
+    ???
+
+    Proposition 1.5:
+        To construct the bisector of a given angle ∠BAC
+
+    Proof:
+        Choose D on AB and E on AC with |AE| = |AD|
+
+        Join D to E and construct the equilateral triangle △DEF on DE
+
+        Join A to F
+
+        By SSS we get that △ADF is congruent to △AEF and so |∠DAF| = |∠EAF|
+
+        Hence AF bisects ∠DAE which equals ∠BAC and we are done
+
+Section 2.4: (Angles and Parallels)
+    Remark 3:
+        We will use the following results:
+            1. Suppose a line CD is a drawn from a point C on the line AB between A and B
+                
+                Then |∠ACD| + |∠DCB| = π
+
+            2. Suppose C is a point not on a line AB
+
+                Then there exists a unique line through C that is parallel to AB
+
+    Remark 4:
+        Result 2 in remark 3 above is equivalent to P5
+
+        It is a simpler version of P5
+
+    Proposition 1.6:
+        Suppose the line AB and CD intersect at the point E. Then |∠AEC| = |∠BED|
+
+        The angles ∠AEC and ∠BED are called opposite angles
+
+    Proof:
+        We have |∠AEC| + |∠CED| = π and |∠CEB| + |∠BED| = π
+
+        By CN1 we then get |∠AEC| + |∠CEB| = |∠CEB| + |∠BED|
+
+        Hence |∠AEC| = |∠BED|
+
+    
