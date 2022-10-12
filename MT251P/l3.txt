@@ -64,14 +64,19 @@
         We will use two other congruence results
 
     Fact ASA:
-        Suppose we have triangles △ABC, △DEF
+        Suppose we have two triangles △ABC, △DEF
 
-        If |∠ABC| = |∠DEF|, |BC| = |EF| and |AC| = ???
+        If |∠ABC| = |∠DEF|, |BC| = |EF| and ||∠BCA| = |∠EFD| then △ABC is congruent to △DEF
 
     Fact SSS:
-        Suppose we have two triangles △ABC, △DEF ???
+        Suppose we have two triangles △ABC, △DEF
 
-    Proof: (Suppose ???
+        If |AB| = |DE|, |BC| = |EF| and |AC| = |DF| then △ABC is congruent to △DEF
+
+    Proposition 1.3:
+        Suppose we have an is isosceles triangle △ABC with |AB| = |AC| then |∠ABC| = |∠BCA|
+
+    Proof:
 
         Choose F on AD and G on AE such that |AG| = |AF| (by Proposition E.1.3)
 
@@ -108,15 +113,18 @@
 
             Choose D on AB with |BD| = |AC|
 
-            ???
+            Join C to D and use SAS to get that △ABC is congruent to △DEF which contradicts CN5
+
+            Hence |AB| > |AC| is false
 
         Case 2.:
             Suppose |AB| < |AC|
 
-            ???
+            Use a similar approach as in Case 1 to get that |AB < |AC| is false
 
-Section 2.3:
-    ???
+        Overall then we have |AB| = |AC| and we are done
+
+2.3 Some elementary constructions
 
     Proposition 1.5:
         To construct the bisector of a given angle ∠BAC
