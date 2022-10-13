@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class l03 {
+public class l03v1 {
 	public static void main(String[] args) {
 
 		Scanner in = new Scanner(System.in);
@@ -23,7 +23,7 @@ public class l03 {
 				}
 			}
 			if (prime) {
-				System.out.println(current);
+				
 				total = total + 1;
 			}
 		}

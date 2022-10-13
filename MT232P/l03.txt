@@ -256,7 +256,7 @@ Equivalence Relations:
         ∃f: x -> y which is a bijection
 
     Example:
-        1. If A = {a, b, c}, B = {1, 2, 3}
+        If A = {a, b, c}, B = {1, 2, 3}
             f: B -> A 
 
             f(1) = a
@@ -265,7 +265,8 @@ Equivalence Relations:
 
             is a bijection
 
-        2. A = {1, 2, 3, 4, 5, 6}, B = {counties in Munster}
+    Example:
+        A = {1, 2, 3, 4, 5, 6}, B = {counties in Munster}
             f: A -> B
 
             f(1) = Cork, ...
@@ -273,14 +274,16 @@ Equivalence Relations:
             f is a bijection
                 A, B are numerically equivalent
 
-        3. Let A = ℕ, B = {2, 4, 6, 8}
+    Example:
+        Let A = ℕ, B = {2, 4, 6, 8}
             f: A -> B
 
             f(n) = 2n is a bijection
 
             So ℕ and the even numbers are numerically equivalent or have same cardinality
 
-        4. Galileo noticed
+    Example:
+        Galileo noticed
 
             1 -> 1²
             2 -> 2² = 4
@@ -291,10 +294,115 @@ Equivalence Relations:
 
             So they have same cardinality
 
-        Defⁿ:
-            We say a set A is finite if ∃ a bijection
+    Defⁿ:
+        We say a set A is finite if ∃ a bijection
 
-            f:{1, 2, 3, ..., n} -> A
-            for some n ∈ ℕ
+        f:{1, 2, 3, ..., n} -> A
+        for some n ∈ ℕ
 
-            OOtherwise we say A is infinite
+        Otherwise we say A is infinite
+
+    Example:
+        ℕ and ℤ are numerically equivalent
+
+        f: ℕ -> ℤ a bijection
+
+        f(n) = {n/2, if n is even,
+                -((n-1)/2), if n is odd}
+
+        If we have a bijection between ℕ and a set A
+
+        Let f(n) be denoted by aₙ
+
+        A = {a₁, a₂, a₃, ...}
+
+        We can list the elements
+
+    Question:
+        Can you do this for any set?
+
+        Is ℚ numerically equivalent to ℕ?
+
+        What about ℝ?
+
+    Example:
+        We can find intervals in ℝ which are numerically equivalent to ℝ
+
+        (-π/2, π/2) is numerically equivalent to ℝ since:
+            f(x) = tan(x)
+
+        tan(x):
+            (-π/2, π/2) -> ℝ is a bijection
+
+        We can also show that (-1, 1) is numerically equivalent to ℝ
+
+    x/(x² - 1)
+        (-1, 1) has the same cardinality as ℝ
+
+    Defⁿ:
+        Let there be an equivalence relation ~
+
+        Let S be the set of subsets of u
+
+        We will define ~ on S
+
+        If A, B ∈ 𝕊, we say A ~ B if A is numerically equivalent to B
+            ie ∃f: A -> B a bijection
+
+        Check ~ is an equivalence relation on S
+
+        1. Is A ~ A ∀A ∈ S:
+            Yes
+            
+            Let f = idₐ
+
+        2. If A ~ B, is B ~ A?
+            Yes, if:
+                f: A -> B isa bijection
+                f⁻¹: B -> C is also a bijection
+
+        3. If A ~ B and B ~ C is A ~ C?
+            A ~ B ⇒ ∃f: A -> B a bijection
+            B ~ C ⇒ ∃g: B -> C
+
+        Let h: A -> C be gₒf: A -> C + we showed that this is also a bijection
+
+        Think of:
+            [ℕ] = {ℕ, ℤ, E, O, ...}
+            [ℝ] = {ℝ, (-π/2, π/2), (-1, 1), ...}
+        
+        Where is ℚ?
+        
+        Is [ℕ] ∩ [ℝ] = ∅?
+
+    Thm 1.59: (The Schroeder-Bernstein Theorem)
+        If x and y are sets each of which is numerically equivalent to a subset of the other then:
+            X is numerically equivalent to y
+
+    Defⁿ: 
+        We say a set A is countably infinite if ∃ a bijection from ℕ to A
+
+        We say a set is countable if it is either finite or countably infinite
+
+        So ℤ, ℕ, E etc are countably infinite
+
+        We say a set is uncountable if it is not countable
+
+    Thm 1.62:
+        Every subset of a countable set is countable
+
+    Proof:
+        Let A be a countable set
+
+        Let B ⊂ A
+
+        If B is finite, then it is a countable
+
+        So assume B is infinite
+
+        We want to prove that it is countably infinite
+
+        Since A s countably infinite we can write A as {a₁, a₂, a₃, ...}
+
+        f: ℕ -> B
+        f(x) = aₙₖ

@@ -21,7 +21,7 @@ public class l03v2 {
                     }
                 }
                 if (i >= starting_number) {
-                    System.out.println(i);
+                    
                     total = total + 1;
                 }
             }
