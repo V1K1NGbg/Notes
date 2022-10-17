@@ -59,6 +59,9 @@ public class l03v3 {
         }
 
         System.out.println(total);
+
+        in.close();
+
         final long endTime = System.currentTimeMillis();
 
         System.out.println("Total execution time: " + (endTime - startTime));
