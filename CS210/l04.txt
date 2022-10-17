@@ -1,0 +1,45 @@
+Bit manipulation:
+    0       -   00000000 00000000 00000000 00000000
+    -1      -   11111111 11111111 11111111 11111111
+    -2      -   11111111 11111111 11111111 11111110
+    65535   -   00000000 00000000 11111111 11111111
+    -65535  -   11111111 11111111 00000000 00000001
+
+    &   -   bitwise AND             -   The bits in the result are set to 1 where the corresponding bits in the two operands are both 1, the other bits are set to 0
+    |   -   bitwise inclusive OR    -   The bits in the result are set to 1 where at least one of the corresponding bits in the two operands is 1, the other bits are set to 0
+    ^   -   bitwise exclusive OR    -   The bits in the result are set to 1 where the corresponding bits in the two operands are different, the other bits (where the corresponding bits in the two operands are the same) are set to 0
+    <<  -   left shift              -   Shifts the bits of the first operand left by the number of bits specified by the second operand; fill from the right with 0.
+    >>  -   signed right shift      -   Shifts the bits of the first operand right by the number of bits specified by the second operand. If the first operand is negative, 1s are filled in from the left; otherwise, 0s are filled in from the left.
+    >>> -   unsigned right shift    -   Shifts the bits of the first operand right by the number of bits specified by the second operand; 0s are filled in from the left.
+    ~   -   bitwise complement      -   All 0 bits are set to 1, and all 1 bits are set to 0.
+
+    116         =   00000000 00000000 00000000 01110100
+    116 << 5    =   00000000 00000000 00001110 10000000
+    116 >> 5    =   00000000 00000000 00000000 00000011
+
+    -116        =   11111111 11111111 11111111 10001100
+    -116 >> 3   =   11111111 11111111 11111111 11110001
+    -116 >>> 3  =   00011111 11111111 11111111 11110001
+
+    116         =   00000000 00000000 00000000 01110100
+    ~116        =   11111111 11111111 11111111 10001011
+    ~116        =   -117
+
+
+Complexity:
+    O(n)    -   The rate at which the running time increases is proportional to the rate at which the size increases
+    O(n2)   -   Running time increases proportional to the square of the size of the problem
+    O(1)    -   Running time is not related to the size of the problem
+    O(log n)-   Time increases slowly at log the rate of the size
+
+Known algorithm complexity:
+    Linear Search                   O(n)
+    Binary Search                   O(log n)
+    Insertion in unordered array    O(1)
+    Insertion in ordered array      O(n)
+    Deletion in unordered array     O(n)
+    Deletion in ordered array       O(n)
+
+Timing a program:
+    long start = System.currentTimeMillis();
+    long elapsed = System.currentTimeMillis() - start;

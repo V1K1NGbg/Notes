@@ -1,0 +1,122 @@
+Thm 1.62:
+    A subset of any countable set is countable
+
+Proof:
+    Suppose A is countable and B ⊂ A
+
+    If B is finite we are done
+    ⇒ assume B is infinite need f: ℕ -> B which is a bijection
+
+    We know A is countable
+    ⇒ we can list the elements of A = {a₁, a₂, a₃, ...}
+
+    Let n₁ be the smallest positive integer of aₙ ∈ B
+
+    Let n₂ be the smallest integer which is greater than n₁ with aₙ₂ ∈ B
+
+    Carry on like this so nₖ is the smallest integer bigger than nₖ₋₁ such that
+    aₙₖ ∈ B
+
+    Define:
+        f: ℕ -> B
+        f(k) = aₙₖ
+
+    Check this is 1-1 and onto so B is countably infinite
+
+We can use the theorem to show that:
+    1. B is countable by showing B ⊂ A
+        where A is countable
+
+    2. A is uncountable by showing B ⊂ A
+        and B is uncountable
+
+Notation:
+    Let A be a set and for each α ∈ A suppose we have a set Eₓ
+
+    Define ⋃(α∈A) Eₓ = {x | x ∈ Eₓ ∃α ∈ A}
+
+Thm 1.63:
+    Let {Eₙ}n∈ℕ be a collection of countable sets.
+
+    Then S = ⋃(n∈ℕ)Eₙ is also countable
+
+Proof:
+    Since Eₙ is countable we can write Eₙ = {xₙ₁, xₙ₂, xₙ₃, ...}
+
+    x₁₁, x₁₂, ...
+    x₂₁, x₂₂, ...
+    ..., ..., ...
+
+    This array contains all elements of S by sweeping diagonally through the array
+
+    Is it possible that some of the elements appear on this list more than once
+        (if an element belongs to two different Eₙ and Eₘ then it will appear twice on list)
+
+    But there is a subset T < ℕ which is numerically equivalent to S since ℕ is countable
+
+    Our last theorem tells us that T is countable.
+
+    So S is numerically equivalent  to a countable set ⇒ S is countable
+
+Corollary 1.64:
+    Let A be a countable set and suppose ∀α in A ∃ a set Bα
+
+    Then  ⋃(α∈A) Bₓ is countable
+
+Proof:
+    Exercise???
+
+Thm 1.65:
+    ℚ is a countable set
+
+Proof:
+    Let Aₖ = {0/k, 1/k, -1/k, 2/k, -2/k, 3/k, -3/k} for k ∈ ℕ
+
+    Clear each Aₖ is countable since:
+        fₖ: ℤ -> aₙ
+        fₖ(n) = n/k is 1-1 and onto
+
+    ℚ = ⋃(k∈ℕ) Aₖ
+
+    So ℚ is a countable union of countable sets ⇒ ℚ is countable
+
+Thm 1.66:
+    ℝ is uncountable
+
+Proof:
+    We will prove (0, 1) is uncountable
+
+    Then since (0, 1) ⊂ ℝ we see that ℝ is uncountable (By Thm 1.62)
+
+    We need to prove that there is no bijection from ℕ to (0, 1)
+
+    We will assume that there is a bijection:
+        f: ℕ -> (0, 1) and find a contradiction
+
+    If x ∈ (0, 1) then it has a decimal expansion x = 0 . x₁, x₂, x₃, ...
+
+    Where xᵢ ∈ {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+    Suppose f: ℕ -> (0, 1) is a bijection
+
+    We can list the images of ℕ as follows
+
+    f(1) = 0 . a₁₁, a₁₂, a₁₃, ...
+    f(2) = 0 . a₂₁, a₂₂, a₂₃, ...
+    f(3) = 0 . a₃₁, a₃₂, a₃₃, ...
+    ...        ...  ...  ...
+
+    ie aₙₖ is the k-th digit after the decimal point in f(k)
+
+    We will find b ∈ (0, 1) such that f(k) ≠ b ∀k ∈ ℕ
+
+    Let b = 0 . b₁, b₂, b₃, ...
+        where bₖ = {2 if aₖₖ ≠ 2,
+                    3 if aₖₖ = 2}
+
+        b ∈ (0, 1) and b ≠ f(k) since bₖ ≠ aₖₖ so b and f(k) differ in the k-th digit
+
+    So f is not onto -><- (contradiction)
+
+    So ∄ f: ℕ -> (0, 1) a bijection
+    ⇒ (0, 1) is uncountable
