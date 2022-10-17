@@ -98,7 +98,7 @@
             In c = b * n we can replace b with a * m by assumption which gives:
                 c = (a * m) * n = a * n * m = a * (m * n)
 
-            m and n are integers ∴ m * n must also be an integer, meaning that we can replace it with k ∈ ℤ:
+            Since m and n are integers ∴ m * n must also be an integer, meaning that we can replace it with k ∈ ℤ:
                 c = a * k which by definition is equivalent to a | c
         7. By definition:
             a|b is equivalent to b = a * m and a|c is equivalent to c = a * n
@@ -116,15 +116,17 @@
             Now we can bring the a to the front on the right side:
                     (s * b) + (t * c) = a * ((s * m) + (t * n))
 
-            m, n, s and t are integers ∴ (s * m) + (t * n) must also be an integer, meaning that we can replace it with k ∈ ℤ:
-                (s * b) + (t * c) = a * k which  by definition is equivalent to a | (s * b) + (t * c)
+            Since m, n, s and t are integers ∴ (s * m) + (t * n) must also be an integer, meaning that we can replace it with k ∈ ℤ:
+                (s * b) + (t * c) = a * k which by definition is equivalent to a | (s * b) + (t * c)
 
 
     Example:
         We claim that 11 | 23ⁿ - 1, for all integers n ≥ 0
 
         For n = 0 we get that 23ⁿ - 1 = 1 - 1 = 0
-            which is divisible by 11. Next assume that 11 | 23ⁿ - 1
+            which is divisible by 11. 
+            
+        Next assume that 11 | 23ⁿ - 1
             for some integer n ≥ 0
         
         Then 23ⁿ⁺¹ - 1 = 23ⁿ⁺¹ - 23 + 22 = 23 * (23ⁿ - 1) + 22
@@ -135,7 +137,7 @@
 
         So by Lemma 3.4 7. we got that 11 | 23 * (23ⁿ - 1) + 22 = 23ⁿ⁺¹ - 1
 
-        Now he claim follows by induction
+        Now the claim follows by induction
 
     Theorem 3.6 (Division Algorithm):
         Let a, b ∈ ℤ with b ≠ 0
