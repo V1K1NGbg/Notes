@@ -25,8 +25,9 @@
         Case 2.:
             Suppose |∠AGF| > |DHE|
 
-            ???
+            A similar approach as in case 1 will show that |∠AGF| > |∠DHE| is false
 
+            So |∠AGF| = |∠DHE|
 
     Proposition 1.8:
         Suppose △ABC is a triangle
@@ -71,7 +72,12 @@
 
     Proposition 1.11:
         Suppose △ABC and △DEF are similar triangles then:
-            ???
+            |DE|/|AB| = |EF|/|BC| = |DF|/|AC|
+
+    Proposition 1.12: (Pythagorean's Theorem)
+        Suppose △ABC is a right angled triangle with ∠ABC is a right angle
+
+        Then |AB|² + |BC|² = |AC|²
 
     Proof:
         Draw a perpendicular from B onto AC at D.
@@ -98,12 +104,14 @@
 
         Here 30 is the magnitude and south west is the direction
 
-        If a thing only requires a magnetude it can be described by a scaller (or constant)
+        If a thing only requires a magnitude it can be described by a scaler (or constant)
 
-        For example length is a scaller because it only requires a magnetude
+        For example length is a scaler because it only requires a magnitude
 
         You can think of vector as being a path (in a particular direction) 
             between two points (called the terminal point)
 
-        The vector
+        The vector v̱ starting at A and finishing at B is also denoted by:
+            v̱ = v⃗ = AB⃗
 
+        The magnitude of v̱ is the distance from A to B
