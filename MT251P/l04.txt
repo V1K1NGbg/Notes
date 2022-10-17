@@ -1,0 +1,109 @@
+    Proposition 1.7:
+        Suppose AB and CD are parallel lines and EF is a third line 
+            that intersects AB at G and intersects CD at H
+
+        Then |∠AGF| = |∠DHE|
+
+        The angle ∠AGF and ∠DHE are called alternate angles
+
+    Proof:
+        We prove it by contradiction
+
+        Suppose |∠AGF| ≠ |∠DHE|
+
+        Then either |∠AGF| < |DHE| or |∠AGF| > |DHE|
+
+        Case 1.:
+            Suppose |∠AGF| < |DHE|
+
+            Then |∠AGF| + |∠EHC| < |∠DHE| + |∠EHC| = π
+
+            By P5, the lines AB and CD  meet on the side of A, which is false.
+
+            So |∠AGF| < |DHE| is false
+
+        Case 2.:
+            Suppose |∠AGF| > |DHE|
+
+            ???
+
+
+    Proposition 1.8:
+        Suppose △ABC is a triangle
+
+        Then |∠ABC| + |∠BCA| + |∠CAB| = π
+
+    Proof:
+        Draw a line DE through A that is parallel to BC
+
+        Then:
+            |∠DAB| + |∠CAB| + |∠EAC| = π
+            
+        Now:
+            |∠DAB| = |∠ABC| and |∠EAC| = |∠BCA|
+
+        So:
+            |∠ABC| + |∠CAB| + |∠BCA| = π
+
+2.5 - Areas
+
+    Note the following result:
+        Suppose △ABC is a triangle and let AE denote the perpendicular from A onto BC (or an extension of BC if necessary)
+
+        Then the aria of △ABC is (1/2) * |BC| * |AE|
+
+    Proposition 1.9:
+        Consider a triangle △ABC
+
+        Choose D on AB and choose E on AC such that DE is parallel to BC
+
+        Then:
+            |AD|/|DB| = |AE|/|EC|
+
+    Definition 2:
+        Two triangles △ABC and △DEF are called similar if:
+            |∠ABC| = |∠DEF|, |∠BCA| = |∠EFD|, |∠CAB| = |∠FDE|
+
+    Proposition 1.10:
+        Suppose AB and CD are lines and EF is a third line that intersects AB at G and intersects CD at H.
+
+        If |∠EGB| = |∠DHE| then AB and CD are parallel
+
+    Proposition 1.11:
+        Suppose △ABC and △DEF are similar triangles then:
+            ???
+
+    Proof:
+        Draw a perpendicular from B onto AC at D.
+        
+        The triangles △ADB and △ABC are similar and so Proposition 1.11 gives:
+            |AB|/|AD| = |AC|/|AB|
+
+        Hence |AB|² = |AD| * |AC|
+
+        △BDC and △ABC are similar and so:
+            |DC|/|BC| = |BC|/|AC|
+
+        Thus |BC|² = |DC| * |AC|
+
+        So |AB|² + |BC|² = |AC| * (|AD| + |DC|) = |AC|²
+
+3 - Vectors:
+    
+3.1 - Introduction:
+    Remark 1:
+        Vectors can be used to describe things that require both magnitude and direction
+
+        For example you could say that you are sailing 30 mph in a south west direction.
+
+        Here 30 is the magnitude and south west is the direction
+
+        If a thing only requires a magnetude it can be described by a scaller (or constant)
+
+        For example length is a scaller because it only requires a magnetude
+
+        You can think of vector as being a path (in a particular direction) 
+            between two points (called the terminal point)
+
+        The vector
+
