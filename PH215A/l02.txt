@@ -15,8 +15,8 @@ Material equivalence - ≡ - if and only if ... then ... - [ p)q = q)p ]
     0   0   0 1 0
 
 Example:
-    ~p ∧ q
-    p   q   ~ p ∧ q
+    ~p v q
+    p   q   ~ p v q
     1   1   0 1 1 1
     1   0   0 1 0 0
     0   1   1 0 1 1

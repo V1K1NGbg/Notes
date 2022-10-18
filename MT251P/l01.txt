@@ -36,7 +36,7 @@ Remark 5:
     Non-negative numbers -> n ≥ 0
     "Root 2" -> √2 (only the positive value)
 
-Proof that √2 is rational:
+Proof that √2 is irrational:
     Supposing (Accepting) that √2 is rational:
         √2 = (a / b) 
         2 = (a² / b²)
@@ -46,7 +46,7 @@ Proof that √2 is rational:
         a = 2 * e for some integer e
         (4 * e²) = (2 * b²)
         (2 * e²) = b²
-        a² -> even
-        ⇒ a -> even
+        b² -> even
+        ⇒ b -> even
 
 n is odd ↔ n² is odd

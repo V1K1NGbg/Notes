@@ -1,0 +1,116 @@
+4. Greatest Common Divisor
+
+Defⁿ:
+    For a, b ∈ ℤ not both zero we call d ∈ ℤ their greatest common divisor and write:
+        d = gcd(a, b) if:
+            1. d > 0
+            2. d | a and d | b
+            3. if c ∈ ℤ is such that c | a and c | b, c ≤ d
+
+    We say that a, b are coprime, if gcd(a, b) = 1
+
+Lemma 4.2:
+    Let a, b ∈ ℤ such that a ≠ 0 and a | b
+
+    Then gcd(a, b) = |a|
+
+Proof:
+    Clearly, |a| > 0
+
+    Also we have that |a| divides both a and b
+
+    Furthermore, if c ∈ ℤ is such that c | a and c | b, then by Lemma 3.4(5) we get that c ≤ |a|
+
+    Therefore gcd(a, b) = |a|
+
+Theorem 4.3:
+    Let a, b ∈ ℤ, not both zero
+
+    Then gcd(a, b) exists and is the minimal element in the set:
+        S := {s * a + t * b | s, t ∈ ℤ, s * a + t * b > 0}
+
+Proof:
+    Note that |a| ∈ S or |b| ∈ S and so S is a non-empty set of natural numbers
+
+    Then S has a minimal element:
+        d = s * a + t * b > 0 for some s, t ∈ ℤ
+
+    Next we show that d|a
+
+    Assume it does not
+
+    By the Division Algorithm there are q, r ∈ ℤ such that a = q * d + r with 0 ≤ r ≤ d 
+
+    As d ∤ a  we have r > 0
+
+    Now r = a - q * d = a - q * (s * a + t * b) = (1 - q * s) * a + (-q * t) * b
+
+    Hence r ∈ S and r < d, which contradicts the minimality of d
+
+    Hence d | a likewise one show d | b
+
+    Finally let c ∈ ℤ such that c | a and c | b
+
+    If c ≤ 0 then surely c ≤ d
+
+    Hence assume c > 0
+
+    By Lemma 3.4(7) we get c | d that is c * m = d for some m ∈ ℤ
+
+    By Lemma 3.1 we have m > 0, as otherwise d ≤ 0 
+
+    Hence d = c * (1 + (m - 1)) = c + c * (m - 1)
+
+    Now either m - 1 = 0 in which case d = c or m - 1 > 0 in which case c < d
+
+    So in all case we have that c ≤ d
+
+    Overall we conclude that d = gcd(a, b)
+
+Corollary 4.4:
+    Let a, b ∈ ℤ not both zero
+
+    Then:
+        1. a and b are coprime if and only if there are s, t ∈ ℤ such s * a + t * b = 1
+        2. If d = gcd(a, b),then gcd(a/b, b/d) = 1
+
+Corollary 4.5: (Euclid's Lemma)
+    Suppose that a, b are coprime integers and that a | b * c for some c ∈ ℤ
+
+    Then a | c
+
+Proof:
+    Homework???
+
+Example:
+    Note that -2 | 16 = -2 * -8
+
+    Hence by Lemma 4.2, we have that gcd (-2, 16) = |-2| = 2
+
+Example:
+    We have 3 * 17 + (-5) * 10 = 1
+
+    Hence 17 and 10 are coprime ie gcd(17, 10) = 1
+
+    Furthermore 3 * 34 + (-5) * 20 = 2 and as 2 | 34 and 2 | 20 we must have gcd(34, 20) - 2
+
+Theorem 4.7: (The Euclidean Algorithm)
+    Let a, b ∈ ℤ, not both zero and b ∤ a
+
+    Set r₋₁ := a and r₀ = b and apply the Division Algorithm successively to rₖ₊₁ where:
+        0 ≤ rₖ₊₁ < |rₖ| until rₙ₊₁ = 0 for some n ≥ 0
+
+    That means we have:
+        r₋₁ = q₀ * r₀ + r₁, where 0 < r₁ < |r₀|
+        r₀  = q₁ * r₁ + r₂, where 0 < r₂ < |r₁|
+        r₁  = q₂ * r₂ + r₃, where 0 < r₃ < |r₂|
+        ...   ...  ...  ...       ... ...  ...
+        rₙ₋₂ = qₙ₋₁ * rₙ₋₁ + rₙ, where 0 < rₙ < |rₙ₋₁|
+        rₙ₋₁ = qₙ * rₙ
+
+    Then gcd(a, b) = rₙ
+
+Proof:
+    As the sequence (rₖ)ₖ≥₁ is positive and decreasing the above process terminates
+
+    In particular rₙ exists and rₙ > 0, by con

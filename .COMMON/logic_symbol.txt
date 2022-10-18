@@ -1,0 +1,6 @@
+Actual  PH215   MT251P  MT232P  CS210
+NOT     ~       ¬       \       !
+AND     .       ∧       ∩       &
+OR      v       v       ∪       |
+IF      ⊃       ⇒       
+IFF     ≡       ⇔
