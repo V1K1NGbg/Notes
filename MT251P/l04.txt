@@ -114,4 +114,94 @@
         The vector v̱ starting at A and finishing at B is also denoted by:
             v̱ = v⃗ = AB⃗
 
-        The magnitude of v̱ is the distance from A to B
+        The magnitude of v̱ is the distance from A to 
+        
+    Remark 2:
+        Once we know the initial point A and the terminal point B of a vector v̱
+            then we can think of v̱ in terms of the coordinates of A and B
+
+    Example:
+        Denote the usual two dimensional xy plane by:
+            ℝ² = {(x, y) | x, y ∈ ℝ}
+
+        and suppose:
+            A = (x₁, y₁), B = (x₂, y₂) ∈ ℝ²
+
+    Then the vector v̱ = AB⃗ cen be written in many ways including:
+        v̱ = (x₂ - x₁, y₂ - y₁)
+
+        v̱ = v₁ * i + v₂ * j where v₁ = x₂ - x₁, v₂ = y₂ - y₁
+
+        v̱ is called the displacement vector
+        
+    Example:
+        Suppose v̱ = AB⃗, where A = (2, 1), B = (4, -6)
+
+        Then:
+            v̱ = (4 - 2)i + (-6 + -1)j = 2i - 7j
+
+    Remark 3:
+        0i + 0j is called the zero vector
+
+    Theorem 1:
+        Suppose w̱ = w₁i + w₂j, v̱ = v₁i + v₂j and t ∈ ℝ
+
+        Then:
+            1. w̱ + v̱ = (w₁ + v₁)i + (w₂ + v₂)j
+            2. tw̱ = tw₁i + tw₂j
+            3. The magnitude (or length) of v̱ is denoted by ||v̱|| and satisfies:
+                ||v̱|| = √(v₁² + v₂²)
+
+            4. The dot (or scaler) product of w̱ and v̱ is denoted by w̱, v̱ and is defined by:
+                w̱.v̱ = w₁v₁ + w₂v₂
+
+            5. Suppose neither w̱ nor v̱ is the zero vector then:
+                w̱.v̱ = ||w̱||||v̱||cos(θ) where θ is the angle between w̱ and v̱ and 0 ≤ θ ≤ π
+
+    Example:
+        Suppose E = (0, 0), F  = (2, -7) and w̱ = EF⃗
+
+        Then w̱ = v̱ (from example) because w̱ = 2i - 7j
+
+        This is an example of the fact that AB⃗ (from example) may equal EF⃗ even though A ≠ E and B ≠ F
+
+        The reason that AB⃗ and EF⃗ are actually the same vector is because 
+            AB⃗ and EF⃗ both have the same magnitude and direction
+
+    Example
+        Suppose w̱ = 2i - 3j, v̱ = 4i + 2j
+
+        Then:
+            w̱ + v̱ = 6i - j
+
+            2v̱ = 8i + 4j
+
+            ||w̱|| = √(4 + 9) = √13
+
+            w̱.v̱ = 2 * 4 + (-3) * 2 = 2
+
+    Definition:
+        The non-zero vectors v̱, w̱ are said to be perpendicular (or orthogonal)
+            if the angle between v̱ and w̱ is π/2
+
+        We also define the zero vector to be perpendicular to any vector
+
+    Remark 4:
+        Two vectors v̱, w̱ in ℝ² are perpendicular ⇔ v̱.w̱ = 0
+
+    Example:
+        Suppose u̱ = 3i - 2j and w̱ = 4i + 6j
+
+        Then find the angle between u̱ and w̱
+
+        Solution:
+            Note that u̱.w̱ = 0 and so u̱ and w̱ are perpendicular
+
+            Hence the angle between u̱ and w̱ is π/2
+
+        Remark 5:
+            Suppose A = (0, 0), B = (x₁, x₂)
+
+            Then the vector v̱ is AB⃗ is called a position vector
+
+            So a position vector is a vector that has the origin (0, 0) as initial point

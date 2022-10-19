@@ -20,7 +20,7 @@ Remark 3:
     P ⇒ Q (If P therefor Q)
     P ⇔ Q (If and only if P therefor Q)
 
-Proof that the √ af an odd number is odd:
+Proof that the √ of an odd number is odd:
     Proof 1:
         n  = (2 * k) + 1 (is always odd)
         n² = ((2 * k) + 1)²

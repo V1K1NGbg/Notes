@@ -7,7 +7,7 @@
         2. A given finite straight line can be extended continuous in a straight line
         3. A point(it's center) and a distance(the length of the radius) define a circle
         4. All right angles are equal
-        5. if a straight line falling on two straight lines makes the interior angles on the same side
+        5. If a straight line falling on two straight lines makes the interior angles on the same side
             less than two lines meet on that side on which the angles are less than two right angles
 
     Common Notions:
@@ -57,7 +57,7 @@
         If |AB| = |DE|, |BC| = |EF| and |∠ABC| = |∠DEF|, then △ABC is congruent to △DEF
 
     Remark 2:
-        Euclid's proof os SAS uses "superposition"
+        Euclid's proof of SAS uses "superposition"
 
         Nowadays, SAS a typically taken as an axiom and we will do that
 
