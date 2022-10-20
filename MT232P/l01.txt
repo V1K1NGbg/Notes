@@ -192,7 +192,7 @@ Proof:
 
       (A - B) ∩ (A - C) ∈ A - (B ∪ C)
 
-   Therefor:
+   Therefore:
       A - (B ∪ C) = (A - B) ∩ (A - C)
 
 Defⁿ:
