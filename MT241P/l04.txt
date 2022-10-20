@@ -228,4 +228,12 @@ Example:
 
     Hence n ∈ {1, 2}
 
-    Similarly we obscure that if n | 3 for some integer n ≥ 1 then 
+    Similarly we obscure that if n | 3 for some integer n ≥ 1 then n ∈ {1, 2, 3}
+
+    As 3 = 1 * 2 + 1 it follows that 2 ∤ 3
+
+    In particular, 3 is prime
+
+    Next 4 = 2 * 2 is not prime
+
+    And so on ...
