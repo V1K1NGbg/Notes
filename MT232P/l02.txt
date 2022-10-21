@@ -65,7 +65,7 @@ Example:
     find gₒf(x) = g(f(x)) = g(3x + 1) = √(3x+1)
 
 This is only defined if:
-    3+1 ≥ 0
+    3x + 1 ≥ 0
     3x ≥ -1
     x ≥ -(1/3) ⇒ x ∈ [-(1/3), ∞)
 
@@ -231,7 +231,7 @@ Proof:
 
     a₁ = a₂ since f is 1-1
 
-    To show gₒf is onto we need to show if z ∈C then ∃a ∈ A such that:
+    To show gₒf is onto we need to show if z ∈ C then ∃a ∈ A such that:
         gₒf(a) = z
         ie g(f(a)) = z
     
