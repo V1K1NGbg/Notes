@@ -269,13 +269,19 @@ Equivalence Relations:
         A = {1, 2, 3, 4, 5, 6}, B = {counties in Munster}
             f: A -> B
 
-            f(1) = Cork, ...
+            f(1) = Cork,
+            f(2) = Clare,
+            f(3) = Kerry,
+            f(4) = Limerick,
+            f(5) = Tipperary,
+            f(6) = Waterford
+
 
             f is a bijection
                 A, B are numerically equivalent
 
     Example:
-        Let A = ℕ, B = {2, 4, 6, 8}
+        Let A = ℕ, B = {2, 4, 6, 8, ...}
             f: A -> B
 
             f(n) = 2n is a bijection
@@ -358,7 +364,7 @@ Equivalence Relations:
 
         2. If A ~ B, is B ~ A?
             Yes, if:
-                f: A -> B isa bijection
+                f: A -> B is a bijection
                 f⁻¹: B -> C is also a bijection
 
         3. If A ~ B and B ~ C is A ~ C?
@@ -377,7 +383,7 @@ Equivalence Relations:
 
     Thm 1.59: (The Schroeder-Bernstein Theorem)
         If x and y are sets each of which is numerically equivalent to a subset of the other then:
-            X is numerically equivalent to y
+            x is numerically equivalent to y
 
     Defⁿ: 
         We say a set A is countably infinite if ∃ a bijection from ℕ to A

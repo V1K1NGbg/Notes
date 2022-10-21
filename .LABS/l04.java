@@ -5,7 +5,7 @@ public class l04 {
 
         Scanner in = new Scanner(System.in);
 
-        int n, i, tests = 10000, successes = 0, b;
+        int n, i, tests = 100000, successes = 0, b;
 
         n = in.nextInt();
         i = in.nextInt();
