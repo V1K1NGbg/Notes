@@ -1,0 +1,98 @@
+Three-dimensional vectors:
+    Remark 6:
+        Suppose we are in a three-dimensional space by:
+            ℝ³ = {(x, y, z) | x, y, z ∈ ℝ}
+
+        and suppose:
+            A = (x₁, y₁, z₁), B = (x₂, y₂, z₂) ∈ ℝ³
+
+        The vector u̱ = AB⃗ can be written as:
+            u̱ = u₁i + u₂j + u₃k where u₁ = x₂ - x₁, u₂ = y₂ - y₁, u₃ = z₂ - z₁
+
+        u̱ is called the displacement vector
+        0i + 0j + 0k is called the zero vector
+
+    Theorem 2:
+        Suppose v̱ = v₁i + v₂j + v₃k, w̱ = w₁i + w₂j + w₃k and t ∈ ℝ:
+            1. v̱ + w̱ = (v₁ + w₁)i + (v₂ + w₂)j + (v₃ + w₃)k
+            2. tv̱ = tv₁i + tv₂j + tv₃k
+            3. The magnitude (or length) of v̱ is denoted by ||v̱|| and satisfies:
+                ||v̱|| = √(v₁² + v₂² + v₃²)
+            4. The dot (or scaler) product of v̱ and w̱ is denoted by v̱.w̱ and is defined by:
+                v̱.w̱ = v₁w₁ + v₂w₂ + v₃w₃
+            5. Suppose neither v̱ not w̱ is the zero vector
+                Then v̱.w̱ = ||v̱||||w̱||cos(θ) where θ is the angle between v̱ and w̱ and 0 ≤ θ ≤ π
+
+    Definition 2:
+        The non-zero vectors v̱, w̱ are said to be perpendicular if the angle between v̱ and w̱ is π/2
+
+        We also define the zero vector to be perpendicular to any vector
+
+    Remark 7:
+        Two vectors v̱, w̱ in ℝ³ are perpendicular ⇔ v̱.w̱ = 0
+
+    Definition 3:
+        Suppose u̱ = u₁i + u₂j + u₃k and w̱ = w₁i + w₂j + w₃k
+
+        The cross product of u̱ and w̱ is denoted by:
+            u̱ x w̱ = (u₂w₃ - u₃w₂)i + (u₃w₁ - u₁w₃)j + (u₁w₂ - u₂w₁)k
+    Note:
+        1 2 3 1 2 3
+        1>2&3-3&2
+          2>3&1-1&3
+            3>1&2-2&1
+
+    Example:
+        Consider the vectors u̱ = 3i − 2j + k and w̱ = i + 3j + 3k
+
+        Find:
+            1. u̱ + w̱
+            2. ||w̱||
+            3. u̱.w̱
+            4. u̱ x w̱
+
+        Solution:
+            1. u̱ + w̱ = 4i + j + 4k
+            2. ||w̱||= √(1 + 9 + 9) = √19
+            3. u̱.w̱ = 0
+            4. u̱ x w̱ = ((-2 * 3) - (1 * 3))i + ((1 * 1) - (3 * 3))j + ((3 * 3) - (-2 * 1))k = -9i - 8j + 11k
+
+    Remark 8:
+        If u̱ and w̱ are vectors in ℝ³ then u̱ x w̱ gives a vector which is perpendicular to both u̱ and w̱
+
+        In example, m̱ = u̱ x w̱ gives a vector which is perpendicular to both u̱ and w̱ because m̱.u̱ = 0 and m̱.w̱ = 0
+
+    Example:
+        Consider the vectors u̱ = i + 2j + k and w̱ = 3i + j + 2k
+
+        Find the angle θ between u̱ and w̱
+
+    Solution:
+        u̱.w̱ = 7, ||u̱|| = √6, ||w̱|| = √14 and so:
+            7 = √6 * √14 * cos(θ) ⇒ cos(θ) = 7/√84 ⇒ θ = arccos(7/√84)
+
+    arccos(x) = cos⁻¹(x)
+
+    Remark 9:
+        Suppose A = (0, 0, 0), B = (x₁, x₂, x₃)
+
+        The vector v̱ = AB⃗ is called a position vector
+
+3.2 - Vectors in ℝⁿ
+
+    Definition 4:
+        For n ≥ 1 we define:
+            ℝⁿ = {(x₁, x₂, ..., xₙ) | x₁ ∈ ℝ for 1 ≤ i ≤ n}
+
+        The vector with initial point at the origin, (0, 0, ..., 0)
+            and terminal point (x₁, x₂, ..., xₙ) is called a position vector and is denoted by:
+                x̱ = (x₁, x₂, ..., xₙ)
+
+    Theorem 3:
+        Suppose (x₁, x₂, ..., xₙ) and (y₁, y₂, ..., yₙ) ∈ ℝⁿ and k ∈ ℝ:
+            1. x̱ + y̱ = (x₁ + y₁, x₂ + y₂, ..., xₙ + yₙ)
+            2. kx̱ = (kx₁, kx₂, ..., kxₙ)
+            3. ||x̱|| = √(x₁² + x₂² + ... + xₙ²)
+            4. x̱.y̱ = x₁y₁ + x₂y₂ + ... + xₙyₙ
+            5. x̱.y̱ = ||x̱||||y̱||cos(θ) where θ is the angle between x̱ and y̱ and 0 ≤ θ ≤ π
+                and neither x̱ nor y̱ is the zero vector (0, 0, ..., 0)

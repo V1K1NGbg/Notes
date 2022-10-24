@@ -1,0 +1,113 @@
+We proved that ℚ is countable and ℝ is uncountable
+
+Example:
+    Any interval (a, b) is numerically equivalent to to (0, 1)
+
+    So (a, b) ~ (0, 1), (0, 1) ~ (-1, 1), (-1, 1) ~ ℝ
+
+    So any interval (a, b) is numerically equivalent to ℝ (0, (1/n)) is numerically equivalent to ℝ
+
+Thm 1.67:
+    Any subset of ℝ which contains an open interval is numerically equivalent ro ℝ
+
+Proof:
+    Let x ∈ ℝ and (a, b) ⊂ x.
+
+    So (a, b) ⊂ x ⊂ ℝ
+
+    Well x is numerically equivalent to a subset of ℝ (namely to x itself)
+
+    Also ℝ is numerically equivalent to a subset of x (namely (a, b))
+
+    So by Schröder–Bernstein theorem, x is numerically equivalent to ℝ
+
+Thm 1.68:
+    Let S be the set of sequences of 0's and 1's
+
+    S = {(a₁, a₂, a₃, ...) | aᵢ = {0, 1}}
+
+    Then S is uncountable
+
+Proof:
+    Let f: ℕ -> S
+
+    We will show that f could not be onto and thus cannot be bijection
+
+    Let's denote f(n) = (xₙ₁, xₙ₂, xₙ₃, ...) where each xₙₖ is either 0 or 1:
+        f(1) = x₁₁, x₁₂, x₁₃, ...
+        f(2) = x₂₁, x₂₂, x₂₃, ...
+        f(3) = x₃₁, x₃₂, x₃₃, ...
+        ...    ...  ...  ...
+        f(n) = xₙ₁, xₙ₂, xₙ₃, ...
+
+    We will contradict a sequence in S which is not on this list
+
+    Define y = (y₁, y₂, y₃, ...) where yₖ = {0 if xₖₖ = 1,
+                                             1 if xₖₖ = 0}
+
+    So yₖ ≠ xₖₖ ie the kᵗʰ element if the sequence y is different from the kᵗʰ element
+        ie y ≠ f(k) ∀k ∈ ℕ
+
+    So f: ℕ -> S is not onto
+
+Exercise:
+    Prove:
+        1. ℕ x ℕ is countable
+        2. ℝ x ℝ = ℝ² is uncountable
+        3. The set of continuous functions from ℝ to ℝ is uncountable
+
+(a, b) <-> {(x, y) | a < x < b, y = 0} or {(x, 0) | a < x < b}
+
+Question:
+    Are all uncountable sets numerically equivalent to each other?
+    
+    No
+
+    We will show this using power sets
+
+Defⁿ:
+    Let A be a set then the power set of A is the set of subsets of A
+
+    We write it as P(A)
+
+Example:
+    A = {a, b, c}
+
+    P(A) = {{a}, {b}, {c}, {ab}, {ac}, {bc}, ∅, {abc}}
+
+    P(A) has 2³ elements
+
+    In general if A is finite and A has n elements then P(A) has 2ⁿ elements
+
+    If A is finite then A is not numerically equivalent to P(A)
+
+Thm 1.73: (Cantor's Theorem)
+    Given a set A there does not exist an onto function from A to P(A)
+
+Proof:
+    Let g: A -> P(A) be a function
+
+    For each a ∈ A, g(a) is a subset of A
+
+    This subset either contains A or it doesn't
+
+    Let B be the subset of A consisting of elements of A which are not in their own image under g
+
+    B = {a ∈ A | a ∉ g(a)}
+
+    Clearly B ⊂ A so B ∈ P(A)
+
+    We claim B is not in the image of g (ie g is not onto)
+
+    Suppose B is in the image of g (ie B is an output of g or in the range of g)
+
+    So B = g(a₀) for some a₀ ∈ A
+
+    Is a₀ ∈ B or not?
+
+    Case 1:
+        Suppose a₀ ∈ B:
+            B = {a ∈ A | a ∉ g(a)} so if a₀ ∉ g(a₀) but B = g(a₀) so a₀ ∉ B
+
+    Case 2:
+        Suppose a₀ ∉ B if a₀ ∉

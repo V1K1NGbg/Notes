@@ -1,0 +1,22 @@
+    Distributed Undistributed
+All (swans) are (white) -> SaP
+
+    Undistributed Undistributed
+Some (swans) are (white) -> SiP
+
+    Distributed Distributed
+No (cats) are (dogs) -> SeP
+
+    Undistributed Distributed
+Some (metals) are not (conductors)
+
+A    Contraries   E
+
+    \       /
+
+  Contradictories
+
+    /       \
+
+I  Subcontraries  O
+

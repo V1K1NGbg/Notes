@@ -205,3 +205,4 @@
             Then the vector v̱ is AB⃗ is called a position vector
 
             So a position vector is a vector that has the origin (0, 0) as initial point
+            
