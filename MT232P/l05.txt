@@ -1,113 +1,101 @@
-We proved that ℚ is countable and ℝ is uncountable
+P(A) = power set of A is the set of subsets of A
+
+Thm: (Cantor's Theorem)
+    If A is a set and P(A) is its power set then
+        A is not numerically equivalent to P(A)
 
 Example:
-    Any interval (a, b) is numerically equivalent to to (0, 1)
+    ℝ and P(ℝ) are not numerically equivalent
 
-    So (a, b) ~ (0, 1), (0, 1) ~ (-1, 1), (-1, 1) ~ ℝ
+    We have two uncountable sets which are not numerically equivalent to each other
 
-    So any interval (a, b) is numerically equivalent to ℝ (0, (1/n)) is numerically equivalent to ℝ
+Cardinal Numbers:
+    - use these to denote the cardinality of a set:
+        0, 1, 2, 3, ...
+        are all cardinal Numbers
 
-Thm 1.67:
-    Any subset of ℝ which contains an open interval is numerically equivalent ro ℝ
+Cardinality of ∅ is 0
+Cardinality of {a} is 1 etc.
 
-Proof:
-    Let x ∈ ℝ and (a, b) ⊂ x.
+Cardinality of ℕ is denoted by ℵ₀
 
-    So (a, b) ⊂ x ⊂ ℝ
+ℵ₀ is the cardinality of any countably infinite set
 
-    Well x is numerically equivalent to a subset of ℝ (namely to x itself)
+Cardinality of ℝ is denoted by c (for continuum)
 
-    Also ℝ is numerically equivalent to a subset of x (namely (a, b))
+Cardinal numbers:
+    0 < 1 < 2 < 3 < ... < ℵ < c < 2ᶜ < ((2)²)ᶜ < ...
 
-    So by Schröder–Bernstein theorem, x is numerically equivalent to ℝ
+    2ᶜ - cardinality of P(ℝ)
 
-Thm 1.68:
-    Let S be the set of sequences of 0's and 1's
+    So we have infinitely many cardinalities of uncountable sets
 
-    S = {(a₁, a₂, a₃, ...) | aᵢ = {0, 1}}
+Is there a set with cardinality bigger than ℵ₀ but smaller than c?
 
-    Then S is uncountable
+This is the Continuum Hypothesis
 
-Proof:
-    Let f: ℕ -> S
+Gödel and Cohen (1940's) proved that this question is independent
+    of our axioms of set theory (Zermelo–Fraenkel set theory)
 
-    We will show that f could not be onto and thus cannot be bijection
+Can't prove or disprove the statement
 
-    Let's denote f(n) = (xₙ₁, xₙ₂, xₙ₃, ...) where each xₙₖ is either 0 or 1:
-        f(1) = x₁₁, x₁₂, x₁₃, ...
-        f(2) = x₂₁, x₂₂, x₂₃, ...
-        f(3) = x₃₁, x₃₂, x₃₃, ...
-        ...    ...  ...  ...
-        f(n) = xₙ₁, xₙ₂, xₙ₃, ...
+Cardinality of P(ℕ) = c 
 
-    We will contradict a sequence in S which is not on this list
+Prove???
 
-    Define y = (y₁, y₂, y₃, ...) where yₖ = {0 if xₖₖ = 1,
-                                             1 if xₖₖ = 0}
-
-    So yₖ ≠ xₖₖ ie the kᵗʰ element if the sequence y is different from the kᵗʰ element
-        ie y ≠ f(k) ∀k ∈ ℕ
-
-    So f: ℕ -> S is not onto
-
-Exercise:
-    Prove:
-        1. ℕ x ℕ is countable
-        2. ℝ x ℝ = ℝ² is uncountable
-        3. The set of continuous functions from ℝ to ℝ is uncountable
-
-(a, b) <-> {(x, y) | a < x < b, y = 0} or {(x, 0) | a < x < b}
-
-Question:
-    Are all uncountable sets numerically equivalent to each other?
-    
-    No
-
-    We will show this using power sets
+§ 1.5 - Properties of ℝ order on ℝ:
 
 Defⁿ:
-    Let A be a set then the power set of A is the set of subsets of A
-
-    We write it as P(A)
+    An order relation on a set A is a relation with the following properties:
+        1. For every x, y ∈ A then either x < y, x > y or x = y (comparability)
+        2. For no x ∈ A does x < x hold (non-reflexivity)
+        3. If x < y and y < z then x < z ∀x, y, z ∈ A (transitivity)
 
 Example:
-    A = {a, b, c}
+    If A = ℝ and < means the usual 'less than' then < is an order relation on ℝ
 
-    P(A) = {{a}, {b}, {c}, {ab}, {ac}, {bc}, ∅, {abc}}
+Example:
+    If <A is an order relation  on A and <B is an order relation on B can we define an order on AxB?
+        (a, b) < (a', b')
 
-    P(A) has 2³ elements
+        (Bubble sort for words for example)
 
-    In general if A is finite and A has n elements then P(A) has 2ⁿ elements
+        Dictionary order on AxB
 
-    If A is finite then A is not numerically equivalent to P(A)
+Let's consider from now on the usual order < on ℝ:
+    Let A < ℝ
 
-Thm 1.73: (Cantor's Theorem)
-    Given a set A there does not exist an onto function from A to P(A)
+    We say b ∈ A is the largest element of A if x < b for all x ∈ A - {b}
 
-Proof:
-    Let g: A -> P(A) be a function
+    We say a ∈ A is the smallest element of A if a < x for all x ∈ A - {a}
 
-    For each a ∈ A, g(a) is a subset of A
+    Clearly A has at most one largest element and at most one smallest element
 
-    This subset either contains A or it doesn't
+    ℤ, ℚ
 
-    Let B be the subset of A consisting of elements of A which are not in their own image under g
+    ℝ does not have a largest element + does not have a smallest element
 
-    B = {a ∈ A | a ∉ g(a)}
+    ∅ doesn't have largest or smallest elements
 
-    Clearly B ⊂ A so B ∈ P(A)
+    ℕ has a smallest element (ie 1) but no largest element
 
-    We claim B is not in the image of g (ie g is not onto)
+    [0, 1] 0 is the smallest element and 1 is the largest element
 
-    Suppose B is in the image of g (ie B is an output of g or in the range of g)
+    (0, 1) has neither largest or smallest element
 
-    So B = g(a₀) for some a₀ ∈ A
+    A = {y | y = √(5 - x²)} = (0, √5)
 
-    Is a₀ ∈ B or not?
+    domain of f(x) = √5 - x
 
-    Case 1:
-        Suppose a₀ ∈ B:
-            B = {a ∈ A | a ∉ g(a)} so if a₀ ∉ g(a₀) but B = g(a₀) so a₀ ∉ B
+Defⁿ:
+    A set A ⊆ ℝ is bounded above if b ∈ ℝ such that x ≤ b ∀ x ∈ A
 
-    Case 2:
-        Suppose a₀ ∉ B if a₀ ∉
+    We say b is an upper bound for A
+
+    Let A = [0, 1]
+
+    Upper bound include:
+        1, 2, 3, 4, π, e, ... [1, ∞) (set of bounds of A)
+
+    Let B = (0, 1) bas upper bounds:
+        1, 2, 3, 4, π, e, ...
