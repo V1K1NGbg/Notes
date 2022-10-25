@@ -1,0 +1,124 @@
+2. Sieve of Eratosthenes
+    Given a n ∈ ℕ let us find all primes in S := {2, 3, 5, ..., n}
+
+    Take m ∈ S
+
+    Either m is prime or m = p * r for some p, r ∈ S
+
+    We can choose p minimal in S by the Well-Ordering Principle
+
+    Then p ≤ r
+
+    Now p² ≤ p * r = m and so p ≤ √m = √n
+
+    Overall m is prime or m is divisible by an integer p with 2 ≤ p ≤ √n
+    
+    Let n = 100 ie S = {2, ..., 100}
+
+    We have √100 = 10
+
+    Eliminating all proper multiples of {2, ..., 10} in S gives all the primes in S
+
+    They are: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97
+
+Lemma 5.3:
+    For integers a, b let p be a prime divisor of a * b
+
+    Then p|a or p|b
+
+Proof:
+    If p|a there is nothing to prove
+
+    So assume p∤a
+
+    Then gcd(p, a) = 1
+
+    We deduce from Euclid's Lemma that p|b
+
+Corollary 5.4:
+    Let p, a₁, a₂, ..., aₖ ∈ ℤ where p is prime
+
+    If p|(a₁ * a₂ * a₃ * ... * aₖ) then p|a for some i ∈ {1, ..., k}
+
+Corollary 5.5:
+    Let p, q₁, q₂, ..., qₖ be prime integer
+
+    If p|(q₁ * q₂ * q₃ * ... * qₖ) then p = q for some i ∈ {1, ..., k}
+
+Theorem 5.6: (Fundamental Theorem Of Arithmetic)
+    Given n ∈ ℤ, non-zero, there exists ɛ ∈ {±1} and primes p₁, ..., pₖ such that n = ɛ * p₁ * ... * pₖ
+
+    Moreover this expression is unique up to the order of the primes p₁, ..., pₖ
+
+Proof:
+    Without loss of generality we assume n ≥ 1
+
+    The statement holds if n = 1
+
+    Next assume the statement holds for 1, ..., n-1, where n ≥ 2
+
+    If n is prime then we are done
+
+    Otherwise there is some positive divisor, say m, of n such that m ∈ {1, n}
+
+    Then n = m * r, for some r ∈ ℤ
+
+    Note that 1 < m, r < n
+
+    By assumption m and r are products of prime integers and thus so is n
+
+    The uniqueness of this  expression can be shown using Corollary 5.5
+
+    So the statement holds for n and so by induction it holds for all n ≥ 1
+
+Example:
+    -12 = -1 * 2 * 2 * 3
+
+Example:
+    21 780 = 2  * 10 890 = 2 * 2 * 5 445 = 2² * 3 * 1 815 = 2² * 3² * 605 = 2² * 3² * 5 * 121 = 2² * 3² * 5 * 11²
+
+Example:
+    Let's find the prime factorization of 2369
+
+    Since √2369 < 49, unless 2369 is prime there must be a prime divisor that is ≤ 48
+
+    By checking:
+        2, 3, 5, 7, 11, 13, 17, 19, 23
+        we see 23|2369 = 23 * 103
+
+    As √103 < 11 and 2, 3, 5, 7 do not divide 103, we conclude that 103 is prime 
+
+    Therefore 2369 = 23 * 103 is the prime factorization of 2369
+
+Corollary 5.8:
+    There is an infinite number of prime integers
+
+Proof:
+    Suppose p₁, ..., pₙ are all the prime integers
+
+    Then q = (p₁ * ... * pₙ) + 1 is an integer which is not divisible by any of the p
+
+    Hence q is a "new" prime integer by Theorem 5.6
+
+Remark 5.9:
+    Let a, b ∈ ℤ, non-zero and let p₁, ..., pₙ be a complete list of prime integers dividing into a and/or b
+
+    Furthermore let:
+        a = ɛₐ * p₁ʳ¹ * pₙʳⁿ and b = ɛᵦ * p₁ˢ¹ * pₙˢⁿ
+        be the representative prime factorizations of a and b
+        (Note that rⱼ, sⱼ ≥ 0 for all j = 1, ..., n but some might be zero)
+
+    Then gcd(a, b) = p₁(ᵐⁱⁿ{r₁, s₁}) * ... * pₙ(ᵐⁱⁿ{rₙ, sₙ})
+    
+    For instance we have 21 780 = 2² * 3² * 5 * 11² and 15 400 = 2³ * 5² * 7 * 11
+
+    Then gcd(27 180, 15 400) = 2² * 3⁰ * 5¹ * 7⁰ * 11¹ = 2² * 5 * 11 = 220
+
+    Given a, b ∈ ℤ, we let lcm(a, b) denote the smallest positive integer divisible by both a and b
+        called the least common multiple of a and b
+
+    With a and b as above, we have:
+        lcm(a, b) = p₁(ᵐᵃˣ{r₁, s₁}) * ... * pₙ(ᵐᵃˣ{rₙ, sₙ})
+
+    So for instance:
+        lcm(27 180, 15 400) = 2³ * 3² * 5² * 7 * 11² = 1 524 600
