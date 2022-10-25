@@ -47,7 +47,7 @@ Proof:
     x₂₁, x₂₂, ...
     ..., ..., ...
 
-    This array contains         Since A s countably inall elements of S by sweeping diagonally through the array
+    This array contains all elements of S by sweeping diagonally through the array
 
     Is it possible that some of the elements appear on this list more than once
         (if an element belongs to two different Eₙ and Eₘ then it will appear twice on list)
