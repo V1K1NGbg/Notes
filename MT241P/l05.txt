@@ -122,3 +122,121 @@ Remark 5.9:
 
     So for instance:
         lcm(27 180, 15 400) = 2³ * 3² * 5² * 7 * 11² = 1 524 600
+
+6. Modular Arithmetic and Chinese Remainder Theorem
+
+Definition 6.1:
+    Let a, b, n be integers with n ≥ 1
+
+    We say that a is congruent to b modulo n and write a ≡ b (mod n) if n | a - b
+
+Example:
+    a ≡ a (mod n) for all a ∈ ℤ and n ≥ 1
+    16 ≡ 5 (mod 11) since 11 | 16 - 5 and
+    16 ≡ 38 (mod 11) since 11 | 16 - 38 = -22
+    23 ≢ 17 (mod 5) since 5 ∤ 23 -17 = 6
+    a ≡ b (mod 1) for all a, b ∈ ℤ since 1 | a - b
+    a ≡ b (mod 2) if and only if a and b are both even or both are odd
+
+Lemma 6.3:
+    Let a, n be integer with n ≥ 1
+
+    Then there exists a unique r ∈ {0, 1, ..., n-1} so that a ≡ r (mod n)
+
+    We call r the residue of a modulo n
+
+Proof:
+    Observe that for all r ∈ ℤ 
+        a ≡ r (mod n) ⇔ n | a - r
+                      ⇔ a - r = n * q for some q ∈ ℤ
+                      ⇔ a = n * q + r for some q ∈ ℤ
+
+    In particular the existence and uniqueness of r ∈ {0, 1, ..., n-1}
+        follows from the Division Algorithm
+
+Lemma 6.4:
+    Let a, b, c, d, n be integers with n, d ≥ 1
+
+    Then the following are equivalent:
+        1. a ≡ b (mod n)
+        2. a + c ≡ b + c (mod n)
+        3. a * d ≡ b * d (mod n * d)
+
+Proof:
+    We have a ≡ b (mod n) ⇔ n | a - b = (a + c - (b + c)) ⇔ a + c ≡ b + c (mod n) and
+        a * d ≡ b * d (mod n * d) ⇔ n * d | (a * d - b * d) = (a * b) * d ⇔ n | a - b ⇔ a ≡ b (mod n)
+
+Lemma 6.5:
+    Let a, b, c, d, n be integers with n ≥ 1
+
+    Also let a ≡ b (mod n) and c ≡ d (mod n)
+
+    Then:
+        1. a + c ≡ b + d (mod n)
+        2. a * c ≡ b * d (mod n)
+        3. aᵏ ≡ bᵏ (mod n) for all integers k ≥ 0
+
+Proof:
+    By assumption n | a - b and n | c - d
+
+    Then by Lemma 3.4(7) we have n | a - b + c - d = (a + c) - (b + d)
+
+    This gives 1.
+
+    2., 3. ??? (LECTURES)
+
+Lemma 6.6:
+    Let a, b, c, n, k integers with n ≥ 1 such that gcd(c, n) = 1
+
+    Then c * a ≡ c * b (mod n) if and only if a ≡ b (mod n)
+
+Proof:
+    First let c * a ≡ c * b (mod n)
+
+    Then n | (c * a - c* b) = c * (a - b)
+
+    As gcd(c, n) = 1 we get n | a - b by Euclid's Lemma
+
+    Hence a ≡ b (mod n)
+
+    If on the other hand a ≡ b (mod n) then
+        c * a ≡ c * b (mod n) follows by Lemma 6.5(2), as c ≡ c (mod n)
+
+Corollary 6.7:
+    Let a, b, c, n be integers with n ≥ 1 such that c * a ≡ c * b (mod n)
+
+    Then a ≡ b (mod n/d) where d = gcd(c, n)
+
+Proof:
+    Write c = d * (c/d) and n = d * (n/d)
+
+    Then c * a ≡ c * b (mod n) implies (c/d) * a ≡ (c/d) * b (mod n/d) by Lemma 6.4
+
+    As gcd(c/d, n/d) = 1 by Corollary 4.4(2) we get that a ≡ b (mod n/d) by Lemma 6.6
+
+Example:
+    As 5 ≡ 2 (mod 3) we have 5 + 5 ≡ 2 + 5 (mod 3) ie 10 ≡ 7 (mod 3)
+        and so 10 * 4 ≡ 7 * 4 (mod 3.4) ie 40 ≡ 28 (mod 12)
+
+    As gcd(17, 19) = 1 we have:
+        56 ≡ 73 (mod 17) ⇔ 56 * 19 ≡ 73 * 19 (mod 17)
+
+    As 17 | 73 - 56 = 17, both congruencies are there
+
+    What is 3²⁰ (mod 41)²?
+
+        We have 3² ≡ 9 ≡ 9 (mod 41)
+
+        3⁴ ≡ (3²)² = 9² ≡ 81 ≡ -1 (mod 41)
+
+        3⁸ ≡ (3⁴)² ≡ (-1)² ≡ 1 (mod 41)
+
+        3¹⁶ ≡ (3⁸)² ≡ (1)² ≡ 1 (mod 41)
+
+        Now 3²⁰ ≡ 3¹⁶ * 3⁴ ≡ 1 * -1 = -1 (mod 41)
+
+    Alternatively:
+        3²⁰ = (3⁴)⁵ ≡ 81⁵ ≡ (-1)⁵ ≡ -1 (mod 41)
+
+    So again:
+        3²⁰ = -1 (mod 41)
