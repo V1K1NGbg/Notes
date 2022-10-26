@@ -122,7 +122,7 @@
 
     Example:
         Denote the usual two dimensional xy plane by:
-            ℝ² = {(x, y) | x, y ∈ ℝ}
+            ℝ² = {(x, y) : x, y ∈ ℝ}
 
         and suppose:
             A = (x₁, y₁), B = (x₂, y₂) ∈ ℝ²

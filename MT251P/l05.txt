@@ -1,7 +1,7 @@
 Three-dimensional vectors:
     Remark 6:
         Suppose we are in a three-dimensional space by:
-            ℝ³ = {(x, y, z) | x, y, z ∈ ℝ}
+            ℝ³ = {(x, y, z) : x, y, z ∈ ℝ}
 
         and suppose:
             A = (x₁, y₁, z₁), B = (x₂, y₂, z₂) ∈ ℝ³
@@ -82,7 +82,7 @@ Three-dimensional vectors:
 
     Definition 4:
         For n ≥ 1 we define:
-            ℝⁿ = {(x₁, x₂, ..., xₙ) | x₁ ∈ ℝ for 1 ≤ i ≤ n}
+            ℝⁿ = {(x₁, x₂, ..., xₙ) : x₁ ∈ ℝ for 1 ≤ i ≤ n}
 
         The vector with initial point at the origin, (0, 0, ..., 0)
             and terminal point (x₁, x₂, ..., xₙ) is called a position vector and is denoted by:
@@ -96,3 +96,81 @@ Three-dimensional vectors:
             4. x̱.y̱ = x₁y₁ + x₂y₂ + ... + xₙyₙ
             5. x̱.y̱ = ||x̱||||y̱||cos(θ) where θ is the angle between x̱ and y̱ and 0 ≤ θ ≤ π
                 and neither x̱ nor y̱ is the zero vector (0, 0, ..., 0)
+
+    Example:
+        Suppose x̱ = (3, -2, 4, 6, 0) and y̱ = (0, 1, 0, -2, 5) in ℝ⁵
+            1. x̱ + y̱ = (3, -1, 4, 4, 5)
+            2. ||x̱|| = √(9 + 4 + 16 + 36) = √65
+            3. x̱.y̱ = -14
+
+    Theorem 4:
+        Suppose x̱ = (x₁, x₂, ..., xₙ), y̱ = (y₁, y₂, ..., yₙ), u̱ = (u₁, u₂, ..., uₙ) and w̱ = (w₁, w₂, ..., wₙ)
+
+        Then:
+            1. y̱ - x̱ is the vector from (x₁, x₂, ..., xₙ) to (y₁, y₂, ..., yₙ)
+
+                Also the vector from (x₁, x₂, ..., xₙ) to (y₁, y₂, ..., yₙ)
+                    is parallel to the vector from (u₁, u₂, ..., uₙ) to (w₁, w₂, ..., wₙ)
+                        ⇔ y̱ - x̱ = t * (w̱ - u̱) for some t ∈ ℝ
+
+            2. The line L passing through (x₁, x₂, ..., xₙ) and (y₁, y₂, ..., yₙ) is given by:
+                L = {(x₁, x₂, ..., xₙ) + t * (y₁ - x₁, y₂ - x₂, y₃ - x³, ..., yⁿ - xₙ) : t ∈ ℝ}
+
+                L is also the line passing through (x₁, x₂, ..., xₙ) parallel to the vector y̱ - x̱
+                    and is called the parametric equation of L
+
+                Furthermore the line M is passing  through (x₁, x₂, ..., xₙ)
+                    and parallel to the vector (u₁, u₂, ..., uₙ) is given by:
+                        M = {(x₁, x₂, ..., xₙ) + t * (u₁, u₂, ..., uₙ) : t ∈ ℝ}
+
+        Example:
+            Find the parametric equation of the line L passing through (1, 2, -1) and (2, 0, 2)
+
+            L = {(1, 2, −1) + t * (1, −2, 3) : t ∈ R}
+
+        Example:
+            Is (3, -2, 5) on L?
+            Is (3, 0, 1) on L?
+
+            Yes because it is when t = 2
+            No because there is not t ∈ ℝ that satisfies the equation
+
+        Definition 5:
+            The non-zero vectors x̱, y̱ ∈ ℝⁿ are said to be perpendicular if the angle between them is (π/2)
+
+            We also define the zero vector to be perpendicular to any vector
+
+        Theorem 5:
+            Suppose x̱.y̱ ∈ ℝⁿ
+
+            Then x̱.y̱ = 0 ⇔ x̱ and y̱ are perpendicular
+
+        Theorem 6: (Cauchy–Schwarz inequality)
+            |x̱.y̱| ≤ ||x̱||||y̱|| for all x̱.y̱ ∈ ℝⁿ
+
+            Also equality holds above ⇔ x̱ = t * y̱ for some t ∈ ℝ
+
+        Proof:
+            First we note that:
+                (x̱ + s * y̱).(x̱ + s * y̱) ≥ 0 for all x ∈ ℝ
+                    ⇒ ||x̱||² + 2 * s * x̱.y̱ + s²||y̱||² ≥ 0 for all s ∈ ℝ
+
+            This means that the left hand side (as a quadratic equation in s) has at most one real root
+
+            So by the quadratic formula we get:
+                4(x̱.y̱)² = 4||y̱||²||x̱||² ≤ 0
+                    ⇒ (x̱.y̱)² ≤ ||x̱||²||y̱||²
+                    ⇒ |x̱.y̱| ≤ ||x̱||||y̱||
+
+            Now to prove that the equality holds:
+                ⇔ the quadratic in s has exactly one real root
+                ⇔ (x̱ + q * y̱).(x̱ + q * y̱) = 0 for exactly one q ∈ ℝ
+                ⇔ x̱ = -q * y̱
+                and so we have proved the second one and we are done
+
+        Remark 10:
+            The Cauchy–Schwarz inequality implies that for all non-zero x̱.y̱ ∈ ℝⁿ we have:
+                -1 ≤ (x̱.y̱)/(||x̱||||y̱||) ≤ 1
+
+            Hence there is a unique θ such that:
+                cos(θ) = (x̱.y̱)/(||x̱||||y̱||) and 0 ≤ θ ≤ π
