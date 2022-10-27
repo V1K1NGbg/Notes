@@ -1,0 +1,238 @@
+P(A) = power set of A is the set of subsets of A
+
+Thm: (Cantor's Theorem)
+    If A is a set and P(A) is its power set then
+        A is not numerically equivalent to P(A)
+
+Example:
+    ℝ and P(ℝ) are not numerically equivalent
+
+    We have two uncountable sets which are not numerically equivalent to each other
+
+Cardinal Numbers:
+    - use these to denote the cardinality of a set:
+        0, 1, 2, 3, ...
+        are all cardinal Numbers
+
+Cardinality of ∅ is 0
+Cardinality of {a} is 1 etc.
+
+Cardinality of ℕ is denoted by ℵ₀
+
+ℵ₀ is the cardinality of any countably infinite set
+
+Cardinality of ℝ is denoted by c (for continuum)
+
+Cardinal numbers:
+    0 < 1 < 2 < 3 < ... < ℵ < c < 2ᶜ < ((2)²)ᶜ < ...
+
+    2ᶜ - cardinality of P(ℝ)
+
+    So we have infinitely many cardinalities of uncountable sets
+
+Is there a set with cardinality bigger than ℵ₀ but smaller than c?
+
+This is the Continuum Hypothesis
+
+Gödel and Cohen (1940's) proved that this question is independent
+    of our axioms of set theory (Zermelo–Fraenkel set theory)
+
+Can't prove or disprove the statement
+
+Cardinality of P(ℕ) = c 
+
+Prove???
+
+§ 1.5 - Properties of ℝ order on ℝ:
+
+Defⁿ:
+    An order relation on a set A is a relation with the following properties:
+        1. For every x, y ∈ A then either x < y, x > y or x = y (comparability)
+        2. For no x ∈ A does x < x hold (non-reflexivity)
+        3. If x < y and y < z then x < z ∀x, y, z ∈ A (transitivity)
+
+Example:
+    If A = ℝ and < means the usual 'less than' then < is an order relation on ℝ
+
+Example:
+    If <A is an order relation  on A and <B is an order relation on B can we define an order on AxB?
+        (a, b) < (a', b')
+
+        (Bubble sort for words for example)
+
+        Dictionary order on AxB
+
+Let's consider from now on the usual order < on ℝ:
+    Let A < ℝ
+
+    We say b ∈ A is the largest element of A if x < b for all x ∈ A - {b}
+
+    We say a ∈ A is the smallest element of A if a < x for all x ∈ A - {a}
+
+    Clearly A has at most one largest element and at most one smallest element
+
+    ℤ, ℚ
+
+    ℝ does not have a largest element + does not have a smallest element
+
+    ∅ doesn't have largest or smallest elements
+
+    ℕ has a smallest element (ie 1) but no largest element
+
+    [0, 1] 0 is the smallest element and 1 is the largest element
+
+    (0, 1) has neither largest or smallest element
+
+    A = {y | y = √(5 - x²)} = (0, √5)
+
+    domain of f(x) = √5 - x
+
+Defⁿ:
+    A set A ⊆ ℝ is bounded above if b ∈ ℝ such that x ≤ b ∀ x ∈ A
+
+    We say b is an upper bound for A
+
+    Let A = [0, 1]
+
+    Upper bound include:
+        1, 2, 3, 4, π, e, ... [1, ∞) (set of bounds of A)
+
+    Let B = (0, 1) bas upper bounds:
+        1, 2, 3, 4, π, e, ...
+
+Defⁿ:
+    Let A ⊂ ℝ
+
+    We say b is an upper bound for A if x ≤ b ∀x ∈ A
+
+    If A has  an upper bound we say A is bounded above
+
+    (0, ∞) is not bounded above:
+
+    A = [0, 1]
+
+    Upper bounds:
+        any b ≥ 1 is an upper bounds for A
+
+    1 seams to be a special upper bound for A
+
+Defⁿ:
+    If the set =of upper bounds of A has a smallest element
+        then we call this the least upper bound of A
+
+    We write it as lub(A)
+
+    Note:
+        This is also called the supremum of A and written sup(A)
+
+Example:
+    If A = [0, 1] then lub(A) = 1
+
+    In this lub(A) ∈ A
+
+    Can we find a set of B such that lub(B) ∉ B?
+    
+    B = [0, 1)
+
+    lub(B) = 1
+
+    1 ∉ B
+
+    Can we ???
+    
+Defⁿ:
+    Let A ⊂ ℝ
+
+    We say A is bounded below if ∃a ∈ ℝ such that a ≤ x ∀ x ∈ A
+
+    We say a is a lower bound of A
+
+    [0, 1] has lower bounds:
+        0, -1, -(1/2), -37524, ...
+
+    Similarly (0, 1) has these lower bounds (-∞, 0) has no lower bound
+
+Defⁿ:
+    If The set of lower bounds of A has a greater element
+        we call it the greatest lower bound of A and write is as glb(A)
+
+    Note:
+        glb(A) is also called the infimum of A and denoted inf(A)
+
+Example:
+    glb(A) could belong to A  eg glb([0, 1]) = 0 and 0 ∈ [0, 1]
+
+    glb(A) might not belong to A eg glb((0, 1]) = 0 and 0 ∉ (0, 1]
+
+    It is possible that glb(b(A)) does not exist eg A = ℝ a \ (-∞, 0) have no glb
+
+    Let S = {x ∈ ℚ | x² < 2}
+
+    Does this have a lub in ℚ?
+    
+    No (since intuitively lub(S) should be √2 and √2 ∉ ℚ)
+
+The Axiom of Completion:
+    Every subset of ℝ which is bounded above has a least upper bound in ℝ
+
+    One consequence of this is:
+
+Thm 1.84: (The Archimedean Property)
+    If x ∈ ℝ, then there exists n ∈ ℕ such that x < n
+
+Proof:
+    If the property does not hold then ∃x ∈ ℝ such that x ≥ n ∀n ∈ ℕ
+        ie ℕ is bounded above so by Axiom of Completion:
+            u = lub(ℕ) exists
+
+    If u =lub(ℕ) then u - 1 < u so u - 1 is not an upper bound of ℕ
+
+    So ∃ m ∈ ℕ such that u - 1 < m ≤ u so u < m + 1 and if m ∈ ℕ, m + 1 ∈ ℕ
+        but u is an upper bound for ℕ and we have found m + 1 ∈ ℕ which is bigger than u ⇒⇐
+
+Thm 1.85: (The density of ℚ in ℝ)
+    Let a, b ∈ ℝ and a < b
+
+    Then ∃ r ∈ ℚ such that a < r < b
+
+Proof:
+    Without loss of generality we can assume 0 ≤ a < b
+
+    We need to find m, n ∈ ℕ such that a < (m/n) < b
+
+    Consider the number 1/(b - a) then by the Archimedean Property:
+        ∃ n ∈ ℕ such that 1/(b - a) < n or 1\n < b - a or a < b - (1/n)
+
+    Choose m to be smaller natural number bigger than na ie m - 1 ≤ na < m
+
+    So a < m/n, m - 1 ≤ na + 1, m < n(b - (1/n)) + 1 since a < b - (1/n),
+        m < nb - 1 + 1 = nb, m/n < b
+
+    Thus a < m/n < b ie ∃r ∈ ℚ such that a < r < b
+
+Exercise:
+    Prove this thm if a, b ≤ a
+
+Exercise:
+    Prove if a, b ∈ ℚ with a < b then ∃r ∈ ℝ - ℚ such that a < r < b
+
+Thm 1.87: (The Nested Intervals Property)
+    For each n ∈ ℕ assume we have a closed interval:
+        Iₙ = [aₙ, bₙ]
+
+    Assume Iₙ ⊃ Iₙ₊₁ ∀n
+
+    Then ⋂∞ₙ₌₁ Iₙ ≠ ∅
+
+    Note:
+        This thm is not true for intervals that are not closed:
+            Iₙ = (0, (1/n))
+
+        ⋂∞ₙ₌₁ Iₙ = ?
+
+        If x ∈ ⋂ Iₙ then x ∈ (0, (1/n)) ∀n ∈ ℕ 0 < x < (1/n) ∀n ???
+
+    Proof of Theorem:
+        Let A = {aₙ | n ∈ ℕ} be the set of Left-hand endpoints of the Iₙ intervals
+
+        Then A is bounded above since aₙ ∈ Iₙ ⊂ ???
