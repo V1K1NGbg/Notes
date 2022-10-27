@@ -80,7 +80,7 @@ Corollary 4.5: (Euclid's Lemma)
     Then a | c
 
 Proof:
-    Homework???
+    
 
 Example:
     Note that -2 | 16 = -2 * -8
