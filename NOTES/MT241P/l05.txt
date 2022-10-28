@@ -193,7 +193,7 @@ Lemma 6.6:
 Proof:
     First let c * a ≡ c * b (mod n)
 
-    Then n | (c * a - c* b) = c * (a - b)
+    Then n | (c * a - c * b) = c * (a - b)
 
     As gcd(c, n) = 1 we get n | a - b by Euclid's Lemma
 
