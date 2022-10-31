@@ -7,15 +7,6 @@ Equivalence Relations:
 
     ∼ ∈ AxA
 
-    ∼ = {(1, 1), (2, 1), (1, 3), (2, 3)}
-
-    1 ∼ 1
-    2 ∼ 1
-    1 ∼ 3
-    2 ∼ 3 ??? 2 ~ 2
-
-    But 1 ≁ 2 here
-
     Defⁿ:
          If A ia a non-empty set, we say a relation ∼ is an equivalence relation on A if:
             1. x ∼ x ∀x ∈ A (reflexivity)

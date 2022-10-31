@@ -183,7 +183,11 @@ Proof:
 
     This gives 1.
 
-    2., 3. ??? (LECTURES)
+    Also by Lemma 3.3 (7) we have n | (a - b) * c + (c - d) * b = a * c - db
+
+    This gives (2)
+
+    Finally part (3) follows from (2)
 
 Lemma 6.6:
     Let a, b, c, n, k integers with n ≥ 1 such that gcd(c, n) = 1

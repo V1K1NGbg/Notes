@@ -59,7 +59,7 @@ Proof:
     So S is numerically equivalent  to a countable set ⇒ S is countable
 
 Corollary 1.64:
-    Let A be a countable set and suppose ∀α in A ∃ a set Bα
+    Let A be a countable set and suppose ∀α in A there exists a set Bα
 
     Then  ⋃(α∈A) Bₓ is countable
 

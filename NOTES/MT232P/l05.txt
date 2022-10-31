@@ -43,7 +43,7 @@ Cardinality of P(ℕ) = c
 
 Prove???
 
-§ 1.5 - Properties of ℝ order on ℝ:
+§ 1.5 - Properties of ℝ (order on ℝ):
 
 Defⁿ:
     An order relation on a set A is a relation with the following properties:
@@ -117,7 +117,7 @@ Defⁿ:
     1 seams to be a special upper bound for A
 
 Defⁿ:
-    If the set =of upper bounds of A has a smallest element
+    If the set of upper bounds of A has a smallest element
         then we call this the least upper bound of A
 
     We write it as lub(A)
@@ -137,8 +137,6 @@ Example:
     lub(B) = 1
 
     1 ∉ B
-
-    Can we ???
     
 Defⁿ:
     Let A ⊂ ℝ
@@ -230,9 +228,30 @@ Thm 1.87: (The Nested Intervals Property)
 
         ⋂∞ₙ₌₁ Iₙ = ?
 
-        If x ∈ ⋂ Iₙ then x ∈ (0, (1/n)) ∀n ∈ ℕ 0 < x < (1/n) ∀n ???
+        If x ∈ ⋂ Iₙ then x ∈ (0, (1/n)) ∀n ∈ ℕ 0 < x < (1/n) x ∄ ie ⋂∞ₙ₌₁ Iₙ = ∅
 
     Proof of Theorem:
         Let A = {aₙ | n ∈ ℕ} be the set of Left-hand endpoints of the Iₙ intervals
 
-        Then A is bounded above since aₙ ∈ Iₙ ⊂ ???
+        Then A is bounded above since aₙ ∈ Iₙ ⊂ I₁ = [a₁, b₁] ∀n
+            ie aₙ ≤ b₁ ∀n ∈ ℕ
+
+        So b₁ is an upper bound for A
+
+        In fact each bₙ is an upper bound of A
+
+        By the Axiom of Completion A has  a lub
+
+        Call lub(A) = x
+
+        Claim x ∈ [aₙ, bₙ] ∀n
+
+        Clearly x ≥ aₙ ∀n since x is an upper bound of A
+
+        And x ≤ bₙ ∀n since each bₙ is an upper bound of A and x is the least upper bound of A
+
+        Now aₙ ≤ x ≤ bₙ ∀n ie x ∈ [aₙ, bₙ] ∀n x ∈ Iₙ ∀n
+
+        So x ∈ ⋂∞ₙ₌₁ Iₙ
+
+        Therefore ⋂∞ₙ₌₁ Iₙ ≠ ∅
