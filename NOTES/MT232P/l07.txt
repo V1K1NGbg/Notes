@@ -1,0 +1,26 @@
+Chapter 2 (Sequences)
+
+Defⁿ:
+    A sequence is a function whose domain is ℕ
+
+We usually denote sequences as:
+    {aₙ}(n∈ℕ) or {aₙ}(n = 1)(∞) or {aₙ}
+
+We want convergence
+
+We want to define lim
+
+arbitrarily close to a (or as close as we like to a)
+
+Defⁿ:
+    Let {aₙ} be a sequence of real numbers
+
+    Let a ∈ ℝ
+
+    We say {aₙ} converges to a
+        or Lim(n → ∞) aₙ = a
+
+        if ∀ɛ > 0 we can say that ∃N ∈ ℕ
+
+        where |aₙ - a| < ɛ if n ≥ N 
+

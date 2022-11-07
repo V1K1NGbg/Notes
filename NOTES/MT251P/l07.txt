@@ -1,0 +1,13 @@
+cos(θ) = (x̱.y̱)/(||x̱||||y̱||)
+following from 3(c)
+
+three non collinear vectors a̱, ḇ, c̱ in ℝⁿ define a triangle
+
+BC = c̱ - ḇ
+
+Planes in ℝ³
+
+equation  of a plane:
+    ṉ.Q₀Q⃗ = 0 where Q is a point on the plane (Q = (x, y, z)) and n is the vector perpendicular to the plane
+
+    
