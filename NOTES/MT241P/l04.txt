@@ -51,7 +51,7 @@ Proof:
 
     Finally let c ∈ ℤ such that c | a and c | b
 
-    If c ≤ 0 then surely c ≤ d
+    If c ≤ 0 then sure    "kkk" - Henry said to my offerly c ≤ d
 
     Hence assume c > 0
 

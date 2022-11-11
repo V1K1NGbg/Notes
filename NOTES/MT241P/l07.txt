@@ -1,0 +1,55 @@
+what is the remainder of 1! + 2! + 3! + 4! + 5! + ... + 100! upon division of 12
+
+12 = 3 * 4 divides k! for all k ≥ 4
+
+Hence k! ≡ 0 (mod 12) for all k ≥ 4
+
+Now:
+    1! + 2! + 3! + 4! + 5! + ... + 100! ≡
+    1! + 2! + 3! + 0 + 0 + ... + 0 (mod 12) ≡ 
+    1! + 2! + 3! (mod 12) ≡
+    1 + 2 + 6 ≡
+    9 (mod 12)
+
+Remark 6.9:
+    divisibility of a by 2 (if last digit is divisible by 2)
+    divisibility by 11 if the odd numbers subtracted from the even numbers is divisible by 11
+
+Example:
+    12573
+    2∤3 therefore 2∤12573
+
+    11|(1+5+3)-(2+7) therefore 11∤12573
+
+
+
+
+Remark 6.14: (Chinese Remainder Theorem)
+    Let n₁, ..., nᵣ be positive, pairwise coprime integers and let a₁, ..., aᵣ be integers
+
+    Then the system of linear congruences:
+        x ≡ a₁ (mod n₁)
+        ...
+        x ≡ aᵣ (mod nᵣ)
+
+    has a simultaneous solution which is unique modulo n = n₁ ...
+
+    x̄ = a₁N₁x₁ + a₂N₂x₂ = -1 * 11 * -1 + 1 * 3 * 4 = 11 + 12 = 23
+
+    23⁹¹ ≡ 23 (mod 33) 
+
+Which is the smallest positive integer that leaves remainders 2, 3, 2 when divided by 3, 5, 7 respectively
+
+That means we look for a solution of the system:
+    x ≡ 2 (mod 3)
+    x ≡ 3 (mod 5)
+    x ≡ 2 (mod 7)
+
+Note that 3, 5, 7 are pairwise coprime
+Hence we can expect a solution by the Chinese Remainder Theorem
+
+We have:
+    a₁ = 2, n₁ = 3, a₂ = 3, n₂ = 5, a₃ = 2, n₃ = 7, n = 3 * 5 * 7 = 105, N₁ = 5 * 7 = 35, N₂ = 3 * 7  = 21, N₃ = 3 * 5 = 15
+
+There is no x ∈ ℚ such that x² = 2
+

@@ -10,4 +10,36 @@ Planes in ℝ³
 equation  of a plane:
     ṉ.Q₀Q⃗ = 0 where Q is a point on the plane (Q = (x, y, z)) and n is the vector perpendicular to the plane
 
-    
+0,2,1 1,1,0
+
+Theorem 7:
+    point: (x₀, y₀, z₀)
+    line: ax + by + cz + d = 0
+
+    Shortest distance from point to line:
+        |(ax₀ + by₀ + cz₀ + d)/(√(a² + b² + c²))|
+
+
+        |a̱.(ḇ x c̱)|
+
+        a = (1, 0, -1)
+        ḇ = (2, 1, 2)
+        c̱ = (3, 2, -1)
+
+        6
+
+
+
+Theorem 9:
+    ||x̱ + y̱|| ≤ ||x̱|| + ||y̱|| for all x̱, y̱ ∈ ℝ
+
+
+    a₁₁x₁ + a₁₂x₂ + ... + a₁ₙxₙ = b₁
+    a₂₁x₁ + a₂₂x₂ + ... + a₂ₙxₙ = b₂
+    ...   + ...   + ... + ...   = ...
+    aₖ₁x₁ + aₖ₂x₂ + ... + aₖₙxₙ = bₖ
+
+
+    no solutions means inconsistent
+    one or more solutions means consistent
+
