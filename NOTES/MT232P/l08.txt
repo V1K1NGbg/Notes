@@ -1,0 +1,7 @@
+Consider {aₙ} = {(-1)ⁿ} = -1, 1, -1, 1, -1, 1, ...
+
+Show Lim n-> ∞ (-1)ⁿ ≠ 1 
+
+We need to find ɛ > 0 such that for all N ∈ ℕ
+
+|(-1)ⁿ - 1| > ɛ
