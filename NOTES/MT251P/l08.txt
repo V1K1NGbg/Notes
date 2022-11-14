@@ -1,0 +1,7 @@
+Definition:
+    Two matrices A = [aᵢⱼ] and B = [bᵢⱼ] are defined to be equal if a and b have the same number of rows and aᵢⱼ = bᵢⱼ
+
+Definition:
+    In a non zero row the first non-zero entry is a 1
+
+    We call this 1 a leading 1

@@ -71,7 +71,9 @@ def formatd(arr1, arr2, arr3, arr4, arr5):
         if arr3[i] > maxarr3:
             maxarr3 = arr3[i]
 
-    return arr1calc, arr2calc, arr4calc, arr5calc, maxarr1, maxarr2, maxarr3, maxarr4, maxarr5, avgarr5
+    info = [maxarr1, maxarr2, maxarr3, maxarr4, maxarr5, avgarr5]
+
+    return arr1calc, arr2calc, arr4calc, arr5calc, info
 
 # p29 = pyproj.Proj(proj='utm', zone=29, ellps='WGS84')
 # p30 = pyproj.Proj(proj='utm', zone=30, ellps='WGS84')
@@ -90,42 +92,43 @@ testprice = []
 
 
 with open('PROJECTS/house-prices/HousePriceDataTRAINING.csv') as csv_file:
-    csv_reader = csv.reader(csv_file, delimiter=',')
+    csvreader = csv.reader(csv_file, delimiter=',')
 
     data = 0
 
-    for row in csv_reader:
-        if random.randint(1, 100) <= 80:
+    for row in csvreader:
+        # if random.randint(1, 100) <= 80:
 
-            # if data >= 20:
-            #     break
-            # if data % 2 == 0:
+            if data >= 20:
+                break
+            if data % 2 == 0:
                 y.append(float(row[0]))
                 x.append(float(row[1]))
                 date.append(row[2])
                 price.append(int(row[3]))
                 bed.append(int(row[4]))
 
-        else:
+        # else:
 
-            # if data % 2 != 0:
+            if data % 2 != 0:
                 testy.append(float(row[0]))
                 testx.append(float(row[1]))
                 testdate.append(row[2])
                 testprice.append(int(row[3]))
                 testbed.append(int(row[4]))
             
-        data = data + 1
+            data = data + 1
 
     print(f'Processed {data} lines.')
 
 # projection if time left
 
-xcalc, ycalc, datecalc, pricecalc, maxx, maxy, maxb, maxd, maxp, avgprice = formatd(x, y, bed, date, price)
+xcalc, ycalc, datecalc, pricecalc, info = formatd(x, y, bed, date, price)
 
-testxcalc, testycalc, testdatecalc, testpricecalc, testmaxx, testmaxy, testmaxb, testmaxd, testmaxp, testavgprice = formatd(testx, testy, testbed, testdate, testprice)
+testxcalc, testycalc, testdatecalc, testpricecalc, testinfo = formatd(testx, testy, testbed, testdate, testprice)
 
-with open("PROJECTS/house-prices/cashe80p.csv", 'w') as csvfile:
+with open("PROJECTS/house-prices/cashe10.csv", 'w') as csvfile:
+# with open("PROJECTS/house-prices/cashe80p.csv", 'w') as csvfile:
     csvwriter = csv.writer(csvfile)
 
     csvwriter.writerow(xcalc)
@@ -133,12 +136,10 @@ with open("PROJECTS/house-prices/cashe80p.csv", 'w') as csvfile:
     csvwriter.writerow(bed)
     csvwriter.writerow(datecalc)
     csvwriter.writerow(pricecalc)
-
-with open("PROJECTS/house-prices/cashe80p (test).csv", 'w') as csvfile:
-    csvwriter = csv.writer(csvfile)
-
+    csvwriter.writerow(info)
     csvwriter.writerow(testxcalc)
     csvwriter.writerow(testycalc)
     csvwriter.writerow(testbed)
     csvwriter.writerow(testdatecalc)
     csvwriter.writerow(testpricecalc)
+    csvwriter.writerow(testinfo)
