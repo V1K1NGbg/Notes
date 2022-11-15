@@ -1,0 +1,25 @@
+ℂ - complex numbers
+
+the only solution to x² = -1
+
+form:
+    ℂ := {a + bi | a, b ∈ ℝ} and where i² := -1
+
+    a - real part
+    b - imaginary part
+
+
+properties:
+    z = a + bi and w = c + di are equal iff a = c and b = d
+
+    z + w = (a + bi) + (c + di) = (a + c) + (b + d)i
+    z * w = (a + bi) * (c + di) = (ac - bd) + (ad + bc)i
+
+the complex plane is also called Argand diagram:
+    Let z = a + bi
+    
+    Then the coordinates of z will be:
+        (Re(z), Im(z)) -> (a, b)
+
+addition of complex numbers is the same as addition of two vectors
+

@@ -90,35 +90,33 @@ testbed = []
 testdate = []
 testprice = []
 
-xycalc = []
-
 with open('PROJECTS/house-prices/HousePriceDataTRAINING.csv') as csv_file:
     csvreader = csv.reader(csv_file, delimiter=',')
 
     data = 0
 
     for row in csvreader:
-        # if random.randint(1, 100) <= 80:
+        if random.randint(1, 100) <= 80:
 
-            if data >= 20:
-                break
-            if data % 2 == 0:
+            # if data >= 20:
+            #     break
+            # if data % 2 == 0:
                 y.append(float(row[0]))
                 x.append(float(row[1]))
                 date.append(row[2])
                 price.append(int(row[3]))
                 bed.append(int(row[4]))
 
-        # else:
+        else:
 
-            if data % 2 != 0:
+            # if data % 2 != 0:
                 testy.append(float(row[0]))
                 testx.append(float(row[1]))
                 testdate.append(row[2])
                 testprice.append(int(row[3]))
                 testbed.append(int(row[4]))
             
-            data = data + 1
+        data = data + 1
 
     print(f'Processed {data} lines.')
 
@@ -128,19 +126,13 @@ xcalc, ycalc, datecalc, pricecalc, info = formatd(x, y, bed, date, price)
 
 testxcalc, testycalc, testdatecalc, testpricecalc, testinfo = formatd(testx, testy, testbed, testdate, testprice)
 
-for i in range(len(xcalc)):
-    idk = []
-    idk.append(xcalc[i])
-    idk.append(ycalc[i])
-    xycalc.append(idk)
 
-xycalcstr = str(xycalc)
-
-with open("PROJECTS/house-prices/cashe10.csv", 'w') as csvfile:
-# with open("PROJECTS/house-prices/cashe80p.csv", 'w') as csvfile:
+# with open("PROJECTS/house-prices/cashe10.csv", 'w') as csvfile:
+with open("PROJECTS/house-prices/cashe80p.csv", 'w') as csvfile:
     csvwriter = csv.writer(csvfile)
 
-    csvwriter.writerow(xycalcstr)
+    csvwriter.writerow(xcalc)
+    csvwriter.writerow(ycalc)
     csvwriter.writerow(bed)
     csvwriter.writerow(datecalc)
     csvwriter.writerow(pricecalc)
