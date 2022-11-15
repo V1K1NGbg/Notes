@@ -90,6 +90,7 @@ testbed = []
 testdate = []
 testprice = []
 
+xycalc = []
 
 with open('PROJECTS/house-prices/HousePriceDataTRAINING.csv') as csv_file:
     csvreader = csv.reader(csv_file, delimiter=',')
@@ -127,12 +128,19 @@ xcalc, ycalc, datecalc, pricecalc, info = formatd(x, y, bed, date, price)
 
 testxcalc, testycalc, testdatecalc, testpricecalc, testinfo = formatd(testx, testy, testbed, testdate, testprice)
 
+for i in range(len(xcalc)):
+    idk = []
+    idk.append(xcalc[i])
+    idk.append(ycalc[i])
+    xycalc.append(idk)
+
+xycalcstr = str(xycalc)
+
 with open("PROJECTS/house-prices/cashe10.csv", 'w') as csvfile:
 # with open("PROJECTS/house-prices/cashe80p.csv", 'w') as csvfile:
     csvwriter = csv.writer(csvfile)
 
-    csvwriter.writerow(xcalc)
-    csvwriter.writerow(ycalc)
+    csvwriter.writerow(xycalcstr)
     csvwriter.writerow(bed)
     csvwriter.writerow(datecalc)
     csvwriter.writerow(pricecalc)
