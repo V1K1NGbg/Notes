@@ -23,3 +23,9 @@ the complex plane is also called Argand diagram:
 
 addition of complex numbers is the same as addition of two vectors
 
+z = a + bi
+z̅ = a - bi
+zz̅ = |z|² ∈ ℝ
+-z = -a -bi
+z⁻¹ = (a/(a²+b²))-(b/(a²+b²))i if z ≠ 0
+
