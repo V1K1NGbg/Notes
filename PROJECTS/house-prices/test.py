@@ -1,5 +1,5 @@
 import numpy as np
-
+import math
 
 def remove_outliers(oneD_array, deviations):
     # w =
