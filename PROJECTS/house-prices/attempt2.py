@@ -8,50 +8,25 @@ from sklearn.model_selection import train_test_split
 from sklearn import ensemble
 import math
 
+def remove_outliers(oneD_array, deviations):
+    # w =
+    variance = ((oneD_array - np.average(oneD_array)) ** 2 ).sum()/len(oneD_array)
+    deviation = math.sqrt(variance)
+    outlier_bool = np.logical_and(oneD_array < (np.average(oneD_array) + deviations * deviation), oneD_array > (np.average(oneD_array) - deviations * deviation))
+    outliers = oneD_array[outlier_bool]
+
 def data_accuracy(predictions, real):
-    # This will be a list, the ith element of this list will be abs(prediction[i] - real[i])/real[i]
-    differences = list(map(lambda x: abs(x[0] - x[1]) / x[1], zip(predictions, real)))
-
-    # Find the value for the bottom t percentile and the top t percentile
-    f = 5
-    t = 95
-    percentiles = np.percentile(differences, [f, t])
-    differences_filter = []
-    for diff in differences:
-        # Keep only values in between f and t percentile
-        if percentiles[0] < diff < percentiles[1]:
-            differences_filter.append(diff)
-
-    # In this example, we are removing everything above the 95th percentile as t is 95
-    # and everything below the 5th percentile as f is 5
-
-    # The higher the value, the worse the guess, therefore removing everything above the 95th percentile will remove 
-    # the 5% worse guesses 
-
-    
-    print(f"Differences excluding outliers: {np.average(differences_filter)}")
-    print(f"Differences: {np.average(differences)}")
-
-def data_accuracy2(predictions, real): # as lists
     p, r = predictions, real
-    w = 1.5 # Deviations
+    w = 1.5
     array = np.stack((p, r), axis=1)
     difference = np.abs(array[:,0]-array[:,1])
     percentages = (difference/np.abs(array[:,1]))*100
-    sorted_per = percentages[percentages[:].argsort()]
-    median = sorted_per[int(len(percentages)/2)]
-
+    median = percentages[int(len(percentages)/2)]
     # removes top and bottom 5% respectively
-    variance = ((percentages - np.average(percentages)) ** 2 ).sum()/len(percentages)
-    deviation = math.sqrt(variance)
-    outlier_bool = np.logical_and(percentages < (np.average(percentages) + w * deviation), percentages > (np.average(percentages) - w * deviation))
-    outliers = percentages[outlier_bool]
+    without_outliers = remove_outliers(percentages, 2)
 
-    print(f"average of 90%: {np.average(outliers)}")
-    print(f"Median is: {median}")
-
-clf = ensemble.GradientBoostingRegressor(n_estimators = 50, max_depth = 8, min_samples_split = 3,
-          learning_rate = 0.0001, loss = 'squared_error')
+    print(f"average of 90%: {np.average(without_outliers)}")
+    print(f"Median is: {percentages[median]}")
 
 data = pd.read_csv("PROJECTS/house-prices/HousePriceDataTRAINING.csv")
 data.columns = ["long","lat","date","price","bed"]
@@ -69,13 +44,7 @@ train1 = data.drop('price',axis=1)
 
 x_train , x_test , y_train , y_test = train_test_split(train1 , labels , test_size = 0.10, random_state =2)
 
-clf.fit(x_train, y_train)
-
-print(x_train, x_test)
-
-x_pred = clf.predict(x_test)
-
-print(clf.score(x_test,y_test))
+reg.fit(x_train,y_train)
+x_pred = reg.predict(x_test)
 
 print(data_accuracy(y_test, x_pred))
-print(data_accuracy2(y_test, x_pred))
