@@ -54,7 +54,7 @@ train2 = list(map(lambda p: np.log2(p), train2))
 
 clf.fit(train1, train2)
 
-datatest = pd.read_csv("PROJECTS/house-prices/HousePriceDataTEST.csv")
+datatest = pd.read_csv("PROJECTS/house-prices/HousePriceDataTEST.csv", header=None)
 datatest.columns = ["long", "lat", "date", "bed"]
 
 conv_dates = []
@@ -64,11 +64,8 @@ for i in range(datatest.date.size):
 
 datatest['date'] = conv_dates
 
-print(datatest.size())
-
 results = list(map(lambda p: 2**p, clf.predict(datatest)))
 
-print(len(results))
 
 for i in range(5):
     print(results[i])
@@ -76,7 +73,6 @@ for i in range(5):
 first = results.pop(0)
 
 datatest = pd.read_csv("PROJECTS/house-prices/HousePriceDataTEST.csv")
-
 datatest[first] = results
 datatest.to_csv('result.csv', index=False)
 
