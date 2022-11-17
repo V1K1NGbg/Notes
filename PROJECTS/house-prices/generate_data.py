@@ -74,7 +74,7 @@ first = results.pop(0)
 
 datatest = pd.read_csv("PROJECTS/house-prices/HousePriceDataTEST.csv")
 datatest[first] = results
-datatest.to_csv('result.csv', index=False)
+datatest.to_csv('PROJECTS/house-prices/result.csv', index=False)
 
 print(datatest.head())
 # print(clf.get_params())
