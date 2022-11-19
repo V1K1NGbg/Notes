@@ -1,0 +1,72 @@
+ℕ = {1, 2, 3, ... }
+ℤ = {0, 1, −1, 2, −2, 3, −3, ...}
+ℚ = {p/q | p, q ∈ ℤ, q ≠ 0}
+
+Definition 1.5:
+    Suppose A and B are both sets and suppose that all elements of A are also
+    elements of B (that is if x ∈ A then x ∈ B), then we say A is a subset of B and write A ⊂ B
+
+    If in addition there is an element y ∈ B which is not an element of A then we say that A is
+    a proper subset of B
+
+Note:
+    If A ⊂ B and B ⊂ A then A = B
+
+Theorem 1.14. Let A, B and C be any sets, then:
+    1 A ∩ A = A and A ∪ A = A (The Idempotent Law)
+    2 A ∩ B = B ∩ A and A ∪ B = B ∪ A (The Commutative Law)
+    3 (A ∩ B) ∩ C = A ∩ (B ∩ C) and (A ∪ B) ∪ C = A ∪ (B ∪ C) (The Associative Law)
+    4 A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C) and A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C) (The Distributive Law)
+
+Proof:
+    Let’s prove A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)
+    
+    We will use the fact that if X and Y are sets with X ⊂ Y and Y ⊂ X then X = Y
+    
+    So here we need to show that A ∩ (B ∪ C) ⊂ (A ∩ B) ∪ (A ∩ C) and that (A ∩ B) ∪ (A ∩ C) ⊂ A ∩ (B ∪ C)
+    
+    Recall that to show X ⊂ Y we need to show that for all elements x ∈ X we have x ∈ Y
+
+    Let x ∈ A ∩ (B ∪ C), then x ∈ A and x ∈ B ∪ C
+    
+    So x ∈ A, and either x ∈ B or x ∈ C
+        Case 1: If x ∈ B, then x ∈ A and x ∈ B so x ∈ A ∩ B
+        Case 2: If x ∈ C, then x ∈ A and x ∈ C so x ∈ A ∩ C
+
+    So either x ∈ A ∩ B or x ∈ A ∩ C
+    
+    In other words x ∈ (A ∩ B) ∪ (A ∩ C)
+
+    So we have shown that A ∩ (B ∪ C) ⊂ (A ∩ B) ∪ (A ∩ C)
+
+    Now we need to show that (A ∩ B) ∪ (A ∩ C) ⊂ A ∩ (B ∪ C)
+
+    Let y ∈ (A ∩ B) ∪ (A ∩ C) then either y ∈ A ∩ B or y ∈ A ∩ C
+        Case 1: If y ∈ A ∩ B, then y ∈ A and y ∈ B
+        Case 2: If y ∈ A ∩ C, then y ∈ A and y ∈ C
+
+    In any case y ∈ A and either y ∈ B or y ∈ C So y ∈ A and y ∈ B ∪ C
+    
+    In other words y ∈ A ∩ (B ∪ C)
+
+    Thus (A ∩ B) ∪ (A ∩ C) ⊂ A ∩ (B ∪ C), as required
+
+    We have shown that A ∩ (B ∪ C) ⊂ (A ∩ B) ∪ (A ∩ C) and that (A ∩ B) ∪ (A ∩ C) ⊂ A ∩ (B ∪ C)
+    We conclude that A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)
+
+Theorem 1.18. Let A, B and C be any sets, then:
+    A − (B ∪ C) = (A − B) ∩ (A − C)
+    A − (B ∩ C) = (A − B) ∪ (A − C)
+
+Proof: 
+    We will prove that A − (B ∪ C) = (A − B) ∩ (A − C) and leave the proof of the second statement as an exercise.
+    If x ∈ A − (B ∪ C) then x ∈ A and x ∉ B ∪C. That means that x ∈A and x /∈B, x /∈C.
+    Now x ∈A and x /∈B means that x ∈A −B.
+    And x ∈A and x /∈C means that x ∈A −C.
+    Thus x ∈(A −B) ∩(A −C).
+    So we have shown that A −(B ∪C) ⊂(A −B) ∩(A −C). (*)
+    Now suppose that y ∈(A −B) ∩(A −C). Then y ∈A −B and y ∈A −C.
+    This means that y ∈A and y /∈B and y /∈C. So y ∈A and y /∈B ∪C.
+    Thus y ∈A −(B ∪C). Thus we have shown that (A −B) ∩(A −C) ⊂A −(B ∪C). (**)
+    From (*) and (**) we have A−(B∪C) ⊂(A−B)∩(A−C) and (A−B)∩(A−C) ⊂A−(B∪C),
+    thus A −(B ∪C) = (A −B) ∩(A −C)
