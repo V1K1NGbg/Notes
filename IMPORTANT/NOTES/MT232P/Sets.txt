@@ -1,0 +1,345 @@
+1.1 Introduction to Set Theory
+In this section we will consider some basic concepts in Set Theory. We will start with the
+definition of a set:
+Definition 1.1. A set is a collection of objects. These objects are called the elements of the
+set.
+Example 1.2. The Natural numbers N= {1, 2, 3, ... } is a set and the number 20 is an
+element of this set. Note that 0 is not an element of N.
+Notation:
+We will usually use capital letters for sets and lowercase letters for elements of sets.
+We write a ∈A if a is an element of the set A.
+If b is not an element of A, we write b /∈A.
+It is not always easy to specify the elements of a set. If the set A has a small number of
+elements, we could list them: for example if A has three elements a, b, and c then we write
+A = {a, b, c}
+We also took this approach with the set N above. However, sometimes it is not useful or
+practical to take this approach and it is clearer to describe a property that specifies the
+elements of the set: for example we could describe the set A = {5, 6, 7, ... } as
+A = {x ∈N|x > 4}.
+Example 1.3. There are often many ways of describing the same set.
+Let C = {x ∈N|x2 −3x + 2 = 0}. We can check that C = {1, 2}. We can also see that we
+could describe C as {x ∈N|x < 3}.
+Definition 1.4. Define the set of Integers as
+Z= {0,1,−1,2,−2,3,−3,...}.
+The set of Rational numbers as
+Q= {p/q |p,q ∈Z,q 6= 0}.
+It is not so easy to give a precise definition of the set of Real numbers. For the moment we
+will say that the set of real numbers Ris the set of all numbers on the number line.
+Notice that given a set A and an element x then exactly one of the following holds: x ∈A;
+x /∈A.
+1
+Definition 1.5. Suppose A and B are both sets and suppose that all elements of A are also
+elements of B (that is if x ∈A then x ∈B), then we say A is a subset of B and write A ⊂B.
+If in addition there is an element y ∈B which is not an element of A then we say that A is
+a proper subset of B.
+Example 1.6. 1. The even whole numbers E = {2, 4, 6, 8,... }is a proper subset of N.
+2. Consider the set D = {0,1}. Then D ⊂Zbut D is not a subset of N.
+3. We have N⊂Z⊂Q⊂R.
+Note: If A ⊂B and B ⊂A then A = B. (Can you explain why this is true?)
+Set Operations
+Definition 1.7. If A and B are sets then their intersection is the set of all elements that
+belong to both A and to B. We write A ∩B.
+Example 1.8. Let A = {2,4,6,8,10}, B = {6,10,13} and C = {1,13}. Then A ∩B =
+{6,10}, B ∩C = {13} and there are no elements in A ∩C.
+We write ∅ for the empty set so we have A ∩C = ∅.
+Definition 1.9. If A ∩B = ∅ we say that they are non-intersecting or disjoint.
+Definition 1.10. If A and B are sets then their union is the set of all elements that belong
+to either A or to B or to both. We write A ∪B.
+Example 1.11. If we return to the last example we have A∪B = {2,4,6,8,10,13}, B∪C =
+{1,6,10,13} and A ∪C = {1,2,4,6,8,10,13}.
+Definition 1.12. If A and B are sets then the complement of B in A is the set of elements
+of A that are not in B. We denote it as A −B. That is
+A −B = {x ∈A|x /∈B}.
+Note: In general A −B 6= B −A. For example if B = {6,10,13} and C = {1,13} then
+B −C = {6,10} but C −B = {1}. If A −B = B −A, what can you say about A and B?
+Definition 1.13. If A is a set then the complement of A is
+C(A) = {x|x /∈A}.
+Theorem 1.14. Let A, B and C be any sets then
+1. A ∩A = A and A ∪A = A (The Idempotent Law)
+2. A ∩B = B ∩A and A ∪B = B ∪A (The Commutative Law)
+2
+3. (A ∩B) ∩C = A ∩(B ∩C) and (A ∪B) ∪C = A ∪(B ∪C) (The Associative Law)
+4. A ∩(B ∪C) = (A ∩B) ∪(A ∩C) and A ∪(B ∩C) = (A ∪B) ∩(A ∪C)
+(The Distributive Law)
+Proof: Let’s prove A∩(B ∪C) = (A∩B) ∪(A∩C) from part 4. We will use the fact that
+if X and Y are sets with X ⊂ Y and Y ⊂ X then X = Y . So here we need to show that
+A ∩(B ∪C) ⊂(A ∩B) ∪(A ∩C) and that (A ∩B) ∪(A ∩C) ⊂A ∩(B ∪C). Recall that
+to show X ⊂Y we need to show that for all elements x ∈X we have x ∈Y .
+Let x ∈A ∩(B ∪C), then x ∈A and x ∈B ∪C. So x ∈A, and either x ∈B or x ∈C.
+Case 1: If x ∈B, then x ∈A and x ∈B so x ∈A ∩B.
+Case 2: If x ∈C, then x ∈A and x ∈C so x ∈A ∩C.
+So either x ∈A ∩B or x ∈A ∩C. In other words x ∈(A ∩B) ∪(A ∩C).
+So we have shown that A ∩(B ∪C) ⊂(A ∩B) ∪(A ∩C).
+Now we need to show that (A ∩B) ∪(A ∩C) ⊂A ∩(B ∪C).
+Let y ∈(A ∩B) ∪(A ∩C) then either y ∈A ∩B or y ∈A ∩C.
+Case 1: If y ∈A ∩B , then y ∈A and y ∈B.
+Case 2: If y ∈A ∩C, then y ∈A and y ∈C.
+In any case y ∈ A and either y ∈ B or y ∈ C. So y ∈ A and y ∈ B ∪C. In other words
+y ∈A ∩(B ∪C).
+Thus (A ∩B) ∪(A ∩C) ⊂A ∩(B ∪C), as required.
+We have shown that A∩(B∪C) ⊂(A∩B)∪(A∩C) and that (A∩B)∪(A∩C) ⊂A∩(B∪C).
+We conclude that A ∩(B ∪C) = (A ∩B) ∪(A ∩C).
+
+Exercise 1.15. Your turn: Prove the rest of the theorem above. Remember to use the fact
+that if A ⊂B and B ⊂A then A = B.
+Notation: Since by part 3. of the previous theorem A ∩(B ∩C) = (A ∩B) ∩C we often
+write it as A ∩B ∩C. Similarly we write A ∪B ∪C for A ∪(B ∪C) = (A ∪B) ∪C.
+We can generalise and write:
+∩nk=1Ak = A1 ∩A2 ∩A3 ∩... ∩An = {x|x ∈Ak for all k = 1,...,n}.
+∪nk=1Ak = A1 ∪A2 ∪A3 ∪... ∪An = {x|x ∈Ak for some k = 1,...,n}.
+Similarly we write
+∩∞k=1Ak = ∩k∈NAk = {x|x ∈Ak for all k ∈N}.
+∪∞k=1Ak = ∪k∈NAk = {x|x ∈Ak for some k ∈N}.
+3
+Example 1.16. For each k ∈Nlet Ak = [0,k]. So A1 = [0,1], A2 = [0,2] etc. Then
+∪nk=1Ak = [0,n]
+and
+∩nk=1Ak = [0,1].
+Also ∪k∈NAk = [0,∞) and ∩k∈NAk = [0,1]. Can you explain why?
+Exercise 1.17. Your turn: For each k ∈Nlet Ak = [1/k,1]. Find:
+1. ∪k∈NAk;
+2. ∩k∈NAk.
+Theorem 1.18. Let A, B and C be any sets then
+A −(B ∪C) = (A −B) ∩(A −C)
+A −(B ∩C) = (A −B) ∪(A −C)
+Proof: We will prove that A −(B ∪C) = (A −B) ∩(A −C) and leave the proof of the
+second statement as an exercise.
+If x ∈A −(B ∪C) then x ∈A and x /∈B ∪C. That means that x ∈A and x /∈B, x /∈C.
+Now x ∈A and x /∈B means that x ∈A −B.
+And x ∈A and x /∈C means that x ∈A −C.
+Thus x ∈(A −B) ∩(A −C).
+So we have shown that A −(B ∪C) ⊂(A −B) ∩(A −C). (*)
+Now suppose that y ∈(A −B) ∩(A −C). Then y ∈A −B and y ∈A −C.
+This means that y ∈A and y /∈B and y /∈C. So y ∈A and y /∈B ∪C.
+Thus y ∈A −(B ∪C). Thus we have shown that (A −B) ∩(A −C) ⊂A −(B ∪C). (**)
+From (*) and (**) we have A−(B∪C) ⊂(A−B)∩(A−C) and (A−B)∩(A−C) ⊂A−(B∪C),
+thus A −(B ∪C) = (A −B) ∩(A −C).
+
+Definition 1.19. If A and B are two non-empty sets then the Cartesian product A ×B of
+A and B is the set of all ordered pairs (a,b) with a ∈A and b ∈B.
+Note that you have seen the Cartesian product of sets many times before. For example
+R2 = R×R= {(x,y)|x ∈Rand y ∈R} is the usual xy-plane. Similarly R3 = R×R×R.
+Example 1.20. Let A = {1,2,3} and B = {−1,0}. Then
+A ×B = {(1,−1),(1,0),(2,−1),(2,0),(3,−1),(3,0)}.
+4
+1.2 Functions
+You are already very familiar with the concept of functions. The definition given in Calculus
+courses is usually:
+Definition 1.21. Given two sets A and B, a function from A to B is a rule that associates
+to each element of A a single element of B. We write f : A → B. Given x ∈ A, we write
+f(x) for the unique element of B associated to it. The set A is called the domain of f and
+the range or image of f is the subset of B given by {y ∈B|y = f(x) for some x ∈A}.
+Sometimes we can write down a specific formula for a function. For example:
+f : R→Rf(x) = x2 −3.
+Sometimes we need more than one formula to describe the function. For example, Dirichlet’s
+function is:
+g : R→Rg(x) =
+{
+1 x ∈Q
+0 x ∈R−Q
+Similarly the absolute value function is described as
+h(x) = |x|=
+{
+−x x < 0
+x x ≥0
+Sometimes we have no ‘formula’ at all. For example, let A = {cat, dog, mouse} and let
+B = {house, garden}, then we can define a function f : A →B by f(cat) = house, f(dog) =
+garden, and f(mouse) = house. (Check that this satisfies the definition of a function, and
+find a different function g : A → B. Can you find an example of a mapping h : A → B
+which is not a function? )
+There are some problems with the definition of a function given above. It is not precise
+enough and therefore open to interpretation. We have a more formal version:
+Definition 1.22. Let A and B be sets. A function from A to B is a set f of ordered pairs
+in A ×B with the property that if (a,b) and (a,b′) are elements of f then b = b′.
+Note: here the domain of f is the set {a ∈A|a appears as the first member of an element of f}.
+We usually think of f as a set of pairs (a,f(a)).
+Definition 1.23. Suppose f : A → B is a function. Suppose C ⊂ A. We can define the
+restriction of f to C as
+f|C : C →B given by f|C(x) = f(x) ∀x ∈C.
+Example 1.24. Consider the following examples:
+1. Let f : R→ Rbe given by f(x) = 3x + 7. Then since Z⊂ Rwe can define the
+restriction f|Z: Z→R. We have f|Z(x) = 3x + 7 for all x ∈Z.
+5
+2. Recall Dirichlet’s Function g : R→Rgiven by g(x) =
+{
+1 x ∈Q
+0 x ∈R−Q.
+It is easy to see that g|Q(x) = 1 for all x ∈Q.
+Definition 1.25. Suppose f : A → B and g : B → C. We can define the composition
+g ◦f : A →C as g ◦f(x) = g(f(x)) for all x such that f(x) is in the domain of g.
+Example 1.26. Let f : R→Rbe given by f(x) = 3x + 7. Let g : [0,∞) →Rbe given by
+g(x) = √x. We can define g ◦f(x) = √3x + 7 if f(x) = 3x + 7 is in the domain of g; that
+is if 3x + 7 ≥0 or x ∈[−7/3,∞).
+Injections, Surjections, and Bijections
+The concept of a bijection will be very important later in this chapter. We will first consider
+the notions of injections and surjections.
+Definition 1.27. Let f : A → B be a function. We say that f is injective or one-to-one
+(1-1) if whenever f(a1) = f(a2) for any two elements a1,a2 ∈ A then a1 = a2. We say that
+f is an injection.
+Example 1.28. 1. The function f : R→ Rgiven by f(x) = 3x + 7 is a one-to-one
+function since if f(a1) = f(a2) then 3(a1) + 7 = 3(a2) + 7 or 3(a1) = 3(a2) which means
+that a1 = a2. Therefore by the definition above we see that f is a one-to-one function.
+2. The function g : R→ Rgiven by g(x) = x2 is a not one-to-one function since it
+is possible to find a1,a2 ∈ Rwhere g(a1) = g(a2) but a1 6= a2. For instance, let
+a1 = −5,a2 = 5 then g(a1) = 25 = g(a2) but a1 = −5 6= 5 = a2.
+3. In the example above we could restrict g to the set C = [0,∞) to get a one to one
+function g|C : [0,∞) →R. (Check!)
+4. Let A = {cat, dog, mouse}and B = {house, garden}, and define a function f : A →B
+by f(cat) = house, f(dog) = garden, and f(mouse) = house. Then f is not one-to-one
+because f(cat) = f(mouse), but ‘cat’ is not equal to ‘mouse’.
+Remark: Note that in order to prove that a function f is one-to-one we need to show that
+the definition holds for any pair of elements of the domain of f. However to prove that
+f is not one-to-one we just need to find a single pair of elements a and b in A for which
+f(a) = f(b) but a 6= b.
+Exercise 1.29. Your turn:
+1. Find a one-to-one function from Nto the set of even numbers E = {2,4,6,8,...}. Now
+find another one!
+2. Find a one-to-one function from Nto the set of odd numbers O = {1,3,5,7,...}.
+6
+Definition 1.30. Let f : A →B be a function. We say that f is surjective or onto if for all
+b ∈B there exists a ∈A such thatf(a) = b. We say that f is an surjection.
+Note: If f is an onto function then the range of f is all of B.
+Example 1.31. 1. The function f : R→ Rgiven by f(x) = 3x + 7 is an onto function
+since if y ∈ Rthen there exists x ∈ Rsuch that f(x) = y i.e. x = y−7
+3 . Therefore by
+the definition above we see that f is an onto function.
+2. The function g : R→ Rgiven by g(x) = x2 is a not onto function since it is possible
+to find y ∈ Rwhich is not in the range of g; for example if y = −1 then there is no
+x ∈Rsuch that g(x) = y.
+3. We could modify the example above by considering h : R→[0,∞), h(x) = x2. Check
+that h is onto!
+Remark: To prove that a function f : A → B is onto we need to show that every y ∈ B
+is in the image of f i.e. that there exists x ∈ A such that f(x) = y. To show that f is not
+onto we just need to find one y ∈B which is not in the image of f.
+Note: It is possible to find examples of functions which are a) both one-to-one and onto b)
+neither one-to-one nor onto c) onto but not one-to-one and d) one-to-one but not onto. Try
+to come up with examples in each of these categories yourself before looking at the next
+example.
+Example 1.32. Find examples of functions f : R→Rin the following categories:
+1. One-to-one and onto: From our work above we see that f(x) = 3x + 7 is one-to-one
+and onto. It is not hard to prove that any non-constant linear function (f(x) = ax+ b
+where a 6= 0) is one-to-one and onto.
+2. Neither 1-1 nor onto: If we let f(x) = sin(x) then f is not onto (since the range is
+[−1,1]) and is not one-to-one (since f(0) = f(2π) etc.)
+3. Onto but not one-to-one: The function f(x) = x(x −1)(x −2) = x3 −3x2 + 2x is not
+one-to-one since f(0) = f(1) = f(2) = 0. From its graph we can see that it is onto.
+4. One-to-one but not onto: The function f(x) = ex is one-to-one but not onto (from its
+graph we can see that it is always increasing and so never takes the same value twice,
+and its range is (0,∞)).
+Definition 1.33. A function f : A →B is called a bijection if it is one-to-one and onto.
+Example 1.34. We have seen above that f : R→Rgiven by f(x) = 3x+7 is one-to-one and
+onto, therefore it is a bijection. We can also check that the function f : N→E = {2,4,6,...}
+given by f(x) = 2x is a bijection. So we have an example of a bijection between a set and
+one of its proper subsets.
+7
+Exercise 1.35. Your turn: Suppose A and B are finite sets (that is they each contain a
+finite number of elements).
+1. Suppose that f : A →B is onto. What can you say about the number of elements in
+A and B?
+2. Suppose that f : A → B is one-to-one. What can you say about the number of
+elements in A and B?
+3. Suppose that f : A → B is a bijection. What can you say about the number of
+elements in A and B?
+Exercise 1.36. Is it possible to find a bijection between Nand Z? If so, find it. If not,
+explain why it is impossible.
+Definition 1.37. Let A be a set. Then the identity function idA is the function given by
+idA : A →A where idA(x) = x for all x ∈A.
+Definition 1.38. Let A and B be sets. Let f : A → B and g : B → A be functions. We
+say that g is the inverse of f if f ◦g = idB and g ◦f = idA. We write g = f−1. (That is
+g = f−1 if f(g(b)) = b for all b ∈B, and g(f(a)) = a for all a ∈A.)
+We might ask which functions have inverses. The next theorem tells us that all bijections
+have inverses.
+Theorem 1.39. Let f : A →B be a bijection. Then g = f−1 exists.
+Proof: We need to define g : B → A such that g(f(a)) = a for all a ∈ A and f(g(b)) = b
+for all b ∈B.
+Let b ∈B, then since f is onto there exists a ∈A such that f(a) = b. Since f is one-to-one,
+there is only one such a. So define g(b) = a.
+Then g(f(a)) = g(b) = a for all a ∈ A. And f(g(b)) = f(a) = b for all b ∈ B. Therefore
+g = f−1.
+
+Example 1.40. We saw previously that f : R→ Rgiven by f(x) = 3x + 7 is a bijection
+and so it has an inverse function. The inverse is g(x) = x−7
+3 . Check that f(g(y)) = y and
+g(f(x)) = x for all x,y ∈R.
+Example 1.41. We have seen above that f : R→Rgiven by f(x) = sin(x) is not a bijection
+since it is neither one-to-one nor onto. However if we restrict the domain and the range by
+considering f : [−π/2,π/2] → [−1,1] we can check that f is a bijection between the sets
+[−π/2,π/2] and [−1,1]. Therefore it has an inverse g(x) = sin−1(x) = arcsin(x) which is
+defined on [−1,1].
+Theorem 1.42. Let f : A → B be a bijection and g : B → C be a bijection. Then
+g ◦f : A →C is a bijection.
+8
+Proof: We need to show that g ◦f : A →C is one-to-one and onto.
+To show that it is one-to-one: Suppose g ◦f(a1) = g ◦f(a2) then g(f(a1)) = g(f(a2)).
+But since g is one-to-one on B this means that f(a1) = f(a2). But since f is one-to-one on
+A we have a1 = a2. Thus g ◦f is one-to-one.
+To show that g ◦f : A → C is onto: Let z ∈ C, then there exists y ∈ B such that
+g(y) = z since g : B →C is onto. There exists x ∈A such that f(x) = y since f : A →B is
+onto. Thus g ◦f(x) = g(f(x)) = g(y) = z, and so g ◦f : A →C is onto.
+
+1.3 Equivalence Relations
+Equivalence relations are important in many areas of mathematics. They will be useful to
+us when we look at cardinality of sets. We will start with some definitions:
+Definition 1.43. A relation on a set A is a subset of A ×A.
+Example 1.44. Let P be the set of all people in the world. Remember that a relation on
+P is just a subset of P ×P. Let’s consider some relations on P:
+D = {(x,y) ∈P ×P | x is a descendant of y};
+B = {(x,y) ∈P ×P | x has an ancestor who is an ancestor of y};
+S = {(x,y) ∈P ×P | x has the same parents as y};
+If (x,y) is an element of a relation we usually write x ∼y. We will concentrate on relations
+with some nice properties:
+Definition 1.45. An equivalence relation on a set A is a relation ∼ which satisfies:
+1. x ∼x for all x ∈A (Reflexivity);
+2. If x ∼y then y ∼x for all x,y ∈A (Symmetry);
+3. If x ∼y and y ∼z then x ∼z for all x,y,z ∈A (Transitivity).
+Let’s consider the relations in Example 1.44 above. Are any of them equivalence relations?
+Example 1.44 (continued). Let’s start with the relation D. We need to check if it is
+reflexive, symmetric and transitive.
+In order to be reflexive we need x ∼x for all x ∈P. But x ∼x means that x is a descendant
+of themselves (which is clearly impossible!) so this relation is not reflexive. This tells us that
+the relation D is not an equivalence relation.
+Is D symmetric? We need to check that if x ∼y then y ∼x, for all x,y ∈P. If x ∼y then
+x is a descendant of y, but that means that y could not be a descendant of x so D is not
+symmetric.
+9
+Is D transitive? We need to check that if x ∼y and y ∼z, then x ∼z for all x,y,z ∈P. If
+x ∼y then x is a descendant of y, and if y ∼z then y is a descendant of z, so therefore x is
+a descendant of z also and so x ∼z. Thus D is transitive.
+We have seen that D is transitive but not reflexive or symmetric and so it is not an equivalence
+relation.
+What about the relation B? Is it reflexive? Is x ∼ x for all x ∈ P? Well, this is true since
+every person x has an ancestor who is an ancestor of x. So B is reflexive.
+Is B symmetric? We need to check that if x ∼ y then y ∼ x, for all x,y ∈ P. If x ∼ y
+then x has an ancestor who is an ancestor of y, but then clearly y has an ancestor who is an
+ancestor of x so y ∼x and B is symmetric.
+Is B transitive? We need to check that if x ∼ y and y ∼ z, then x ∼ z for all x,y,z ∈ P.
+If x has an ancestor who is an ancestor of y, y has an ancestor who is an ancestor of z it is
+not always true that x has an ancestor who is an ancestor of z. For example, suppose y has
+parents x and z. Then x ∼y and y ∼z but x and z do not have to have a common ancestor
+so we are not guaranteed that x ∼z. We have shown that B is not transitive.
+We have seen that B is reflexive and symmetric but not transitive, and so it is not an
+equivalence relation.
+What about the relation S? Is it reflexive? Is x ∼ x for all x ∈ P? Well, this is true since
+every person x has the same parents as themselves. So S is reflexive.
+Is S symmetric? We need to check that if x ∼y then y ∼x, for all x,y ∈P. If x ∼y then
+x has the same parents as y, but then clearly y has the same parents as x so y ∼x and S is
+symmetric.
+Is S transitive? We need to check that if x ∼y and y ∼z, then x ∼z for all x,y,z ∈P. If
+x has the same parents as y, and y has the same parents as z thenx has the same parents as
+z. So S is transitive.
+We have seen that S is reflexive, symmetric and transitive, and so it is an equivalence
+relation.
+Example 1.46. We can put a relation on Ras follows: x ∼y if x−y ∈Z. Note that under
+this relation we have 1.1 ∼2.1, 1.1 ∼2.1, 1.1 ∼3.1 etc. and also 1.1 ∼−0.9, 1.1 ∼−1.9 ...
+Is this an equivalence relation on R?
+We need to check if ∼ is reflexive, symmetric and transitive.
+Reflexivity: Is x ∼x for all x ∈R? Yes, because x −x = 0 ∈Zfor all x ∈R.
+Symmetry: If x ∼ y is y ∼ x for all x,y ∈ R? Yes, because x ∼ y means that x −y ∈ Zso
+there exists n ∈Zsuch that x −y = n, but then y −x = −n ∈Zand so y ∼x.
+Transitivity: If x ∼ y and y ∼ z is it true that x ∼ z? Yes, if x ∼ y then there exists
+n ∈ Zsuch that x −y = n, and y ∼ z so there exists m ∈ Zsuch that y −z = m. Then
+x −z = x −y + y −z = n + m ∈Zand so x ∼z.
+Thus our relation ∼ is an equivalence relation on R.
+Exercise 1.47. Let A be the set of all books in the Maynooth University Library. Define
+an equivalence relation on A. Define a relation on A which is not an equivalence relation.
+10
