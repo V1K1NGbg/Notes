@@ -1,0 +1,36 @@
+Monotone Convergence Theorem
+
+Example:
+    sequence:
+        √2, √(2√2), √(2√(2√2))
+        or 
+        aₙ₊₁ = √(2 * aₙ)
+
+    Can we show that {aₙ} converges?
+    Can we use the MCT?
+    Is {aₙ} monotone and bounded
+
+    Claim 1:
+        aₙ < 2 ∀n ∈ ℕ
+
+        Proof:
+            Induction:
+                Is it true for n=1?
+                √2 = a₁ < 2
+
+                Assuming aₖ < 2, where n = k, then we have to prove that aₖ₊₁ < 2
+
+                aₖ₊₁ = √(2 * aₖ) < √(2 * 2) then
+                aₖ₊₁ < 2
+
+                Claim is true, then {aₙ} is bounded above
+
+    Claim 2:
+        {aₙ} is increasing
+
+        Since aₙ < 2 from claim 1
+        then aₙ² < 2 * aₙ
+        then aₙ < √(2 * aₙ) = aₙ₊₁
+
+        So aₙ < aₙ₊₁ ∀n
+        then {aₙ} is increasing
