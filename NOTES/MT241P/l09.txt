@@ -1,0 +1,8 @@
+Statistical experiment
+All possible outcomes are denoted by Ω
+Event is a subset of Ω
+Events of Interest denoted by ɛ
+Probability
+    AP1: P(Ω) = 1
+    AP2: If A ∈ ɛ then P(A) ≥ 0
+    AP3: If A and B are disjoined events in ɛ then P(A ∪ B) = P(A) + P(B)
