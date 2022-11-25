@@ -6,3 +6,27 @@ Probability
     AP1: P(Ω) = 1
     AP2: If A ∈ ɛ then P(A) ≥ 0
     AP3: If A and B are disjoined events in ɛ then P(A ∪ B) = P(A) + P(B)
+
+
+four letter and three digit password
+
+    N = 26³ * 10⁴ = 175 760 000
+
+a hacker can check 10⁷ passwords a day
+
+what is the chance that the hacker guesses the password on the first day
+
+10⁷/N = 10³/26³ = 0.0569
+
+9 Combinatorics
+
+sample k out of n elements
+
+order either matters or it doesn't 
+
+each sample is either replaced or its not replaced
+
+Example:
+    How many different functions:
+        f: {1, 2, ..., 50} -> {1, 2, 3, ..., 100} are there?
+        k ∈

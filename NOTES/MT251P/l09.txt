@@ -1,0 +1,18 @@
+Lecture 16
+
+the identity matrix is denoted Iₙ and is n x n where each entry equal to 0 except the diagonal entries which are equal to 1
+
+Example:
+    I₃ = (1 0 0)
+         (0 1 0)
+         (0 0 1)
+
+Remark 8:
+    If A is any k x n matrix, then IₖA = A, AIₙ = a
+
+Chapter 5 The inverse and determinant of a matrix
+
+AB = Iₙ = BA , where A, B ∈ Mₙₓₙ(ℝ)
+
+The operations to take you from A to Iₙ
+are the same as the one that take you from Iₙ to a⁻¹

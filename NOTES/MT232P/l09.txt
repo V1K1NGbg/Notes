@@ -34,3 +34,44 @@ Example:
 
         So aₙ < aₙ₊₁ ∀n
         then {aₙ} is increasing
+
+
+Example:
+    Let {aₙ} = {1/n}
+
+    1, 1/2, 1/3, 1/4, 1/5, ...
+
+    let nₖ = 2k
+
+    2, 4, 6, 8, ...
+
+    aₙ₁ = 1/2, aₙ₂ = 1/4, aₙ₃ = 1/6
+
+    that is a subsequence of {aₙ} = {1/n}
+
+    let nₖ = 3k
+
+    3, 6, 9, 12, ...
+
+    aₙ₁ = 1/3, aₙ₂ = 1/6, aₙ₃ = 1/9
+
+    that is a subsequence of {aₙ} = {1/n}
+
+    Consider the sequence:
+    {aₙ} = {(-1)ⁿ} = -1, 1, -1, 1, -1, ...
+
+    Consider {a₂ₙ} = 1, 1, 1, 1, 1, ...
+
+    Lim(n->∞) a₂ₙ = 1
+
+    Consider {a₂ₙ₊₁} = -1, -1, -1, -1, -1, ...
+
+    Lim(n->∞) a₂ₙ₊₁ = -1
+
+    Since we have two subsequence of {aₙ} which converges to different limits then {aₙ} can't converge by the last Theorem
+
+Thm 2.31: Bolzano–Weierstrass theorem
+
+    every bounded sequence has a convergent subsequence
+
+    
