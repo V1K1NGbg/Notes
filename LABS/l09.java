@@ -1,8 +1,6 @@
 
 import java.util.*;
-import java.math.*;
 import java.math.BigInteger;
-import java.lang.Object.*;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -30,7 +28,6 @@ public class l09{
             contents[i]=contents[rand];
             contents[rand]=temp;
         }
-        int total=0;
         for(int i=0;i<items;i++){
             int slot = mysolution2.find(size, mytable, contents[i]);
             if(!hashtable[slot].equals(contents[i])){
@@ -44,6 +41,7 @@ public class l09{
                 System.out.println("Here is your receipt: "+sha256(hash+mytable.gettotal()));
             }catch(NoSuchAlgorithmException e){};
         }
+        myscanner.close();
     }
     
     public static String sha256(String input) throws NoSuchAlgorithmException {

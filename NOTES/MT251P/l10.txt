@@ -1,0 +1,62 @@
+inverse of A
+
+make the matrix A into RREF and simultaneously do the same role operations on Iₙ where A = n x n
+
+Then A -> Iₙ
+And  Iₙ -> A⁻¹
+
+To check we need to multiply A⁻¹ by A
+
+Theorem 4:
+    Suppose A, B ∈ Mₙₓₙ(ℝ)
+    Then:
+        AB = Iₙ ⇔ BA = Iₙ
+
+Remark 3:
+    A consequence of theorem 4 is that if you want to check that C = A⁻¹,
+        then you only need to check that AC = Iₙ and you don't need to check that CA = Iₙ
+
+Definition 3:
+    Suppose A is an n x n matrix
+
+    The determinant of A is denoted by det(A) and is defined as follows:
+        If A = (a₁₁) is a 1 x 1 matrix, then det(A) = a₁₁
+        If A = (a₁₁ a₁₂
+                a₂₁ a₂₂) is a 2 x 2 matrix, then det(A) = a₁₁a₂₂ - a₁₂a₂₁
+
+        Now assume the determinant has been defined for all (n - 1) x (n - 1) matrix
+
+        How do we find det
+
+
+
+Theorem 5:
+    To calculate det we can choose any row and any column
+
+    det(A) = det(Aᵀ
+
+    If upper triangular (aᵢⱼ = 0 where i > j) then det(A) = a₁₁a₂₂a₃₃...aₙₙ
+
+    If lower triangular (aᵢⱼ = 0 where i < j) then det(A) = a₁₁a₂₂a₃₃...aₙₙ
+
+    If B is a matrix obtained from A by multiplying one row of A be a scalar s, then det(B) = s * det(A)
+
+    If B is a matrix obtained from A by swapping two rows of A then det(B) = - det(A)
+
+    If two rows of A are identical, then det(A) = 0
+
+    If A has a zero row, then det(A) = 0
+
+    If B is the matrix obtained from A by adding s times one row of A to another row of A then det(B) = det(A)
+
+    If B is a matrix obtained from A by multiplying one column of A be a scalar s, then det(B) = s * det(A)
+
+    If B is a matrix obtained from A by swapping two columns of A then det(B) = - det(A)
+
+    If two columns of A are identical, then det(A) = 0
+
+    If A has a zero column, then det(A) = 0
+
+    If B is the matrix obtained from A by adding s times one column of A to another column of A then det(B) = det(A)
+
+    det(AB) = det(A)det(B)

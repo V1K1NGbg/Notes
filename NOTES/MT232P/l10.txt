@@ -1,0 +1,6 @@
+Cauchy Sequence
+
+To show {aₙ} is not a Cauchy sequences we need to show ∃ɛ > 0 such that ∀N ∈ ℕ there exists n, m ≥ N such that |aₙ - aₘ| > ɛ
+
+Thm 3.37: Every convergent sequence of real numbers is a Cauchy Sequence
+Thm 3,38: Ever Cauchy sequence is a bounded sequence
