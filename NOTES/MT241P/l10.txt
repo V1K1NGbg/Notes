@@ -1,0 +1,4 @@
+probability
+
+If you calculate the probability of one thing happening and the probability of another thing happening,
+    then the probability of both happening is the separate probabilities combined
