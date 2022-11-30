@@ -60,3 +60,5 @@ Theorem 5:
     If B is the matrix obtained from A by adding s times one column of A to another column of A then det(B) = det(A)
 
     det(AB) = det(A)det(B)
+
+    

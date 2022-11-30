@@ -1,7 +1,26 @@
 import java.util.*;
 
 public class l10 {
-
+// X,X,X, ,X,X,X,X,X,X,X, ,X,X,X,X,X,X, ,X
+// X,X,X, ,X,X,X,X,X,X,X, ,X,X,X,X,X,X, ,X
+// X,X,X, , , , , , ,X,X, ,X,X,X,X, , , ,X
+// X,X,X,X,X,X,X, ,X,X,X,X,X,X,X,X,X,X,X,X
+// X,X,X,X,X,X,X, ,X,X, , , , , , ,X,X,X,X
+// X,X,X, , ,X,X,X,X,X, ,X,X,X,X, ,X,X,X,X
+// X,X, , ,X, ,X,X,X,X, , , ,X,X, ,X,X,X,X
+// X,X,X, ,X,X,X,X,X,X,X,X, ,X,X, ,X,X,X,X
+// X,X, , ,X, , ,X,X,X,X,X, ,X,X, ,X,X,X,X
+// X,X,X,X,X,X, , , , , , , ,X,X, ,X,X,X,X
+// X, ,X,X,X,X, ,X,X, ,O,X,X,X,X, ,X,X,X,X
+// , , , , ,X,X,X,X, , ,X,X,X,X, ,X,X,X,X
+// X,X,X,X,X,X,X,X,X,X,X,X,X,X,X, ,X,X,X,X
+// X,X,X,X,X,X, , ,X,X,X,X, , , , ,X,X,X,X
+// X,X, ,X,X, ,X,X,X,X,X,X, ,X,X, ,X,X,X,X
+// X, , ,X,X, ,X,X,X,X,X,X, ,X,X, ,X,X,X,X
+// X,X, ,X,X, ,X, , ,X, , , ,X,X, ,X,X, ,
+// X, , ,X,X,X,X,X,X,X, ,X,X,X,X, ,X,X, ,X
+// X,X, ,X,X,X,X,X,X,X, ,X,X,X,X,X,X,X, ,X
+// X,X, ,X,X,X,X,X,X,X, ,X,X,X,X,X,X,X, ,X
     public static void main(String[] args) {
 
         int lives = 200;
@@ -52,6 +71,8 @@ public class l10 {
             String move = myBrain.getMove(maze[posX - 1][posY], maze[posX + 1][posY], maze[posX][posY + 1],
                     maze[posX][posY - 1]);
 
+            System.out.println(move);
+
             if (move.equals("north") && maze[posX - 1][posY]) {
 
                 posX--;
@@ -91,38 +112,79 @@ public class l10 {
 
 class Brain {
 
-    public boolean[][] points = new boolean[20][20];
-    public int x = 9, y = 9;
+    public Stack<Integer> stack = new Stack<>(); // n0, s1, w2, e3
+    public boolean[][] points = new boolean[40][40];
+    public int x = 19, y = 19;
     public int last = 0;
 
-    
-    public String getMove(boolean north, boolean south, boolean east, boolean west) {
-        switch (last) {
+    public String singlemove(int dir) {
+        stack.push(dir);
+        last = dir;
+        switch (dir) {
             case 0:
-                if (north) {
-                    if (!west && !east) {
-                        return "north";
-                    } else {
-                        points[]
-                    }
-                }
-                break;
+                y = y - 1;
+                return ("north");
             case 1:
-                if (south) {
-                    
-                }
-                break;
+                y = y + 1;
+                return ("south");
             case 2:
-                if (east) {
-                    
-                }
-                break;
+                x = x - 1;
+                return ("west");
             case 3:
-                if (west) {
-                    
-                }
-                break;
+                x = x + 1;
+                return ("east");
+            default:
+                return ("Error");
         }
 
+    }
+    
+    public String move(boolean north, boolean south, boolean west, boolean east) {
+
+    }
+
+    public String getMove(boolean north, boolean south, boolean east, boolean west) {
+        System.out.println(x + " " + y);
+        int count = 0;
+        if (north)
+            count = count + 1;
+        if (south)
+            count = count + 1;
+        if (west)
+            count = count + 1;
+        if (east)
+            count = count + 1;
+        if (points[x + 1][y])
+            count = count - 1;
+        if (points[x - 1][y])
+            count = count - 1;
+        if (points[x][y + 1])
+            count = count - 1;
+        if (points[x][y - 1])
+            count = count - 1;
+        switch (count) {
+            case 1:
+                points[x][y] = true;
+                return (move(north, south, west, east));
+            case 2:
+                return (move(north, south, west, east));
+            case 3:
+                return (move(north, south, west, east));
+            case 4:
+                return (move(north, south, west, east));
+            case 0:
+                points[x][y] = true;
+                switch (stack.pop()) {
+                    case 0:
+                        return ("south");
+                    case 1:
+                        return ("north");
+                    case 2:
+                        return ("east");
+                    case 3:
+                        return ("west");
+                }
+        }
+        return ("Error");
     }
 }
