@@ -71,8 +71,8 @@ public class l10 {
             String move = myBrain.getMove(maze[posX - 1][posY], maze[posX + 1][posY], maze[posX][posY + 1],
                     maze[posX][posY - 1]);
 
-            System.out.println(move + maze[posX - 1][posY] + maze[posX + 1][posY] + maze[posX][posY + 1]
-                    + maze[posX][posY - 1] + posX + posY);
+            // System.out.println(move + maze[posX - 1][posY] + maze[posX + 1][posY] + maze[posX][posY + 1]
+            //         + maze[posX][posY - 1] + posX + posY);
 
             if (move.equals("north") && maze[posX - 1][posY]) {
 
@@ -140,38 +140,24 @@ class Brain {
 
     }
 
-    public String direction(boolean primary, boolean secondary, boolean tertiary, int elseint, int primaryint,
-            int secondaryint,
-            int tertiaryint) {
-        if (primary) {
+    public String direction(boolean primary, boolean secondary, boolean tertiary, int primaryint,
+            int secondaryint, int tertiaryint, int elseint, boolean checkprimary, boolean checksecondary,
+            boolean checktertiary) {
+        if (primary && !checkprimary) {
             return (singlemove(primaryint));
-        } else if (secondary) {
+        } else if (secondary && !checksecondary) {
             return (singlemove(secondaryint));
-        } else if (tertiary) {
+        } else if (tertiary && !checktertiary) {
             return (singlemove(tertiaryint));
         } else {
             return (singlemove(elseint));
         }
     }
 
-    public String move(boolean north, boolean south, boolean west, boolean east) {
-        switch (last) {
-            case 0:
-                return (direction(north, east, west, 1, 0, 3, 2));
-            case 1:
-                return (direction(south, west, east, 0, 1, 2, 3));
-            case 2:
-                return (direction(west, north, south, 3, 2, 0, 1));
-            case 3:
-                return (direction(east, south, north, 2, 3, 1, 0));
-            default:
-                return ("Error");
-        }
-    }
-
     public String getMove(boolean north, boolean south, boolean east, boolean west) {
-        System.out.println(x + " " + y);
+        
         int count = 0;
+        
         if (north)
             count = count + 1;
         if (south)
@@ -212,7 +198,18 @@ class Brain {
                     return ("Error");
             }
         } else {
-            return (move(north, south, west, east));
+            switch (last) {
+                case 0:
+                    return (direction(north, east, west, 0, 3, 2, 1, points[x][y - 1], points[x + 1][y], points[x - 1][y]));
+                case 1:
+                    return (direction(south, west, east, 1, 2, 3, 0, points[x][y + 1], points[x - 1][y], points[x + 1][y]));
+                case 2:
+                    return (direction(west, north, south, 2, 0, 1, 3, points[x - 1][y], points[x][y - 1], points[x][y + 1]));
+                case 3:
+                    return (direction(east, south, north, 3, 1, 0, 2, points[x + 1][y], points[x][y + 1], points[x][y - 1]));
+                default:
+                    return ("Error");
+            }
         }
     }
 }
