@@ -71,8 +71,9 @@ public class l10 {
             String move = myBrain.getMove(maze[posX - 1][posY], maze[posX + 1][posY], maze[posX][posY + 1],
                     maze[posX][posY - 1]);
 
-            // System.out.println(move + maze[posX - 1][posY] + maze[posX + 1][posY] + maze[posX][posY + 1]
-            //         + maze[posX][posY - 1] + posX + posY);
+            // System.out.println(move + maze[posX - 1][posY] + maze[posX + 1][posY] +
+            // maze[posX][posY + 1]
+            // + maze[posX][posY - 1] + posX + posY);
 
             if (move.equals("north") && maze[posX - 1][posY]) {
 
@@ -97,7 +98,7 @@ public class l10 {
             if (posY % 19 == 0 || posX % 19 == 0) {
 
                 System.out.println(posX + "," + posY);
-                System.out.println(200-lives);
+                System.out.println(200 - lives);
 
                 System.exit(0);
 
@@ -117,11 +118,9 @@ class Brain {
     public Stack<Integer> stack = new Stack<>(); // n0, s1, w2, e3
     public boolean[][] points = new boolean[40][40];
     public int x = 19, y = 19;
-    public int last = 0;
 
     public String singlemove(int dir) {
         stack.push(dir);
-        last = dir;
         switch (dir) {
             case 0:
                 y = y - 1;
@@ -141,24 +140,10 @@ class Brain {
 
     }
 
-    public String direction(boolean primary, boolean secondary, boolean tertiary, int primaryint,
-            int secondaryint, int tertiaryint, int elseint, boolean checkprimary, boolean checksecondary,
-            boolean checktertiary) {
-        if (primary && !checkprimary) {
-            return (singlemove(primaryint));
-        } else if (secondary && !checksecondary) {
-            return (singlemove(secondaryint));
-        } else if (tertiary && !checktertiary) {
-            return (singlemove(tertiaryint));
-        } else {
-            return (singlemove(elseint));
-        }
-    }
-
     public String getMove(boolean north, boolean south, boolean east, boolean west) {
-        
+
         int count = 0;
-        
+
         if (north)
             count = count + 1;
         if (south)
@@ -180,36 +165,29 @@ class Brain {
         if (count == 0) {
             switch (stack.pop()) {
                 case 1:
-                    last = 0;
                     y = y - 1;
                     return ("north");
                 case 0:
-                    last = 1;
                     y = y + 1;
                     return ("south");
                 case 3:
-                    last = 2;
                     x = x - 1;
                     return ("west");
                 case 2:
-                    last = 3;
                     x = x + 1;
                     return ("east");
                 default:
                     return ("Error");
             }
         } else {
-            switch (last) {
-                case 0:
-                    return (direction(north, east, west, 0, 3, 2, 1, points[x][y - 1], points[x + 1][y], points[x - 1][y]));
-                case 1:
-                    return (direction(south, west, east, 1, 2, 3, 0, points[x][y + 1], points[x - 1][y], points[x + 1][y]));
-                case 2:
-                    return (direction(west, north, south, 2, 0, 1, 3, points[x - 1][y], points[x][y - 1], points[x][y + 1]));
-                case 3:
-                    return (direction(east, south, north, 3, 1, 0, 2, points[x + 1][y], points[x][y + 1], points[x][y - 1]));
-                default:
-                    return ("Error");
+            if (north && !points[x][y - 1]) {
+                return (singlemove(0));
+            } else if (east && !points[x + 1][y]) {
+                return (singlemove(3));
+            } else if (west && !points[x - 1][y]) {
+                return (singlemove(2));
+            } else {
+                return (singlemove(1));
             }
         }
     }
