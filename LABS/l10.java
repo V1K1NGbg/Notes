@@ -97,6 +97,7 @@ public class l10 {
             if (posY % 19 == 0 || posX % 19 == 0) {
 
                 System.out.println(posX + "," + posY);
+                System.out.println(200-lives);
 
                 System.exit(0);
 
