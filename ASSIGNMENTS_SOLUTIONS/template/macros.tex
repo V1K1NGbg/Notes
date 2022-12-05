@@ -1,0 +1,57 @@
+\renewcommand{\part}[1]{\textbf{\large Part \Alph{partCounter}}\stepcounter{partCounter}\\} % part macro
+\newcommand{\solution}{\textbf{\large Solution}} % solution macro
+
+\newmdenv[
+    backgroundcolor=gray!20,
+    skipabove=\topsep,
+    skipbelow=\topsep,
+]{grayBoxed}
+
+% General writing
+\newcommand{\bracket}[1]{\left(#1\right)} % for automatic resizing of brackets
+\newcommand{\sbracket}[1]{\left[#1\right]} % for automatic resizing of square brackets
+\newcommand{\mset}[1]{\left\{#1\right\}} % for automatic resizing of curly brackets
+\newcommand{\defeq}{\coloneqq} % the "defined as" command
+\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}} % uppercase roman numerals
+
+\newcommand{\rednote}[1]{{\color{red} #1}} % for red text
+\newcommand{\bluenote}[1]{{\color{blue} #1}} % for blue text
+\newcommand{\greennote}[1]{{\color{green} #1}} % for green text
+
+% Blackboard Maths Symbols
+\newcommand{\N}{\mathbb{N}} % natural numbers
+\newcommand{\Q}{\mathbb{Q}} % rational numbers
+\newcommand{\Z}{\mathbb{Z}} % integers
+\newcommand{\R}{\mathbb{R}} % real numbers
+\newcommand{\C}{\mathbb{C}} % complex numbers
+\newcommand{\E}{\mathbb{E}} % expectation operators
+
+% Aesthetic
+
+\newcommand{\defBox}[2]{
+    \begin{tcolorbox}[colback=cyan!5!white,colframe=cyan!40!black,
+        colbacktitle=cyan!40!black,title=Definition: #1]
+        #2
+    \end{tcolorbox}
+}
+
+\newcommand{\lemBox}[2]{
+    \begin{tcolorbox}[colback=cyan!5!white,colframe=cyan!50!black,
+        colbacktitle=cyan!50!black,title=Lemma: #1]
+        #2
+    \end{tcolorbox}
+}
+
+\newcommand{\thmBox}[2]{
+    \begin{tcolorbox}[colback=cyan!5!white,colframe=cyan!70!black,
+        colbacktitle=cyan!70!black,title=Theorem: #1]
+        #2
+    \end{tcolorbox}
+}
+
+% Homework Specific
+\newcommand{\homBox}[1]{
+    \begin{tcolorbox}[colback=cyan!5!white,colframe=cyan!50!black]
+        #1
+    \end{tcolorbox}
+}

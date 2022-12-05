@@ -1,0 +1,65 @@
+%%% The following looks horrible, but essentially sets up biblatex for producing
+%%% bibliographies that look nice (you likely will not even need this)
+\usepackage[style=authoryear-comp, maxcitenames=2, isbn=false, url=false,
+  giveninits=true, doi=false, eprint=false, dashed=false, date=year,
+  related=false, mergedate=true]{biblatex}
+\renewbibmacro{in:}{%
+  \ifboolexpr{%
+    test {\ifentrytype{article}}%
+    or
+    test {\ifentrytype{inproceedings}}%
+  }{}{\printtext{\bibstring{in}\intitlepunct}}%
+}
+\renewbibmacro*{cite:labelyear+extrayear}{%
+  \ifentrytype{online}
+  {}
+  {\iffieldundef{labelyear}
+    {}
+    {\printtext[bibhyperref]{%
+        \printfield{labelyear}
+        \printfield{extrayear}}}}}
+
+\AtEveryBibitem{%
+  \clearfield{pagetotal}%
+}
+
+\DeclareFieldFormat[article,inbook,incollection,techreport,inproceedings,patent,thesis,unpublished]{title}{#1\isdot}
+\DeclareFieldFormat{pages}{#1}
+
+\usepackage[plain]{algorithm} % algorithms package
+\usepackage{algpseudocode} % pseudo-code package
+\usepackage{amsbsy} % for producing bold maths symbols
+\usepackage{amsfonts} % an extended set of fonts for maths
+\usepackage{amssymb} % various maths symbols
+\usepackage{amsthm} % for producing theorem-like environments
+\usepackage{datetime2} % managing dates and times
+\usepackage{delimseasy} % makes easy the manual sizing of brackets, square brackets, and curly brackets
+\usepackage{enumitem} % customing list environments
+\usepackage{extramarks} % extra marks
+\usepackage{fancyhdr} % headers and footers
+\usepackage{float} % makes dealing with floats (e.g. tables and figures) easier
+\usepackage{framed} % for producing framed boxes
+\usepackage{graphicx} % for including graphics in the document
+\usepackage{hyperref} % automatically produce hyperlinks for cross-references
+\usepackage{import} % Import and subimport
+\usepackage{listings} % Code blocks
+\usepackage{mathtools} % package for maths (fixes some deficiences of amsmath so is preferred)
+\usepackage{mdframed} % boxes
+\usepackage{microtype} % better font sizing (extremely helpful with long equations!)
+\usepackage{newtx} % a fonts package
+\usepackage{pdfpages} % for including pdf documents inside the compiled pdf
+\usepackage{pgf} % produce pdf graphics using LaTeX
+\usepackage{pgfplots} % create normal/logarithmic plots in two and three dimensions
+\pgfplotsset{compat=1.18} % sorts out the compatability warning
+\usepackage{physics} % useful for vector calculus and linear algebra symbols
+\usepackage[most]{tcolorbox} % for producing coloured boxes
+\tcbuselibrary{theorems} % theorems with tcolorbox
+\usepackage{tikz-3dplot} % for producing 3d plots
+\usepackage{tikz} % for drawing graphics in LaTeX
+\usepackage{tkz-base} % drawing with a Cartesian coordinate system
+\usepackage{tkz-euclide} % drawing in Euclidean geometry
+\usepackage{xcolor} % a package for colours
+
+\usetikzlibrary{automata, positioning}
+
+\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}

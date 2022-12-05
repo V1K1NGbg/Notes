@@ -1,0 +1,9 @@
+a sequences can be translated to a function 
+If f, g.ℝ -> ℝ
+
+are functions 
+define:
+    (f + g)(x) = f(x) + g(x)
+    (f * g)(x) = f(x) * g(x)
+    (f / g)(x) = f(x) / g(x)
+    

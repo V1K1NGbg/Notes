@@ -1,0 +1,40 @@
+\documentclass[12pt]{article} % use the article class
+
+\input{../../../homework-preamble/packages.tex} % imports the packages.tex file from the preamble directory
+\input{../../../homework-preamble/environments.tex} % imports the environments.tex file from the preamble directory
+\input{../../../homework-preamble/macros.tex} % imports the macros.tex file from the preamble directory
+\input{../../../homework-preamble/settings.tex} % imports the settings.tex file from the preamble directory
+\input{../../../homework-preamble/titlepage.tex} % imports the titlepage.tex file from the preamble directory
+
+\title{
+    \vspace{2in}
+        \textmd{\textbf{MT231 - Analysis 1}}\\
+    \vspace{1in}
+    \textmd{\textbf{Homework \#1}}\\
+    \vspace{1in}
+}
+
+\author{
+    \hmwkAuthorName\\
+    \hmwkStudentnum
+}
+
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\pagebreak
+
+\begin{homeworkProblem}
+
+\end{homeworkProblem}
+
+\pagebreak
+
+\begin{homeworkProblem}
+
+\end{homeworkProblem}
+
+\end{document}
