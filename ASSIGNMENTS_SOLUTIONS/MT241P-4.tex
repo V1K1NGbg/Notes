@@ -37,19 +37,26 @@
         priate sample space $\Omega$.
     }
     \solution
+    $$\Omega = \mset{RR, RN, NR, NN}$$
     \part
     \homBox{
         Let A be the event that it rains today and let B be the event that it rains
         tomorrow. List the outcomes of the following events:
         \begin{itemize}
-            \item $A^C$
+            \item $A^c$
             \item $A\cup B$
             \item $A \cap B$
-            \item $A \cap B^C$
-            \item $(A \cup B)^C$
+            \item $A \cap B^c$
+            \item $(A \cup B)^c$
         \end{itemize}
     }
     \solution
+    $$A^c = \mset{NR, NN}$$
+    $$A \cup B = \mset{RR, RN, NR}$$
+    $$A \cap B = \mset{RR}$$
+    $$A \cap B^c = \mset{RN}$$
+    $$(A \cup B)^c = \mset{NN}$$
+    \pagebreak
     \part
     \homBox{
         Find the probabilities for the following events:
@@ -61,6 +68,11 @@
         \end{itemize}
     }
     \solution
+    "It will rain today or tomorrow." is the same as $A \cup B$,and therefore form part A: $$P(A \cup B) = P(RR) + P(RN) + P(NR) =$$$$= P(A)P(B) + P(A)P(B^c) + P(A^c)P(B) =$$$$= 0.6*0.5 + 0.6*0.5 + 0.4*0.5 = 0.8$$
+    "It will rain today and tomorrow." is the same as $A \cap B$,and therefore form part A: $$P(A \cap B) = P(RR)=$$$$= P(A)P(B)=$$$$= 0.6*0.5 = 0.3$$
+    "It will rain today but not tomorrow." is the same as $A \cap B^c$,and therefore form part A: $$P(A \cap B^c) = P(RN) =$$$$= P(A)P(B^c) =$$$$= 0.6*0.5 = 0.3$$
+    "It will rain today or tomorrow, but not both days." has the following outcomes: RN, NR. Then The probability for that event (Let's call it C) will be: $$P(C) = P(RN) + P(NR) =$$$$= P(A)P(B^c) + P(A^c)P(B) =$$$$= 0.6*0.5 + 0.4*0.5 = 0.5$$
+
 \end{homeworkProblem}
 \begin{homeworkProblem}
     \homBox{
@@ -84,8 +96,8 @@
     \solution
     \homBox{
         Next you play a game for money. Each time heads comes up you win a Euro, each
-time tails comes up you lose a Euro. However, as soon as you lose for the first time
-you claim you have to go home and stop playing.
+        time tails comes up you lose a Euro. However, as soon as you lose for the first time
+        you claim you have to go home and stop playing.
     }
     \part
     \homBox{
@@ -111,17 +123,84 @@ you claim you have to go home and stop playing.
 \begin{homeworkProblem}
     \homBox{
         You are at a party attended by k people, including you. What is the
-likelihood of somebody else at the party sharing your birthday? (We assume that
-nobody was born in a leap year). What is the likelihood if k = 23?
+        likelihood of somebody else at the party sharing your birthday? (We assume that
+        nobody was born in a leap year). What is the likelihood if k = 23?
     }
     \solution
 \end{homeworkProblem}
 \begin{homeworkProblem}
     \homBox{
-        Use combinatorial arguments to prove that, for every integer n $\geq$ 0, $$$$
+        Use combinatorial arguments to prove that, for every integer n $\geq$ 0, $$\sum_{k=0}^n \binom{n}{k} = 2^n$$
     }
+    \solution
 \end{homeworkProblem}
-
+\begin{homeworkProblem}
+    \homBox{
+        Let A and B be finite sets such that A has n elements and B has
+        m elements, where n $\geq$ m. How many injective functions $f : A \rightarrow B$ are there, that
+        is, functions where $f(a_1) \neq f(a_2)$, whenever $a_1 \neq a_2$.
+    }
+    \solution
+\end{homeworkProblem}
+\begin{homeworkProblem}
+    \homBox{
+        In how many ways can 2n tennis players be paired and assigned to
+        n courts?
+    }
+    \solution
+\end{homeworkProblem}
+\begin{homeworkProblem}
+    \homBox{
+        How many distinct integer solutions does the equation: $$x_1 + x_2 + x_3 + x_4 = 100$$ heve, if:
+    }
+    \part
+    \homBox{
+        $x_i \geq 0$, for all i = 1, 2, 3, 4
+    }
+    \solution
+    \part
+    \homBox{
+        $x_i \geq i$, for all i = 1, 2, 3, 4
+    }
+    \solution
+\end{homeworkProblem}
+\begin{homeworkProblem}
+    \homBox{
+        In my home town, it rains one third of all days. Traffic is heavy
+        on half of the rainy days and a quarter of the dry days. If it's rainy and the traffic
+        is heavy, then I am bound to be late for work half of all days. A quarter of the days
+        that I'm late, it is not rainy but the traffic is heavy. Whenever there is light traffic,
+        I am twice as likely to be late on a rainy day, compared to dry days. I am late for
+        work one quarter of all days.
+    }
+    \part
+    \homBox{
+        Draw the tree diagram, where the first stage gives rain / no rain, the second
+        stage gives traffic / no traffic and the third stage gives late / not late.
+    }
+    \solution
+    \part
+    \homBox{
+        What is my chance of being on time on a rainy day with light traffic?
+    }
+    \solution
+    \part
+    \homBox{
+        What is my chance of being on time on a dry day?
+    }
+    \solution
+    \part
+    \homBox{
+        Given I was late today, what is the chance of there having been light traffic?
+    }
+    \solution
+    \part
+    \homBox{
+        Given I was on time today and there was light traffic, what is the chance of
+        there having been rain?
+    }
+    \solution
+\end{homeworkProblem}
 \end{document}
 % \begin{homeworkProblem}
 %     \homBox{Hello!}
