@@ -1,1 +1,20 @@
     << means very less the
+
+
+the cumulative ion function (CDF)
+
+
+
+toss a fair coin 3 times
+let X be the number of heads per outcome
+then Rₓ = {0, 1, 2, 3}
+and the PMF of x is:
+
+
+
+chance of heads is per
+number of tries until heads 
+
+P(1) = p
+P(2) = (1-p)p
+P(3) = (1-p)²p
