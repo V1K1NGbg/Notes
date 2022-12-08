@@ -18,3 +18,7 @@ number of tries until heads
 P(1) = p
 P(2) = (1-p)p
 P(3) = (1-p)²p
+
+
+Example:
+    we throw a die that is , ω

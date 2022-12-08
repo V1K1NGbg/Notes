@@ -7,3 +7,10 @@ define:
     (f * g)(x) = f(x) * g(x)
     (f / g)(x) = f(x) / g(x)
     
+
+everything we defined for sequences is also defined on functions 
+
+Let f, g be functions on 
+
+I am in room 208
+

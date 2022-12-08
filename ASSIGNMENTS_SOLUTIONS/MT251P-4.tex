@@ -34,11 +34,13 @@
         There are infinitely many 4 $\times$ 4 matrices that are not invertible.
     }
     \solution
+    Since a square matrix is invertible if and only if its determinant is non-zero. Since there are infinitely many possible values for the elements of a 4 $\times$ 4 matrix, there are also infinitely many matrices that have a determinant of zero and are therefore not invertible. Therefore the statement is True
     \part
     \homBox{
         There is a 4 $\times$ 4 invertible matrix A such that $A^3 = 2A^2$ and $\det A = 2$.
     }
     \solution
+    The equation $A^3 = 2A^2$ can be rewritten as $A^3 - 2A^2 = 0$. Since the determinant of a matrix must be nonzero in order for it to be invertible, we know that the determinant of $A$ is nonzero. Therefore, the determinant of $A^3 - 2A^2$ must also be nonzero, so the equation $A^3 - 2A^2 = 0$ must have only the trivial solution $A = 0$. However we are given that $A = 2$. Therefore the statement is False
     \part
     \homBox{
         There is a 4 $\times$ 4 matrix A such that $A^2 =
@@ -50,19 +52,24 @@
             \end{pmatrix}$
     }
     \solution
+    We see that the top left entry of $A^2$ is $-1$. Since the square of a number is always nonnegative and the entries have to be Real we have a contradiction.
+    Therefore the statement is False.
 \end{homeworkProblem}
 \begin{homeworkProblem}
     \part
     \homBox{
-        Prove that $\det (A^{-1}BA)$ = $\det (B)$, for all n $\times$ n matrices A, B where A is invertible
+        Prove that $\det (A^{-1}BA)$ = $\det (B)$, for all n $\times$ n matrices A, B, where A is invertible
         and n > 1.
     }
     \solution
+    Let $A$ be an invertible $n \times n$ matrix, and let $B$ be any $n \times n$ matrix. We have
+    $\det (A^{-1}BA) = \det (A^{-1}) \det (B) \det (A) = \frac{1}{\det (A)} \det (B) \det (A) = \det (B)$, so $\det (A^{-1}BA) = \det (B)$
     \part
     \homBox{
         Suppose $\underline{a} = i + 2j - k$, $\underline{b} = i + 3j + k$ and $\underline{c} = 3i + 8j + 4k$. Find $||\underline{w}||^2$ if $\underline{w} \in \R^3$ such that $\underline{w}.\underline{a} = 3$, $\underline{w}.\underline{b} = 5$ and $\underline{w}.\underline{c} = 17$.
     }
     \solution
+    matrix 103/3
 \end{homeworkProblem}
 \begin{homeworkProblem}
     \homBox{
@@ -70,8 +77,9 @@
         $$x_1 - 4x_2 + 3x_3 = 0$$
         $$2x_1 - 6x_2 + 10x_3 = 6$$
         $$x_1 - 2x_2 + 7x_3 = 5$$
-        }
-        \solution
+    }
+    \solution
+    no solution
 \end{homeworkProblem}
 \begin{homeworkProblem}
     \homBox{
@@ -81,17 +89,19 @@
         $$y + 4x - 6z = 8$$
     }
     \solution
+    idk but there isa solution
 \end{homeworkProblem}
 \begin{homeworkProblem}
     \homBox{
-        Find $A^{-1}$ if $A = 
-        \begin{pmatrix}
-            0 & 1 & 2\\
-            1 & 0 & 3\\
-            4 & -3 & 8
-        \end{pmatrix}$
+        Find $A^{-1}$ if $A =
+            \begin{pmatrix}
+                0 & 1  & 2 \\
+                1 & 0  & 3 \\
+                4 & -3 & 8
+            \end{pmatrix}$
     }
     \solution
+    -9 devided by 7....
 \end{homeworkProblem}
 \end{document}
 % \begin{homeworkProblem}
