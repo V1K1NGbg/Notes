@@ -40,7 +40,8 @@
         There is a 4 $\times$ 4 invertible matrix A such that $A^3 = 2A^2$ and $\det A = 2$.
     }
     \solution
-    The equation $A^3 = 2A^2$ can be rewritten as $A^3 - 2A^2 = 0$. Since the determinant of a matrix must be nonzero in order for it to be invertible, we know that the determinant of $A$ is nonzero. Therefore, the determinant of $A^3 - 2A^2$ must also be nonzero, so the equation $A^3 - 2A^2 = 0$ must have only the trivial solution $A = 0$. However we are given that $A = 2$. Therefore the statement is False
+    $$A^3 = 2A^2$$ $$A(AA) = 2(AA)$$ Since A is invertible, then $A^{-1}$ exists. So: $$A(AA)(A^{-1}A^{-1}) = 2(AA)(A^{-1}A^{-1})$$ $$A(AA^{-1})(AA^{-1}) = 2(AA^{-1})(AA^{-1})$$ We also know that $AA^{-1} = I_4$ since A is a $4\times 4$ matrix. So: $$A(I_4)(I_4) = 2(I_4)(I_4)$$ $$A = 2(I_4)$$ $$\det(A) = \det(2(I_4))$$ $$\det(A) = 16$$
+    Since $16 \neq 2$, then the statement is False.
     \part
     \homBox{
         There is a 4 $\times$ 4 matrix A such that $A^2 =
@@ -69,7 +70,62 @@
         Suppose $\underline{a} = i + 2j - k$, $\underline{b} = i + 3j + k$ and $\underline{c} = 3i + 8j + 4k$. Find $||\underline{w}||^2$ if $\underline{w} \in \R^3$ such that $\underline{w}.\underline{a} = 3$, $\underline{w}.\underline{b} = 5$ and $\underline{w}.\underline{c} = 17$.
     }
     \solution
-    matrix 103/3
+    Since $\underline{w}$ is in $\R^3$, it must be represented in the form of $\underline{w} = xi + yj + zk$ for some $x, y, z \in \R$.
+
+    We have the following:
+    $$ \underline{w}.\underline{a} = (xi + yj + zk).(i + 2j - k) = x + 2y - z = 3 $$
+    $$ \underline{w}.\underline{b} = (xi + yj + zk).(i + 3j + k) = x + 3y + z = 5 $$
+    $$ \underline{w}.\underline{c} = (xi + yj + zk).(3i + 8j + 4k) = 3x + 8y + 4z = 17 $$Now we can solve for $x, y, z$ using a matrix:
+    $$\begin{pmatrix}
+            1 & 2 & -1 & 3  \\
+            1 & 3 & 1  & 5  \\
+            3 & 8 & 4  & 17
+        \end{pmatrix}$$
+    Replace $R_2$ with $R_2 - R_1$
+    $$\begin{pmatrix}
+            1 & 2 & -1 & 3  \\
+            0 & 1 & 2  & 2  \\
+            3 & 8 & 4  & 17
+        \end{pmatrix}$$
+    Replace $R_3$ with $R_3 - 3R_1$
+    $$\begin{pmatrix}
+            1 & 2 & -1 & 3 \\
+            0 & 1 & 2  & 2 \\
+            0 & 2 & 7  & 8
+        \end{pmatrix}$$
+    Replace $R_3$ with $R_3 - 2R_2$
+    $$\begin{pmatrix}
+            1 & 2 & -1 & 3 \\
+            0 & 1 & 2  & 2 \\
+            0 & 0 & 3  & 4
+        \end{pmatrix}$$
+    Replace $R_1$ with $R_1 - 2R_2$
+    $$\begin{pmatrix}
+            1 & 0 & -5 & -1 \\
+            0 & 1 & 2  & 2  \\
+            0 & 0 & 3  & 4
+        \end{pmatrix}$$
+    Replace $R_3$ with $\frac{1}{3}R_3$
+    $$\begin{pmatrix}
+            1 & 0 & -5 & -1          \\
+            0 & 1 & 2  & 2           \\
+            0 & 0 & 1  & \frac{4}{3}
+        \end{pmatrix}$$
+    Replace $R_2$ with $R_2 - 2R_3$
+    $$\begin{pmatrix}
+            1 & 0 & -5 & -1           \\
+            0 & 1 & 0  & -\frac{2}{3} \\
+            0 & 0 & 1  & \frac{4}{3}
+        \end{pmatrix}$$
+    Replace $R_1$ with $R_1 - (-5)R_3$
+    $$\begin{pmatrix}
+            1 & 0 & 0 & \frac{17}{3} \\
+            0 & 1 & 0 & -\frac{2}{3} \\
+            0 & 0 & 1 & \frac{4}{3}
+        \end{pmatrix}$$
+    Then: $x = \frac{17}{3}, y = -\frac{2}{3}, z = \frac{4}{3}$\\
+    Therefore $||\underline{w}|| = \sqrt{x^2 + y^2 + z^2} = \sqrt{\frac{17}{3}^2 - \frac{2}{3}^2 + \frac{4}{3}^2} = \frac{\sqrt{309}}{3}$\\
+    Then: $||\underline{w}||^2 = (\frac{\sqrt{309}}{3})^2 = \frac{103}{3}$
 \end{homeworkProblem}
 \begin{homeworkProblem}
     \homBox{
@@ -79,7 +135,31 @@
         $$x_1 - 2x_2 + 7x_3 = 5$$
     }
     \solution
-    no solution
+    We can solve for $x_1, x_2, x_3$ using a matrix:
+    $$\begin{pmatrix}
+            1 & -4 & 3  & 0 \\
+            2 & -6 & 10 & 6 \\
+            1 & -2 & 7  & 5
+        \end{pmatrix}$$
+    Replace $R_2$ with $R_2 - 2R_1$
+    $$\begin{pmatrix}
+            1 & -4 & 3 & 0 \\
+            0 & 2  & 4 & 6 \\
+            1 & -2 & 7 & 5
+        \end{pmatrix}$$
+    Replace $R_3$ with $R_3 - R_1$
+    $$\begin{pmatrix}
+            1 & -4 & 3 & 0 \\
+            0 & 2  & 4 & 6 \\
+            0 & 2  & 4 & 5
+        \end{pmatrix}$$
+    Replace $R_3$ with $R_3 - R_2$
+    $$\begin{pmatrix}
+            1 & -4 & 3 & 0  \\
+            0 & 2  & 4 & 6  \\
+            0 & 0  & 0 & -1
+        \end{pmatrix}$$
+    Notice how the last row states: $0 = -1$, therefore the system has no solutions.
 \end{homeworkProblem}
 \begin{homeworkProblem}
     \homBox{
@@ -89,7 +169,53 @@
         $$y + 4x - 6z = 8$$
     }
     \solution
-    idk but there isa solution
+    We can solve for $x, y, z$ using a matrix:
+    $$\begin{pmatrix}
+            4 & -6 & 8  & 8 \\
+            1 & 2  & -5 & 2 \\
+            4 & 1  & -6 & 8
+        \end{pmatrix}$$
+    Replace $R_1$ with $R_2$
+    $$\begin{pmatrix}
+            1 & 2  & -5 & 2 \\
+            4 & -6 & 8  & 8 \\
+            4 & 1  & -6 & 8
+        \end{pmatrix}$$
+    Replace $R_2$ with $R_2 - 4R_1$
+    $$\begin{pmatrix}
+            1 & 2   & -5 & 2 \\
+            0 & -14 & 28 & 0 \\
+            4 & 1   & -6 & 8
+        \end{pmatrix}$$
+    Replace $R_3$ with $R_3 - 4R_1$
+    $$\begin{pmatrix}
+            1 & 2   & -5 & 2 \\
+            0 & -14 & 28 & 0 \\
+            0 & -7  & 14 & 0
+        \end{pmatrix}$$
+    Replace $R_2$ with $\frac{1}{2}R_2$
+    $$\begin{pmatrix}
+            1 & 2  & -5 & 2 \\
+            0 & -7 & 14 & 0 \\
+            0 & -7 & 14 & 0
+        \end{pmatrix}$$
+    Replace $R_3$ with $R_3 - R_2$
+    $$\begin{pmatrix}
+            1 & 2  & -5 & 2 \\
+            0 & -7 & 14 & 0 \\
+            0 & 0  & 0  & 0
+        \end{pmatrix}$$
+    Replace $R_2$ with $-\frac{1}{7}R_2$
+    $$\begin{pmatrix}
+            1 & 2 & -5 & 2 \\
+            0 & 1 & -2 & 0 \\
+            0 & 0 & 0  & 0
+        \end{pmatrix}$$
+    Notice how the last row states $0 = 0$, therefore the system has infinitely many solutions.\\
+    Then the system of linear equations is: $$x + 2y - 5z = 2$$ $$y + -7z = 0$$
+    By Remark 4, x, y are leading variables, and z is a free variable. We say that z = s, where s can be any real number.
+    Then we can represent x, y in terms of z: $$ x = 2 - 2y + 5z = 2 - 2y + 5s $$ $$y = 7z = 7s$$ Then: $$x = 2 - 2y + 5s = 2 - 2(7s) + 5s = 2 - 9s$$
+    Therefore the solution set of the system of equations is:$$\mset{(2 - 9s, 7s,s):s \in \R}$$
 \end{homeworkProblem}
 \begin{homeworkProblem}
     \homBox{
@@ -101,7 +227,88 @@
             \end{pmatrix}$
     }
     \solution
-    -9 devided by 7....
+    $$A = \begin{pmatrix}
+            0 & 1  & 2 \\
+            1 & 0  & 3 \\
+            4 & -3 & 8
+        \end{pmatrix}
+        \begin{pmatrix}
+            1 & 0 & 0 \\
+            0 & 1 & 0 \\
+            0 & 0 & 1
+        \end{pmatrix} = I_3$$
+    Replace $R_1$ with $R_2$ in both matrices
+    $$\begin{pmatrix}
+            1 & 0  & 3 \\
+            0 & 1  & 2 \\
+            4 & -3 & 8
+        \end{pmatrix}
+        \begin{pmatrix}
+            0 & 1 & 0 \\
+            1 & 0 & 0 \\
+            0 & 0 & 1
+        \end{pmatrix}$$
+    Replace $R_3$ with $R_3 - 4R_1$ in both matrices
+    $$\begin{pmatrix}
+            1 & 0  & 3  \\
+            0 & 1  & 2  \\
+            0 & -3 & -4
+        \end{pmatrix}
+        \begin{pmatrix}
+            0 & 1  & 0 \\
+            1 & 0  & 0 \\
+            0 & -4 & 1
+        \end{pmatrix}$$
+    Replace $R_3$ with $R_3 - (-3)R_2$ in both matrices
+    $$\begin{pmatrix}
+            1 & 0 & 3 \\
+            0 & 1 & 2 \\
+            0 & 0 & 2
+        \end{pmatrix}
+        \begin{pmatrix}
+            0 & 1  & 0 \\
+            1 & 0  & 0 \\
+            3 & -4 & 1
+        \end{pmatrix}$$
+    Replace $R_3$ with $\frac{1}{2}R_3$ in both matrices
+    $$\begin{pmatrix}
+            1 & 0 & 3 \\
+            0 & 1 & 2 \\
+            0 & 0 & 1
+        \end{pmatrix}
+        \begin{pmatrix}
+            0           & 1  & 0           \\
+            1           & 0  & 0           \\
+            \frac{3}{2} & -2 & \frac{1}{2}
+        \end{pmatrix}$$
+    Replace $R_2$ with $R_2 - 2R_3$ in both matrices
+    $$\begin{pmatrix}
+            1 & 0 & 3 \\
+            0 & 1 & 0 \\
+            0 & 0 & 1
+        \end{pmatrix}
+        \begin{pmatrix}
+            0           & 1  & 0           \\
+            -2          & 4  & 1           \\
+            \frac{3}{2} & -2 & \frac{1}{2}
+        \end{pmatrix}$$
+    Replace $R_1$ with $R_1 - 3R_3$ in both matrices
+    $$\begin{pmatrix}
+            1 & 0 & 0 \\
+            0 & 1 & 0 \\
+            0 & 0 & 1
+        \end{pmatrix}
+        \begin{pmatrix}
+            -\frac{9}{2} & 7  & -\frac{3}{2} \\
+            -2           & 4  & 1            \\
+            \frac{3}{2}  & -2 & \frac{1}{2}
+        \end{pmatrix}$$
+    Since A is in RREF, then:
+    $$A^{-1} = \begin{pmatrix}
+        -\frac{9}{2} & 7  & -\frac{3}{2} \\
+        -2           & 4  & 1            \\
+        \frac{3}{2}  & -2 & \frac{1}{2}
+    \end{pmatrix}$$
 \end{homeworkProblem}
 \end{document}
 % \begin{homeworkProblem}
