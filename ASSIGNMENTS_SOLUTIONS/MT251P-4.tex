@@ -34,13 +34,13 @@
         There are infinitely many 4 $\times$ 4 matrices that are not invertible.
     }
     \solution
-    Since a square matrix is invertible if and only if its determinant is non-zero. Since there are infinitely many possible values for the elements of a 4 $\times$ 4 matrix, there are also infinitely many matrices that have a determinant of zero and are therefore not invertible. Therefore the statement is True
+    Since a square matrix is invertible if and only if its determinant is non-zero. Since there are infinitely many possible values for the elements of a 4 $\times$ 4 matrix, there are also infinitely many matrices that have a determinant of zero ie there are infinite amount of matrices with a zero row and any matrix with a zero row has det = 0 and therefore not invertible. Therefore the statement is True
     \part
     \homBox{
         There is a 4 $\times$ 4 invertible matrix A such that $A^3 = 2A^2$ and $\det A = 2$.
     }
     \solution
-    $$A^3 = 2A^2$$ $$A(AA) = 2(AA)$$ Since A is invertible, then $A^{-1}$ exists. So: $$A(AA)(A^{-1}A^{-1}) = 2(AA)(A^{-1}A^{-1})$$ $$A(AA^{-1})(AA^{-1}) = 2(AA^{-1})(AA^{-1})$$ We also know that $AA^{-1} = I_4$ since A is a $4\times 4$ matrix. So: $$A(I_4)(I_4) = 2(I_4)(I_4)$$ $$A = 2(I_4)$$ $$\det(A) = \det(2(I_4))$$ $$\det(A) = 16$$
+    $$A^3 = 2A^2$$ $$A(AA) =There 2(AA)$$ Since A is invertible, then $A^{-1}$ exists. So: $$A(AA)(A^{-1}A^{-1}) = 2(AA)(A^{-1}A^{-1})$$ Since $AA^{-1} = I_4 = A^{-1}A$, then: $$A(AA^{-1})(AA^{-1}) = 2(AA^{-1})(AA^{-1})$$ We also know that $AA^{-1} = I_4$ since A is a $4\times 4$ matrix. So: $$A(I_4)(I_4) = 2(I_4)(I_4)$$ $$A = 2(I_4)$$ $$\det(A) = \det(2(I_4))$$ $$\det(A) = 16$$
     Since $16 \neq 2$, then the statement is False.
     \part
     \homBox{
@@ -53,8 +53,20 @@
             \end{pmatrix}$
     }
     \solution
-    We see that the top left entry of $A^2$ is $-1$. Since the square of a number is always nonnegative and the entries have to be Real we have a contradiction.
-    Therefore the statement is False.
+    $$\det(A^2) = \det(A)\det(A) = \det(A)^2$$
+    Since $\det(A) \in \R$, then $\det(A^2) \geq 0$
+
+    However, $$\det(A^2) = -1\det\begin{pmatrix}
+            1 & 0 & 0 \\
+            0 & 1 & 0 \\
+            0 & 0 & 1
+        \end{pmatrix}$$
+        $$= -1\det\begin{pmatrix}
+            1 & 0 \\
+            0 & 1 
+        \end{pmatrix}$$
+        $$= -1$$
+    This gives a contradiction. Therefore the statement is False.
 \end{homeworkProblem}
 \begin{homeworkProblem}
     \part
@@ -211,11 +223,17 @@
             0 & 1 & -2 & 0 \\
             0 & 0 & 0  & 0
         \end{pmatrix}$$
-    Notice how the last row states $0 = 0$, therefore the system has infinitely many solutions.\\
-    Then the system of linear equations is: $$x + 2y - 5z = 2$$ $$y + -7z = 0$$
+    Replace $R_1$ with $R_1 - 2R_2$
+    $$\begin{pmatrix}
+            1 & 0 & -1 & 2 \\
+            0 & 1 & -2 & 0 \\
+            0 & 0 & 0  & 0
+        \end{pmatrix}$$
+    Notice how the matrix is in RREF and the last row states $0 = 0$, therefore the system has infinitely many solutions.\\
+    Then the system of linear equations is: $$x - z = 2$$ $$y - 2z = 0$$
     By Remark 4, x, y are leading variables, and z is a free variable. We say that z = s, where s can be any real number.
-    Then we can represent x, y in terms of z: $$ x = 2 - 2y + 5z = 2 - 2y + 5s $$ $$y = 7z = 7s$$ Then: $$x = 2 - 2y + 5s = 2 - 2(7s) + 5s = 2 - 9s$$
-    Therefore the solution set of the system of equations is:$$\mset{(2 - 9s, 7s,s):s \in \R}$$
+    Then we can represent x, y in terms of z: $$ x = 2 + z = 2 + s $$ $$y = 2z = 2s$$
+    Therefore the solution set of the system of equations is:$$\mset{(2 + s, 2s, s):s \in \R}$$
 \end{homeworkProblem}
 \begin{homeworkProblem}
     \homBox{
@@ -289,7 +307,7 @@
         \end{pmatrix}
         \begin{pmatrix}
             0           & 1  & 0           \\
-            -2          & 4  & 1           \\
+            -2          & 4  & -1          \\
             \frac{3}{2} & -2 & \frac{1}{2}
         \end{pmatrix}$$
     Replace $R_1$ with $R_1 - 3R_3$ in both matrices
@@ -300,15 +318,15 @@
         \end{pmatrix}
         \begin{pmatrix}
             -\frac{9}{2} & 7  & -\frac{3}{2} \\
-            -2           & 4  & 1            \\
+            -2           & 4  & -1           \\
             \frac{3}{2}  & -2 & \frac{1}{2}
         \end{pmatrix}$$
     Since A is in RREF, then:
     $$A^{-1} = \begin{pmatrix}
-        -\frac{9}{2} & 7  & -\frac{3}{2} \\
-        -2           & 4  & 1            \\
-        \frac{3}{2}  & -2 & \frac{1}{2}
-    \end{pmatrix}$$
+            -\frac{9}{2} & 7  & -\frac{3}{2} \\
+            -2           & 4  & -1           \\
+            \frac{3}{2}  & -2 & \frac{1}{2}
+        \end{pmatrix}$$
 \end{homeworkProblem}
 \end{document}
 % \begin{homeworkProblem}

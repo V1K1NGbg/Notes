@@ -1,0 +1,122 @@
+\documentclass{article}
+
+\input{template/homework/hw-inputs.tex}
+
+\title{
+    \vspace{2in}
+        \textmd{\textbf{MT232P - Analysis}}\\
+        % \textmd{\textbf{MT241P - Finite Mathematics}}\\
+        % \textmd{\textbf{MT251P - Foundations of Euclidean Geometry}}\\
+    \vspace{1in}
+    \textmd{\textbf{Assignment \#4}}\\
+    \vspace{1in}
+}
+
+\author{
+    \hmwkAuthorName\\
+    \hmwkStudentnum
+}
+
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\pagebreak
+
+\begin{homeworkProblem}
+    \homBox{
+        Let $x_1 = 1$, and set $x_{n+1} = \sqrt{2 + x_n}$ for all $n \in \mathbb{N}$. Use the Monotone Convergence
+        Theorem to show that $\left\{x_n\right\}_1^\infty$ converges, and find $\lim_{n \to \infty} x_n$.
+    }
+    \solution
+    First, we show that the sequence $\mset{x_n}$ is increasing. Since $x_1 = 1$, we have $x_{n+1} = \sqrt{2+x_n} > \sqrt{2+1} = \sqrt{3} > 1 = x_1$ for all $n \in \mathbb{N}$. Thus, the sequence is increasing.
+    $\mset{x_n}$
+    Next, we need to show that the sequence is bounded above. Note that $x_{n+1} = \sqrt{2+x_n} \le \sqrt{2+2} = \sqrt{4} = 2$ for all $n \in \mathbb{N}$. Thus, the sequence is bounded above.
+
+    Since the sequence is increasing and bounded above, by the Monotone Convergence Theorem, the sequence $\mset{x_n}$ converges. To find the limit, we take the limit of both sides of the equation $x_{n+1} = \sqrt{2+x_n}$ as $n \to \infty$:
+
+    $$\lim_{n \to \infty} x_{n+1} = \lim_{n \to \infty} \sqrt{2+x_n}$$
+
+    Since the sequence $\mset{x_n}$ converges, the limit on the right-hand side exists and is equal to the limit of the sequence, say $L$. We can then write:
+
+    $$L = \lim_{n \to \infty} \sqrt{2+x_n} = \sqrt{2+L}$$
+
+    Squaring both sides, we get $L^2 = 2 + L$, so $L^2 - L - 2 = 0$. This quadratic equation has two solutions, $L = \frac{1 \pm \sqrt{5}}{2}$. However, since $L$ is the limit of an increasing sequence, it must be greater than or equal to the first term of the sequence, which is $1$. This implies that $L = \frac{1 + \sqrt{5}}{2}$.
+
+    Therefore, the limit of the sequence $\mset{x_n}$ is $\frac{1 + \sqrt{5}}{2}$.
+\end{homeworkProblem}
+\begin{homeworkProblem}
+    \homBox{
+        Show that if every subsequence of $\mset{a_n}_1^\infty$ has itself a subsequence which converges to
+        0, then $\mset{a_n}_1^\infty$ converges to 0
+    }
+    \solution
+\end{homeworkProblem}
+\begin{homeworkProblem}
+    \homBox{
+        Assume $\mset{a_n}_1^\infty$ and $\mset{b_n}_1^\infty$ are Cauchy sequences. Use a triangle inequality argument to
+prove directly from the definition of a Cauchy sequence that $\mset{c_n}_1^\infty$, where $c_n = |an-bn|$,is also a Cauchy sequence.
+    }
+    \solution
+\end{homeworkProblem}
+\begin{homeworkProblem}
+    \homBox{
+        What is the value of $\lim_{x \to 1} \frac{1}{1+ \sqrt{x}}$? Prove your assertion using an $\epsilon - \delta$ argument.
+    }
+    \solution
+    
+\end{homeworkProblem}
+\end{document}
+% \begin{homeworkProblem}
+%     \homBox{Hello!}
+%     \part
+%     \solution
+%     \begin{align}
+%         Hello
+%     \end{align}
+%     \begin{align*}
+%         Hello
+%     \end{align*}
+%     \begin{align}
+%         Hello
+%     \end{align}
+%     Hello
+%     \part
+%     Hello\\Hello\\Hello
+%     \solution
+%     Hello
+% \end{homeworkProblem}
+
+
+% \begin{homeworkProblem}
+%     \defBox{Hello}{
+% \begin{itemize}
+%     \item It will rain today or tomorrow.
+%     \item It will rain today and tomorrow.
+%     \item It will rain today but not tomorrow.
+%     \item It will rain today or tomorrow, but not both days.
+% \end{itemize}
+%     }
+%     \part
+%     \solution
+
+%     \part
+%     \solution
+% \end{homeworkProblem}
+
+
+% \begin{homeworkProblem}
+%     \lemBox{Hello}{
+
+%     }
+% \end{homeworkProblem}
+
+
+% \begin{homeworkProblem}
+%     \thmBox{Hello}{
+%         \tcblower
+%         Hello
+%     }
+% \end{homeworkProblem}

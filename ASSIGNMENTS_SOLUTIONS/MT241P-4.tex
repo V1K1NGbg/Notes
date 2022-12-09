@@ -83,17 +83,26 @@
         How many possible outcomes are there?
     }
     \solution
+    There are $2^n$ solutions since on each throw only one of two things can happen. The coin will either fall on heads or on tails.
     \part
     \homBox{
         What is the probability of each outcome?
     }
     \solution
+    Since the coin is a fair coin, then the probability of heads is the same as the probability of tails, which is $(\frac{1}{2})^n$, where n is the number of throws.
     \part
     \homBox{
         If you throw the coin ten times, what is the chance of there being exactly
         one tail in any three consecutive throws?
     }
     \solution
+    If we represent a tail with a T and a head with an H, then we can have the following configurations for three consecutive throws that satisfy the prompt:
+    \begin{itemize}
+        \item HHT
+        \item HTH
+        \item THH
+    \end{itemize}
+
     \homBox{
         Next you play a game for money. Each time heads comes up you win a Euro, each
         time tails comes up you lose a Euro. However, as soon as you lose for the first time
@@ -104,21 +113,25 @@
         Describe the sample space Ω in terms of your possible wins/losses.
     }
     \solution
+    $$\Omega = \mset{T, HT, HHT, HHHT, HHHHT, HHHHHT, \dots}$$
     \part
     \homBox{
         For each outcome $\omega \in \Omega$ give its probability.
     }
     \solution
+    $\omega = (\frac{1}{2})^n$, where n is the index of the element in $\Omega$
     \part
     \homBox{
         What is the probability of you winning at least one, but less than four Euro?
     }
     \solution
+    The probability of winning at least 1, but less than 4 euro is the same as the probability of getting 1, 2, or 3 Euro, which is the same as the probability of getting 1 Euro + the probability of getting 2 Euro + the probability of getting 3 Euro, which is the same as: $$P(HHT) + P(HHHT) + P(HHHHT) =$$$$= P(H)P(H)P(T) + P(H)P(H)P(H)P(T) + P(H)P(H)P(H)P(H)P(T) =$$$$= \frac{1}{2}\frac{1}{2}\frac{1}{2} + \frac{1}{2}\frac{1}{2}\frac{1}{2}\frac{1}{2} + \frac{1}{2}\frac{1}{2}\frac{1}{2}\frac{1}{2}\frac{1}{2} =$$$$= \frac{1}{2^3} + \frac{1}{2^4} + \frac{1}{2^5} =$$$$= \frac{2^2}{2^5} + \frac{2}{2^5} + \frac{1}{2^5} =$$$$= \frac{7}{2^5}$$
     \part
     \homBox{
         What is the probability of you winning more than two Euro?
     }
     \solution
+    The probability of winning more than two Euro, is the same as winning 3 or more Euro, which is the same as getting at least 4 heads, allowing for the next throw to leave us with at least 3 euro even if the throw gives a tail. The probability of that is: $$P(HHHH)=$$$$=P(H)P(H)P(H)P(H)=$$$$=\frac{1}{2}\frac{1}{2}\frac{1}{2}\frac{1}{2}=$$$$=\frac{1}{16}$$
 \end{homeworkProblem}
 \begin{homeworkProblem}
     \homBox{
@@ -127,12 +140,17 @@
         nobody was born in a leap year). What is the likelihood if k = 23?
     }
     \solution
+    k = 23 = 22 + 1(you)\\
+    The chance for each person to have the same birthday as you is: $\frac{1}{365}$
+    The chance for each person not to have the same birthday as you is: $\frac{364}{365}$
+    Then the chance for no one to have the same birthday as you is: $(\frac{364}{365})^{22}$
 \end{homeworkProblem}
 \begin{homeworkProblem}
     \homBox{
         Use combinatorial arguments to prove that, for every integer n $\geq$ 0, $$\sum_{k=0}^n \binom{n}{k} = 2^n$$
     }
     \solution
+    If we say n is a number of balls, the left side of the equation gives the possible subsets of n balls. As each ball can either be in the subset or not, then there must be $2^n$ possible subsets for n balls. Therefore we get: $\sum_{k=0}^n \binom{n}{k} = 2^n$
 \end{homeworkProblem}
 \begin{homeworkProblem}
     \homBox{
@@ -141,6 +159,10 @@
         is, functions where $f(a_1) \neq f(a_2)$, whenever $a_1 \neq a_2$.
     }
     \solution
+    If A has n elements, and B has m elements, and the function is injunctive, then:\\
+    ${n}\choose{m}$ is the number of sets of size m possible to make with n elements\\
+    $m!$ is the number of orientations you can have m elements in\\
+    Therefore the amount of injective functions is ${n}\choose{m}$$m!$
 \end{homeworkProblem}
 \begin{homeworkProblem}
     \homBox{
@@ -148,6 +170,7 @@
         n courts?
     }
     \solution
+    Since there are 2n players and n courts with 2 players per court, then the possible pairs for the first court are ${2n}\choose{2}$. Since we already picked 2 people, then the possible pairs for the second court are ${2(n-1)}\choose{2}$. With that knowledge we can deduce that the combinations are: $${2n!}\choose{(2!)^n}$$
 \end{homeworkProblem}
 \begin{homeworkProblem}
     \homBox{
@@ -158,6 +181,7 @@
         $x_i \geq 0$, for all i = 1, 2, 3, 4
     }
     \solution
+
     \part
     \homBox{
         $x_i \geq i$, for all i = 1, 2, 3, 4
