@@ -31,21 +31,8 @@
         Theorem to show that $\left\{x_n\right\}_1^\infty$ converges, and find $\lim_{n \to \infty} x_n$.
     }
     \solution
-    First, we show that the sequence $\mset{x_n}$ is increasing. Since $x_1 = 1$, we have $x_{n+1} = \sqrt{2+x_n} > \sqrt{2+1} = \sqrt{3} > 1 = x_1$ for all $n \in \mathbb{N}$. Thus, the sequence is increasing.
-    $\mset{x_n}$
-    Next, we need to show that the sequence is bounded above. Note that $x_{n+1} = \sqrt{2+x_n} \le \sqrt{2+2} = \sqrt{4} = 2$ for all $n \in \mathbb{N}$. Thus, the sequence is bounded above.
-
-    Since the sequence is increasing and bounded above, by the Monotone Convergence Theorem, the sequence $\mset{x_n}$ converges. To find the limit, we take the limit of both sides of the equation $x_{n+1} = \sqrt{2+x_n}$ as $n \to \infty$:
-
-    $$\lim_{n \to \infty} x_{n+1} = \lim_{n \to \infty} \sqrt{2+x_n}$$
-
-    Since the sequence $\mset{x_n}$ converges, the limit on the right-hand side exists and is equal to the limit of the sequence, say $L$. We can then write:
-
-    $$L = \lim_{n \to \infty} \sqrt{2+x_n} = \sqrt{2+L}$$
-
-    Squaring both sides, we get $L^2 = 2 + L$, so $L^2 - L - 2 = 0$. This quadratic equation has two solutions, $L = \frac{1 \pm \sqrt{5}}{2}$. However, since $L$ is the limit of an increasing sequence, it must be greater than or equal to the first term of the sequence, which is $1$. This implies that $L = \frac{1 + \sqrt{5}}{2}$.
-
-    Therefore, the limit of the sequence $\mset{x_n}$ is $\frac{1 + \sqrt{5}}{2}$.
+    To use the Monotone Convergence Theorem, a sequence must be monotone. For a sequence to be monotone, we need to show that it is increasing and bounded. To show that the sequence is bounded we can use induction.\\Base case: $$x_2 = \sqrt{2+1} > x_1 = 1$$ $$\sqrt{3} > 1$$ Assume: $x_{n + 2} > x_{n + 1}$\\Then: $$x_{n+3} > x_{n+2}$$ $$\sqrt{2 + x_{n + 2}} > \sqrt{2 + x_{n + 1}}$$ $$2 + x_{n + 2} > 2 + x_{n + 1}$$ $$x_{n + 2} > x_{n + 1} \forall n \in \N$$ Because ${x_n}$ is strictly increasing, we know that if we prove it is also bounded, then we will know that it is monotone.\\ For a sequence to be bounded, $\exists M \in \N$ such that $|x_n| < M \forall n \in \N$\\ We can show that $x_n < 2 \forall n \in \N$ by induction\\Base case: $$n = 1, x_n = 1 < 2$$Assume: $$x_n <2$$, then we must show that $$x_{n+1} < 2$$ $$\sqrt{2 + x_n} < 2$$ $$2 + x_n < 4$$ $$x_n < 2$$, which is true by our assumption. Therefore since the sequence is increasing and bounded it is also monotone.Then by using the Monotone Convergence Theorem we know that ${x_n}$ converges.\\ Since ${x_n}$ converges, we know that $\lim_{n \to \infty}{x_n}$ exists.
+    Let L = $\lim_{n \to \infty}{x_n}$, then since $x_{n+1} = \sqrt{2 + x_n}$: $$x_{n+1}^2 = 2 + x_n$$ $$\lim_{n \to \infty}{(x_{n + 1})}^2 = L^2$$ $$\lim_{n \to \infty}{2 + x_n} = 2 + L$$, because ($x_{n + 1}^2 = 2 + x_n$), we know that $L^2 = 2 + L$. Then to find L we use the -b formula to get $L_1 = 2$ and $L_2 = -1$, however since ${x_n}$ is increasing and $x_1 = 1$, then the sequence can't converge to -1, therefore ${x_n}$ converges to 2
 \end{homeworkProblem}
 \begin{homeworkProblem}
     \homBox{
@@ -53,20 +40,23 @@
         0, then $\mset{a_n}_1^\infty$ converges to 0
     }
     \solution
+    Let ${a_{n_k}}$ be a subsequence of ${a_n}$. We know that ${a_{n_k}}$ has a subsequence of it's own ${a_{n_{k_j}}}$. This new subsequence also has to be a subsequence of ${a_n}$\\Assume ${a_n}$ doesn't  converge to 0. We know that some subsequences of ${a_n}$ converge to 0, meaning that if ${a_n}$ doesn't converge to 0, then it must also have a subsequence which also doesn't converge to 0. Let's call this subsequence ${a_{n_s}}$. If we show that this subsequence also converges to 0, then ${a_{n}}$ must also converge to 0. Because ${a_{n_s}}$  is a subsequence of ${a_{n}}$, then it has a subsequence convergent to 0. By assumption, ${a_{n_s}}$ doesn't converge to 0. Therefore it must have a subsequence which doesn't converge to 0. Call this ${a_{n_{s_k}}}$. This is also a subsequence of ${a_n}$. Then it must have a subsequence that converges to 0  even tough that does not.\\If we repeat the steps above, eventually we will get that the subsequence must converge to 0.
 \end{homeworkProblem}
 \begin{homeworkProblem}
     \homBox{
         Assume $\mset{a_n}_1^\infty$ and $\mset{b_n}_1^\infty$ are Cauchy sequences. Use a triangle inequality argument to
-prove directly from the definition of a Cauchy sequence that $\mset{c_n}_1^\infty$, where $c_n = |an-bn|$,is also a Cauchy sequence.
+prove directly from the definition of a Cauchy sequence that $\mset{c_n}_1^\infty$, where $c_n = |a_n-b_n|$,is also a Cauchy sequence.
     }
     \solution
+    Using the triangle inequality to prove that ${c_n}_{n \in \N}$ is also a Cauchy sequence, where $c_n = |a_n - b_n|$. To show that ${c_n}$ is a Cauchy sequence, we need to show that $\forall \varepsilon > 0$, $\exists N \in \N$ such that $|c_n - c_m| < \varepsilon$, where $n, m > N$. We know that $\forall \varepsilon > 0, \exists N$ such that $m, n > N$. Then: $$|a_n - a_m| < \frac{\varepsilon}{2}, |b_n - b_m| < \frac{\varepsilon}{2}$$
+    We can show this as: $$|a_{n_1} - a_{m_1}| < \frac{\varepsilon}{2}, |b_{n_1} - b_{m_1}| < \frac{\varepsilon}{2}$$if $m_1, n_1 > N_1$ and $$|a_{n_2} - a_{m_2}| < \frac{\varepsilon}{2}, |b_{n_2} - b_{m_2}| < \frac{\varepsilon}{2}$$ if $m_2, n_2 > N_2$. Let $N = \max \mset{N_1, N_2}$, then $$|a_n - a_m| < \frac{\varepsilon}{2}, |b_n - b_m| < \frac{\varepsilon}{2}$$ if $m, n > N$ Therefore we can  show the following: If $n_1$: $$|a - b| \geq ||a| - |b||$$(The Triangle Inequality) $$|c_n - c_m| = ||a_n - b_n| - |a_m - b_m||$$ $$\leq |a_n - b_n - a_m + b_m|$$ $$\leq|a_n - a_m - (b_n - b_m)|$$ $$\leq|a_n - a_m| + |b_n - b_m|$$ $$< \frac{\varepsilon}{2} + \frac{\varepsilon}{2}$$ $$< \varepsilon$$ if n, m > N
 \end{homeworkProblem}
 \begin{homeworkProblem}
     \homBox{
         What is the value of $\lim_{x \to 1} \frac{1}{1+ \sqrt{x}}$? Prove your assertion using an $\epsilon - \delta$ argument.
     }
     \solution
-    
+    Let $f(x) = \frac{1}{1 + \sqrt{x}}$. Let $h(x) = 1 + \sqrt{x}$, and $g(x) = 1$, then $\frac{g}{h}(x) = f(x)$. Therefore $\frac{\lim_{x \to 1}{g(x)}}{\lim_{x \to 1}{h(x)}} = \lim_{x \to 1}{f(x)}$. The limit of $g(x) = 1 \forall x$, The limit of $h(x)$ we can guess that is $h(1) = 2$ from the formula. To prove it, we must show that $\forall \varepsilon > 0, \exists \delta$ such that if $0 < |x - 1| < \delta$. Then: $$|h(x) - 2| < \varepsilon$$ $$|\sqrt{x} - 1| < \varepsilon$$ $$-\varepsilon < \sqrt{x} - 1 < \varepsilon$$ $$(1-\varepsilon)^2 < x <(1+\varepsilon)^2$$ $$(1-\varepsilon)^2 -1 < x - 1 <(1+\varepsilon)^2 -1$$ $$|x - 1| < \delta$$ and $$|x  - 1| < \max \mset{|(1-\varepsilon)^2 -1|, |(1+\varepsilon)^2 - 1}$$ Then $\delta = \max \mset{|(1-\varepsilon)^2 -1|, |(1+\varepsilon)^2 - 1}$\\ Therefore we have proven $\lim_{x \to 1}{h(x) = 2}$.\\ Therefore since $\lim_{x \to 1}{h(x) = 2}$ and $\lim_{x \to 1}{g(x) = 1}$  and $\lim_{x \to 1}{f(x)} = \frac{\lim_{x \to 1}{g(x)}}{\lim_{x \to 1}{h(x)}}$. Then by Theorem 3.10.4, $\lim_{x \to 1}{f(x)} = \frac{\lim_{x \to 1}{g(x)}}{\lim_{x \to 1}{h(x)}} = \frac{1}{2}$
 \end{homeworkProblem}
 \end{document}
 % \begin{homeworkProblem}
