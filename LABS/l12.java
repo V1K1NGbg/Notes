@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Bigger_sort {
+public class l12 {
     public static long[][] map;
 
     public static long collatz(long n) {
